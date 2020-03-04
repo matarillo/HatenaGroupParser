@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace hatenagroup
 {
@@ -7,22 +7,14 @@ namespace hatenagroup
     {
         static void Main(string[] args)
         {
-            var entries = Record.GetRecords("hatenagroup.matarillo.csv");
-            var es = entries.Where(x => !string.IsNullOrEmpty(x.Comment));
-            foreach (var e in es)
+            var records = Record.GetRecords("hatenagroup.matarillo.csv");
+            Console.WriteLine(records.Count);
+            var entries = new List<Entry>();
+            foreach (var record in records)
             {
-                Console.WriteLine("----date");
-                Console.WriteLine(e.Date);
-                var comments = Record.ToComments(DateTime.Now, e.Comment);
-                foreach (var c in comments)
-                {
-                    Console.WriteLine("----name");
-                    Console.WriteLine(c.Name);
-                    Console.WriteLine("----body");
-                    Console.WriteLine(c.Body);
-                }
-                Console.WriteLine();
+                entries.AddRange(Record.ToEntries(record));
             }
+            Console.WriteLine(entries.Count);
         }
     }
 }

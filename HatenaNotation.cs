@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,21 +12,89 @@ namespace hatenagroup
         {
             var builder = new Builder();
             var lines = text.Split('\n');
-            var state = State.None;
+            var state = BlockState.None;
             foreach (var line in lines)
             {
                 switch (state)
                 {
-                    case State.List1:
+                    case BlockState.Definition:
+                        state = ReadDefinition(line, builder);
                         break;
+                    case BlockState.Table:
+                        state = ReadTable(line, builder);
+                        break;
+                    case BlockState.Blockquote:
+                        state = ReadBlockquote(line, builder);
+                        break;
+                    case BlockState.SuperPre:
+                        state = ReadSuperPre(line, builder);
+                        break;
+                    case BlockState.Html:
+                        state = ReadHtml(line, builder);
+                        break;
+                    case BlockState.None:
                     default:
+                        state = Read(line, builder);
                         break;
                 }
             }
             return builder.GetEntries();
         }
 
-        static State Read(string line, Builder builder)
+        static BlockState ReadDefinition(string line, Builder builder)
+        {
+            var m = DefinitionMatcher.Match(line);
+            if (m.Success)
+            {
+                return DoDefinition(m, line, builder);
+            }
+            DoEndDefinition(builder);
+            return Read(line, builder);
+        }
+
+        static BlockState ReadTable(string line, Builder builder)
+        {
+            var m = TableMatcher.Match(line);
+            if (m.Success)
+            {
+                DoTable(m, builder);
+                return BlockState.Table;
+            }
+            return Read(line, builder);
+        }
+
+        private static BlockState ReadBlockquote(string line, Builder builder)
+        {
+            var m = EndBlockquoteMacther.Match(line);
+            if (m.Success)
+            {
+                return BlockState.None;
+            }
+            return DoBlockquote(line, builder);
+        }
+
+        private static BlockState ReadSuperPre(string line, Builder builder)
+        {
+            var m = EndSuprePreMacther.Match(line);
+            if (m.Success)
+            {
+                return DoEndSuprePre(builder);
+            }
+            builder.Append(line);
+            return BlockState.SuperPre;
+        }
+
+        private static BlockState ReadHtml(string line, Builder builder)
+        {
+            var m = EndHtmlMacther.Match(line);
+            if (m.Success)
+            {
+                return DoEndHtml(m, line, builder);
+            }
+            return DoHtml(line, builder);
+        }
+
+        static BlockState Read(string line, Builder builder)
         {
             var m = HeaderMatcher.Match(line);
             if (m.Success)
@@ -47,14 +114,20 @@ namespace hatenagroup
             m = DefinitionMatcher.Match(line);
             if (m.Success)
             {
-                builder.Append("<dl>");
-                DoDefinition(m, line, builder);
-                return State.Definition;
+                DoBeginDefinition(builder);
+                return DoDefinition(m, line, builder);
+            }
+            m = TableMatcher.Match(line);
+            if (m.Success)
+            {
+                DoTable(m, builder);
+                DoTableSeparator(m, builder);
+                return BlockState.Table;
             }
             m = BeginBlockquoteMacther.Match(line);
             if (m.Success)
             {
-                return State.Blockquote;
+                return BlockState.Blockquote;
             }
             m = BeginSuprePreMacther.Match(line);
             if (m.Success)
@@ -68,7 +141,7 @@ namespace hatenagroup
             }
             var markdownLine = ParseInline(line);
             builder.Append(markdownLine);
-            return State.None;
+            return BlockState.None;
         }
 
         private static string ParseInline(string line)
@@ -80,29 +153,91 @@ namespace hatenagroup
             return line;
         }
 
-        private static State DoBeginHtml(Match m, string line, Builder builder)
+        private static BlockState DoBeginHtml(Match m, string line, Builder builder)
         {
             var html = line.Substring(m.Length).Trim();
             builder.Append(html);
-            return State.Html;
+            return BlockState.Html;
         }
 
-        private static State DoBeginSuprePre(Match m, Builder builder)
+        private static BlockState DoHtml(string line, Builder builder)
+        {
+            var html = line.Trim();
+            builder.Append(html);
+            return BlockState.Html;
+        }
+
+        private static BlockState DoEndHtml(Match m, string line, Builder builder)
+        {
+            var html = line.Substring(0, line.Length - 1 - m.Length).Trim();
+            builder.Append(html);
+            return BlockState.None;
+        }
+
+        private static BlockState DoBeginSuprePre(Match m, Builder builder)
         {
             var lang = m.Groups[1].Value;
             builder.Append($"```{lang}");
-            return State.SuperPre;
+            return BlockState.SuperPre;
         }
 
-        private static void DoDefinition(Match m, string line, Builder builder)
+        private static BlockState DoEndSuprePre(Builder builder)
+        {
+            builder.Append("```");
+            return BlockState.None;
+        }
+
+        private static BlockState DoBlockquote(string line, Builder builder)
+        {
+            line = ParseInline(line);
+            builder.Append("> " + line);
+            return BlockState.Blockquote;
+        }
+
+        private static void DoTableSeparator(Match m, Builder builder)
+        {
+            var sb = new StringBuilder();
+            sb.Append("|");
+            foreach (Capture c in m.Groups[2].Captures)
+            {
+                sb.Append(" --- |");
+            }
+            builder.Append(sb.ToString());
+        }
+
+        private static void DoTable(Match m, Builder builder)
+        {
+            var sb = new StringBuilder();
+            sb.Append("|");
+            foreach (Capture c in m.Groups[2].Captures)
+            {
+                var td = c.Value.Trim();
+                td = ParseInline(td);
+                sb.Append(" ").Append(td).Append(" |");
+            }
+            builder.Append(sb.ToString());
+        }
+
+        private static void DoBeginDefinition(Builder builder)
+        {
+            builder.Append("<dl>");
+        }
+
+        private static BlockState DoDefinition(Match m, string line, Builder builder)
         {
             var dt = m.Groups[1].Value;
             var dd = line.Substring(m.Length).Trim();
             dd = ParseInline(dd);
             builder.Append($"<dt>{dt}</dt><dd>{dd}</dd>");
+            return BlockState.Definition;
         }
 
-        private static State DoList(Match m, string line, Builder builder)
+        private static void DoEndDefinition(Builder builder)
+        {
+            builder.Append("</dl>");
+        }
+
+        private static BlockState DoList(Match m, string line, Builder builder)
         {
             var listMark =
                 (m.Length == 1) ? "* " :
@@ -112,19 +247,19 @@ namespace hatenagroup
             var listText = line.Substring(m.Length).Trim();
             listText = ParseInline(listText);
             builder.Append($"{listMark}{listText}");
-            return State.None;
+            return BlockState.None;
         }
 
-        private static State DoSubHeader(Match m, string line, Builder builder)
+        private static BlockState DoSubHeader(Match m, string line, Builder builder)
         {
             var headerMark = new string('#', m.Length);
             var headerText = line.Substring(m.Length).Trim();
             headerText = ParseInline(headerText);
             builder.Append($"{headerMark} {headerText}");
-            return State.None;
+            return BlockState.None;
         }
 
-        static State DoHeader(Match m, string line, Builder builder)
+        static BlockState DoHeader(Match m, string line, Builder builder)
         {
             var unixtime = int.Parse(m.Groups[1].Value);
             var headerText = line.Substring(m.Length).Trim();
@@ -137,18 +272,14 @@ namespace hatenagroup
             }
             headerText = ParseInline(headerText);
             builder.CreateEntry(unixtime, headerText, tags);
-            return State.None;
-        }
-
-        static State ReadList1(string line, Builder builder)
-        {
-            throw new NotImplementedException();
+            return BlockState.None;
         }
 
         static readonly Regex HeaderMatcher = new Regex("^\\*(\\d+)\\*");
         static readonly Regex SubHeaderMatcher = new Regex("^\\*{2,3}");
         static readonly Regex ListMatcher = new Regex("^-{1,3}");
         static readonly Regex DefinitionMatcher = new Regex("^:([^:]+):");
+        static readonly Regex TableMatcher = new Regex("^\\|(([^|]*)\\|)+$");
         static readonly Regex BeginBlockquoteMacther = new Regex("^>>$");
         static readonly Regex EndBlockquoteMacther = new Regex("^<<$");
         static readonly Regex BeginSuprePreMacther = new Regex("^>\\|([^|]*)\\|$");
@@ -196,14 +327,11 @@ namespace hatenagroup
         static string EvalAsin(Match m)
         {
             return "https://www.amazon.co.jp/dp/" + m.Groups[2].Value;
-        } 
+        }
 
-        enum State
+        enum BlockState
         {
             None,
-            List1,
-            List2,
-            List3,
             Definition,
             Table,
             Blockquote,

@@ -22,7 +22,7 @@ namespace hatenagroup
         [Name("text")]
         public string Text { get; set; }
 
-        public static IEnumerable<Record> GetRecords(string path)
+        public static IList<Record> GetRecords(string path)
         {
             using (var reader = new StreamReader(path))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
@@ -60,6 +60,18 @@ namespace hatenagroup
                 Name = namecomment[0],
                 Body = string.Join("\n", lines)
             };
+        }
+
+        public static IList<Entry> ToEntries(Record record)
+        {
+            var entries = HatenaNotation.ToMarkdownEntries(record.Body);
+            var date = DateTime.ParseExact(record.Date, "yyyy-MM-dd", CultureInfo.InvariantCulture.DateTimeFormat);
+            var comments = ToComments(date, record.Comment);
+            if (entries.Count > 0)
+            {
+                entries[0].Comments = comments;
+            }
+            return entries;
         }
     }
 }
