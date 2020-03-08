@@ -89,7 +89,7 @@ love : 'Ego -> 'Ego -> seq<int> when 'Ego : comparison
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-この記事は[http://connpass.com/event/22056/](http://connpass.com/event/22056/)の9日目の記事です。
+この記事は[F# Advent Calendar 2015](http://connpass.com/event/22056/)の9日目の記事です。
 
 記事の発端は、[id:m-hiyama](https://profile.hatena.ne.jp/m-hiyama/) さんの3つの記事です。
 
@@ -119,7 +119,7 @@ F# は
 
 なのだけど、Min-Plus半環のコードを書いてみたらどうなるの？というのをやってみました。
 
-まずは、[http://d.hatena.ne.jp/m-hiyama/20151202/1449016930](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930)のコードを参考に
+まずは、[m-hiyamaさんの2番目の記事](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930)のコードを参考に
 
 
 * 演算子オーバーロード
@@ -127,11 +127,11 @@ F# は
 * 明示的な型変換
 
 
-を入れてみたのが、[http://haskell.g.hatena.ne.jp/matarillo/20151207](http://haskell.g.hatena.ne.jp/matarillo/20151207)に載せたコードです。ここに再掲します。
+を入れてみたのが、[12/7の記事](http://haskell.g.hatena.ne.jp/matarillo/20151207)に載せたコードです。ここに再掲します。
 
 <script src="https://gist.github.com/matarillo/7502d98b8d46f56b4546.js"></script>
 
-次に、[http://d.hatena.ne.jp/m-hiyama/20151208/1449544751](http://d.hatena.ne.jp/m-hiyama/20151208/1449544751)を参考にして、多相的な数値リテラルはないけれども演算子オーバーロードをたくさん作ってみたらどんな使い勝手になるかを試してみました。
+次に、[m-hiyamaさんの3番目の記事](http://d.hatena.ne.jp/m-hiyama/20151208/1449544751)を参考にして、多相的な数値リテラルはないけれども演算子オーバーロードをたくさん作ってみたらどんな使い勝手になるかを試してみました。
 
 <script src="https://gist.github.com/matarillo/d9861bcce64b4b6ae4da.js"></script>
 
@@ -139,7 +139,7 @@ F# は
 
 
 * 演算子 <code>@+</code>と<code>@*</code>がMin-Plus半環のための演算子です。これは（<code>?&lt;-</code>演算子を使うハックによって）<code>int</code>型、<code>float</code>型、および<code>MinPlus</code>カスタム型を引数にとることができます。
-* * なお、このハックについては、[http://haskell.g.hatena.ne.jp/matarillo/20150817/1439787013](http://haskell.g.hatena.ne.jp/matarillo/20150817/1439787013)から始まる5つのエントリーで解説していますので、興味がある人はそちらを読んでください。
+* * なお、このハックについては、[この記事](http://haskell.g.hatena.ne.jp/matarillo/20150817/1439787013)から始まる5つのエントリーで解説していますので、興味がある人はそちらを読んでください。
 * <code>main</code>関数では、シャドーイング機能を使って、<code>+</code>演算子と<code>*</code>演算子の実装を<code>@+</code>と<code>@*</code>に付け替えています。
 
 
@@ -235,7 +235,7 @@ F#には型クラスがないので、型に応じた計算の関数を引き渡
 <script src="https://gist.github.com/matarillo/44d202fce5cfff16d4ca.js"></script>
 
 
-[https://ideone.com/FzAgSV](https://ideone.com/FzAgSV)。
+[実行結果はIdeoneで見れます](https://ideone.com/FzAgSV)。
 
 もとの記事のソースをよく読むと、内部的には<code>double</code>だけでOKだったっぽい。そしたらもっと楽ですね。後で書けたら書く。
 
@@ -271,13 +271,13 @@ F#には型クラスがないので、型に応じた計算の関数を引き渡
 
 > 最近のプログラミング言語はジェネリックス機能を持っているものが多いですが、言語の進化に伴って後から付けたものがほとんどで、最初からジェネリックスありきで設計したものって、（少なくともメジャーどころでは）ないんじゃないの。ジェネリックスと演算子オーバーロードと型クラスを中核にしたプログラミング言語が出てきたら面白いのにね。
 
-F# は[http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html) なのでメジャーどころとは言いにくいところですが、ジェネリックスがあって演算子オーバーロードもあって、型クラスはないけどインライン関数の力でポリモーフィックなべき乗を書くことができます。
+F# は[TIOBEランキングで31位](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html) なのでメジャーどころとは言いにくいところですが、ジェネリックスがあって演算子オーバーロードもあって、型クラスはないけどインライン関数の力でポリモーフィックなべき乗を書くことができます。
 
 <script src="https://gist.github.com/matarillo/cd9aa111c29573e5576f.js"></script>
 
-実行結果は[https://ideone.com/LFqeAg](https://ideone.com/LFqeAg)で見ることができます。
+実行結果は[IdeOne](https://ideone.com/LFqeAg)で見ることができます。
 
-<code>[https://msdn.microsoft.com/en-us/library/ee353503.aspx](https://msdn.microsoft.com/en-us/library/ee353503.aspx)</code>関数は、プリミティブな数値型、もしくは<code>One</code>という名前の静的メンバーが定義されている任意の型を引数にとって、その型の「1」を返すというもの。
+<code>[LanguagePrimitives.GenericOne](https://msdn.microsoft.com/en-us/library/ee353503.aspx)</code>関数は、プリミティブな数値型、もしくは<code>One</code>という名前の静的メンバーが定義されている任意の型を引数にとって、その型の「1」を返すというもの。
 
 インライン関数として定義した<code>pow</code>の引数や戻り値の型や型制約を省略しているのでよくわからないかもしれませんが、F#コンパイラが適切な型や型制約を推論してくれます。
 
@@ -290,7 +290,7 @@ F# は[http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html](http://
 
 その上で、<code>pow</code>の呼び出し側で、実際にどんな型を引数として渡しているかが、コンパイル時にチェックされます。今回の例では<code>int</code>型と<code>float</code>型を渡していますが、どちらもプリミティブな数値型であり、<code>*</code>演算子がオーバーロード定義されているので、コンパイルに通ります。
 
-「F#すごいじゃん」と思うかもしれませんが、実は注意点があって、F#では<strong>ジェネリクスと（多相）インライン関数は別の仕組みなのでシームレスに使うことはできない</strong>というところ。そのあたりのことが[https://msdn.microsoft.com/ja-jp/library/dd548046.aspx](https://msdn.microsoft.com/ja-jp/library/dd548046.aspx)が、一言でいえば「インライン関数はコンパイル時に、ジェネリクスは実行時に型が解決される」という感じです。
+「F#すごいじゃん」と思うかもしれませんが、実は注意点があって、F#では<strong>ジェネリクスと（多相）インライン関数は別の仕組みなのでシームレスに使うことはできない</strong>というところ。そのあたりのことが[MSDNに書いてあります](https://msdn.microsoft.com/ja-jp/library/dd548046.aspx)が、一言でいえば「インライン関数はコンパイル時に、ジェネリクスは実行時に型が解決される」という感じです。
 
 （追記）ちなみにScalaの場合は「staticなんてものはないのだ。シングルトンオブジェクトがあるだけだ。」「型からシングルトンオブジェクトのインスタンスが決まる仕組みが整備されれば、それが型クラスになるのだ。」という感じの解決法で、（自分で好んで書きたいとはあまり思わないものの）興味深い仕掛けです。
 
@@ -770,7 +770,7 @@ F#の演算子のことをよくわかっていないことに気づいたので
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-CodeIQに[https://codeiq.jp/q/1579](https://codeiq.jp/q/1579)という問題が出ていました。
+CodeIQに[Minority's hello, world](https://codeiq.jp/q/1579)という問題が出ていました。
 
 問題が見れなくなっているので引用すると、こういうもの。
 > <h4>■問題の概要</h4>
@@ -1060,7 +1060,7 @@ Scalaのfor式が不便(Haskellのdoとreturnみたいに独立してない)と�
 
 [http://lampwww.epfl.ch/~odersky/talks/wg2.8-boston06.pdf](http://lampwww.epfl.ch/~odersky/talks/wg2.8-boston06.pdf)
 
-（追記）というわけで、[http://d.hatena.ne.jp/matarillo/20140429](http://d.hatena.ne.jp/matarillo/20140429)。
+（追記）というわけで、[C#で書いてみた](http://d.hatena.ne.jp/matarillo/20140429)。
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -1187,7 +1187,7 @@ C#は、いろんな機能を貪欲にぶっこんできているわけじゃな
 
 で、そのぶっこみかたというのが、割とコンパイラががんばるタイプの、キーワードが増えていくやつじゃないですか。
 
-そんで、その様を「[http://bleis-tift.hatenablog.com/entry/asyncawaitdis](http://bleis-tift.hatenablog.com/entry/asyncawaitdis)」と厳しく指摘されたりするわけじゃないですか。
+そんで、その様を「[専用の構文をどんどん追加していくと、その言語にはどんどんゴミの山が積みあがっていきます。](http://bleis-tift.hatenablog.com/entry/asyncawaitdis)」と厳しく指摘されたりするわけじゃないですか。
 
 で、なんでC#はそういう（言わば、ダサい）方針なのかというと、言語仕様についてもユーザービリティテストを実施して、その結果がおれらみたいなボンクラにとって難しすぎるとわかると却下していたりするからなんだけど、その中に含まれる1要因として、IDE、というかVisual Studioで開発したりデバッグ時にステップ実行したりするときにわかりやすいかどうか、というのもあるんじゃないかなと。
 
@@ -1297,7 +1297,7 @@ zipWith max [1,2] [4,5])
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774](http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774)のど頭のこれ
+[前回の記事](http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774)のど頭のこれ
 
 ```ocaml
 type 'a Num = { ... }
@@ -1363,7 +1363,7 @@ type 'a Num = { ... }
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[[http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2228766-add-higher-order-generics-to-f-type-classes-](http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2228766-add-higher-order-generics-to-f-type-classes-)。
+      <content:encoded><![CDATA[[.NETのCLRに高階ジェネリクス（型クラス、高カインド）を！という要望はMSから断られているわけだけども](http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2228766-add-higher-order-generics-to-f-type-classes-)。
 
 回答にある「Steffenがコメント欄に書いたようなやり方でエンコードできるよ」というのが気になった。
 
@@ -1727,7 +1727,7 @@ printfn "%A" list3
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-コードは、「[http://d.hatena.ne.jp/sumim/20130210/p1](http://d.hatena.ne.jp/sumim/20130210/p1)」を移植したもの。
+コードは、「[セクシー素数ベンチ（の非効率な実装）](http://d.hatena.ne.jp/sumim/20130210/p1)」を移植したもの。
 
 ```ocaml
 open System.Linq
@@ -2072,8 +2072,8 @@ hoogleの使い方（型から引く）という技もそうだが、トップ�
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[http://www.haskell.org/ghc/docs/latest/html/libraries/base/Control-Applicative.html](http://www.haskell.org/ghc/docs/latest/html/libraries/base/Control-Applicative.html)の勉強のため、[http://haskell.g.hatena.ne.jp/matarillo/20110620/1308581970](http://haskell.g.hatena.ne.jp/matarillo/20110620/1308581970)をApplicativeに変更してみた。
-書いていると、Applicativeというよりは[http://itpro.nikkeibp.co.jp/article/COLUMN/20120110/378061/?ST=develop&P=4](http://itpro.nikkeibp.co.jp/article/COLUMN/20120110/378061/?ST=develop&P=4)にするべきと分かったので、そのように実装した。
+[Applicative](http://www.haskell.org/ghc/docs/latest/html/libraries/base/Control-Applicative.html)の勉強のため、[プログラミングHaskellのパーサー](http://haskell.g.hatena.ne.jp/matarillo/20110620/1308581970)をApplicativeに変更してみた。
+書いていると、Applicativeというよりは[Alternative](http://itpro.nikkeibp.co.jp/article/COLUMN/20120110/378061/?ST=develop&P=4)にするべきと分かったので、そのように実装した。
 
 ```haskell
 import Data.Char
@@ -2757,9 +2757,9 @@ data Tree = Leaf Int | Node Tree Tree
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-Stack Overflowに質問されていた、「[http://stackoverflow.com/questions/2785029/](http://stackoverflow.com/questions/2785029/)」の回答を翻訳してみた。
+Stack Overflowに質問されていた、「[In what areas might the use of F# be more appropriate than C#?](http://stackoverflow.com/questions/2785029/)」の回答を翻訳してみた。
 
-## [http://stackoverflow.com/posts/2787342/revisions](http://stackoverflow.com/posts/2787342/revisions)の回答
+## [simon cousins](http://stackoverflow.com/posts/2787342/revisions)の回答
 
 私は、とあるエネルギー会社向けに、発電所のポートフォリオに関する国の発電スケジュールと取引ポジションとのバランスをとるためのアプリケーションを書きました。クライアントおよびサーバーコンポーネントはC#でしたが、計算エンジンはF#で書かれています。
 
@@ -2779,7 +2779,7 @@ F#はこのアプリケーションの心臓部の複雑さに対処するため
 
 <span class="deco" style="font-weight:bold;">並列処理</span>。実装の結果が関数的に純粋であることは、ベクトルデータの処理に固有の並列性を利用するのにうってつけです。NET 4が出た今は、私が次に進むべき場所は多分ここでしょう。
 
-## [http://stackoverflow.com/posts/2785113/revisions](http://stackoverflow.com/posts/2785113/revisions)の回答
+## [Tomas Petricek](http://stackoverflow.com/posts/2785113/revisions)の回答
 
 Microsoft Researchでインターンシップに参加していたとき、（F#自身で記述された）F#のVisual Studio IntelliSenseに関して何か所か仕事をしました。以前のC#プロジェクトですでにIntelliSenseについての経験がありましたので、両者を比較できると思います。
 
@@ -3156,7 +3156,7 @@ reverse (xs ++ ys) = reverse ys ++ reverse xs
 ## 13.7 コンパイラーの正しさ
 
 忙しかったのでかなり間が空いてしまった。
-今回は[http://haskell.g.hatena.ne.jp/matarillo/20120223/1330017719](http://haskell.g.hatena.ne.jp/matarillo/20120223/1330017719)を、10.5節とは違った形で（コンパイルして実行することで）評価する関数を定義して、その関数の振る舞いがもとの関数の振る舞いと一致することを証明する。
+今回は[10.5節で出てきた関数](http://haskell.g.hatena.ne.jp/matarillo/20120223/1330017719)を、10.5節とは違った形で（コンパイルして実行することで）評価する関数を定義して、その関数の振る舞いがもとの関数の振る舞いと一致することを証明する。
 
 10.5節の関数の、仮想マシンを使わない定義はこれ（10.5節ではもともとの関数名は <code>value</code> だったが、<code>eval</code> に置き換えてある）。
 
@@ -4395,7 +4395,7 @@ splitの結果に要素が1つ増えるだけだし、しかもそれは空リ�
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[[http://haskell.g.hatena.ne.jp/matarillo/20120306/1331058448](http://haskell.g.hatena.ne.jp/matarillo/20120306/1331058448)をF#に移植してみた。
+      <content:encoded><![CDATA[[昨日のHaskellコード](http://haskell.g.hatena.ne.jp/matarillo/20120306/1331058448)をF#に移植してみた。
 
 ```ocaml
 type Point =
@@ -4598,7 +4598,7 @@ solve size =  solutions initial
         (f,b):ps = n
 ```
 
-[http://ideone.com/0gFNU](http://ideone.com/0gFNU)
+[ideone.comでの実行結果。](http://ideone.com/0gFNU)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -5957,7 +5957,7 @@ nim =  turn 1 [5,4,3,2,1]
 <li value="4">ライフゲームのボードを対話的に作成したり、変更したりできるエディターを作れ。</li>
 </ol>
 
-[http://haskell.g.hatena.ne.jp/matarillo/20120125/1327499245](http://haskell.g.hatena.ne.jp/matarillo/20120125/1327499245)を修正して、ボードサイズを可変にできるようにしてやったぜ。
+[9.7で写経したライフゲーム](http://haskell.g.hatena.ne.jp/matarillo/20120125/1327499245)を修正して、ボードサイズを可変にできるようにしてやったぜ。
 
 ```haskell
 module NineNineFour where
@@ -6091,7 +6091,7 @@ flippos p b =  if elem p b
 [http://d.hatena.ne.jp/rst76/20120204/1328362118](http://d.hatena.ne.jp/rst76/20120204/1328362118)
 
 F#の環境を作るのが面倒という声も上がっているけど、
-[http://ideone.com/DTAC2](http://ideone.com/DTAC2)
+[オンラインでやりゃいいじゃない。パンがなければお菓子を食べればいいじゃない。](http://ideone.com/DTAC2)
 
 というか、Linux/Mac/Solarisな人ならmonoを入れれ。
 
@@ -6293,7 +6293,7 @@ calc $ take (length xs - length out) xs
 </ol>
 
 結局、terminalのバッファリングモードの関係で、VirtualBoxでLinuxを動かした。
-[http://haskell.g.hatena.ne.jp/matarillo/20120124/1327375513](http://haskell.g.hatena.ne.jp/matarillo/20120124/1327375513)だったからGHCiを使うことにした。
+[最近のHugsにはgetChがないとのことでいろいろ面倒](http://haskell.g.hatena.ne.jp/matarillo/20120124/1327375513)だったからGHCiを使うことにした。
 ```haskell
 module NineNineOne where
 
@@ -6436,7 +6436,7 @@ cmd.exeじゃエスケープシーケンスが効かないからってminttyを�
 ## ライフゲーム
 
 さて、9.7はライフゲームの実装。
-ひたすら写経。[http://haskell.g.hatena.ne.jp/matarillo/20110908/1315442247](http://haskell.g.hatena.ne.jp/matarillo/20110908/1315442247)関数群を使っている。
+ひたすら写経。[9.5で実装した](http://haskell.g.hatena.ne.jp/matarillo/20110908/1315442247)関数群を使っている。
 
 ```haskell
 module NineSeven where
@@ -6558,7 +6558,7 @@ wait n =  seqn [return () | _ <- [1..n]]
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[もともと、俺の[http://haskell.g.hatena.ne.jp/matarillo/20110430/1304151012](http://haskell.g.hatena.ne.jp/matarillo/20110430/1304151012)は、“[http://d.hatena.ne.jp/rst76/20100706/1278430517](http://d.hatena.ne.jp/rst76/20100706/1278430517)を全部理解できるようになること”だったわけで、それは今でも変わっていない。
+      <content:encoded><![CDATA[もともと、俺の[Haskell学習の目標](http://haskell.g.hatena.ne.jp/matarillo/20110430/1304151012)は、“[http://d.hatena.ne.jp/rst76/20100706/1278430517](http://d.hatena.ne.jp/rst76/20100706/1278430517)を全部理解できるようになること”だったわけで、それは今でも変わっていない。
 で、Haskellはだんだんわかって来たけど、“木探索から CPS にすることで効率化”が腑に落ちてなかった。
 そんな時に[http://www.geocities.jp/m_hiroi/func/ocaml25.html](http://www.geocities.jp/m_hiroi/func/ocaml25.html)というページを見つけた。
 おお、なるほどね。CPSで効率化を理解する取っ掛かりができたぞ。
@@ -6775,7 +6775,7 @@ Haskellにくわしい後輩から「F#教えてください」と言われた�
 
 でもそれじゃつまらないので、Haskellの勉強で学んだ知識をもとにF#に挑戦してみた。
 
-いろいろ試行錯誤した結果がこれだ。One, Two Three→[http://qiita.com/items/1798](http://qiita.com/items/1798)
+いろいろ試行錯誤した結果がこれだ。One, Two Three→[F#で素数の無限シーケンスを作る](http://qiita.com/items/1798)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -8149,7 +8149,7 @@ reverse = foldl (\xs x -> x : xs) []
       <description />
       <content:encoded><![CDATA[
 map/filter/foldr/foldlを例にした説明。
-このうち、foldr以外はLINQにもある。mapは[http://msdn.microsoft.com/ja-jp/library/bb546168.aspx](http://msdn.microsoft.com/ja-jp/library/bb546168.aspx)、filterは[http://msdn.microsoft.com/ja-jp/library/bb546161.aspx](http://msdn.microsoft.com/ja-jp/library/bb546161.aspx)、foldlは[http://msdn.microsoft.com/ja-jp/library/bb546138.aspx](http://msdn.microsoft.com/ja-jp/library/bb546138.aspx)。だから大体問題ないんだけど、foldrを理解するのにちょっと時間がかかった。
+このうち、foldr以外はLINQにもある。mapは[Select](http://msdn.microsoft.com/ja-jp/library/bb546168.aspx)、filterは[Where](http://msdn.microsoft.com/ja-jp/library/bb546161.aspx)、foldlは[Aggregate](http://msdn.microsoft.com/ja-jp/library/bb546138.aspx)。だから大体問題ないんだけど、foldrを理解するのにちょっと時間がかかった。
 教科書にはまだ書いてなかったんだけど、どうやらfoldrは無限リストを扱えるようなのだ。
 まじ？どうやって？なんでfoldlではだめなの？
 
@@ -8543,7 +8543,7 @@ sorted xs = and [x <= y | (x, y) <- pairs xs]
 
 ## 文字列の内包表記
 
-ここで、Stringは[Char]であることが示される。[http://haskell.g.hatena.ne.jp/matarillo/20110429/1304100404](http://haskell.g.hatena.ne.jp/matarillo/20110429/1304100404)
+ここで、Stringは[Char]であることが示される。[気づいてたけど。](http://haskell.g.hatena.ne.jp/matarillo/20110429/1304100404)
 
 ただし String is a [Char]なのはいいけど、逆はどうなんだろう。つまり、Stringと[Char]は同値なのか？というのが気になったので、試してみた。
 
@@ -9041,7 +9041,7 @@ Hugsの<code>:load</code>コマンドが、プログラム中では<code>import<
 * * 固定精度整数。普通の32ビット符号付き整数。オーバーフローに注意。
 * <code>Integer</code>型
 * * 多倍長整数。
-* * * これ必要だよね。C#には長らくなかった。([http://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger.aspx](http://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger.aspx))
+* * * これ必要だよね。C#には長らくなかった。([.NET 4から標準ライブラリに入った](http://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger.aspx))
 * <code>Float</code>型
 * * 単精度浮動小数点数。普通の32ビットIEEE 754浮動小数点数。
 * * * だとすればNaN、+∞、-∞も値に含まれるはず。あとで出てくるかな？

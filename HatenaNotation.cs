@@ -15,12 +15,6 @@ namespace hatenagroup
             var state = BlockState.None;
             foreach (var line in lines)
             {
-            if (line.StartsWith("><div"))
-            {
-                var d = 0;
-            }
-
-
                 switch (state)
                 {
                     case BlockState.Definition:
@@ -319,11 +313,11 @@ namespace hatenagroup
         static readonly Regex BeginHtmlMacther = new Regex("^>(?=<)");
         static readonly Regex EndHtmlMatcher = new Regex("(?<=>)<$");
         static readonly Regex CategoryMatcher = new Regex("(\\[([^\\]]+)\\])+");
-        static readonly Regex HttpMatcher = new Regex("\\[(https?://[^\\]:]+)(:title(=[^\\]]*)?)?\\]");
+        static readonly Regex HttpMatcher = new Regex("\\[(https?://[^\\]:]+)(:title(=([^\\]]*))?)?\\]");
 
         static string EvalHttp(Match m)
         {
-            // new Regex("\\[(https?://[^\\]:]+)(:title(=[^\\]]*)?)?\\]");
+            // new Regex("\\[(https?://[^\\]:]+)(:title(=([^\\]]*))?)?\\]");
             var url = m.Groups[1].Value;
             var title =
                 m.Groups[4].Success ? m.Groups[4].Value :
