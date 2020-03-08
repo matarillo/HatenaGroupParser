@@ -15,6 +15,12 @@ namespace hatenagroup
             var state = BlockState.None;
             foreach (var line in lines)
             {
+            if (line.StartsWith("><div"))
+            {
+                var d = 0;
+            }
+
+
                 switch (state)
                 {
                     case BlockState.Definition:
@@ -306,7 +312,7 @@ namespace hatenagroup
         static readonly Regex ListMatcher = new Regex("^-{1,3}");
         static readonly Regex DefinitionMatcher = new Regex("^:([^:]+):");
         static readonly Regex TableMatcher = new Regex("^\\|(([^|]*)\\|)+$");
-        static readonly Regex BeginBlockquoteMacther = new Regex("^>([^>]+)?>$");
+        static readonly Regex BeginBlockquoteMacther = new Regex("^>([^<>]+)?>$");
         static readonly Regex EndBlockquoteMatcher = new Regex("^<<$");
         static readonly Regex BeginSuprePreMacther = new Regex("^>\\|([^|]*)\\|$");
         static readonly Regex EndSuprePreMatcher = new Regex("^\\|\\|<$");
