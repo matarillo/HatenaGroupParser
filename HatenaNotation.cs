@@ -32,6 +32,9 @@ namespace hatenagroup
                     case BlockState.Html:
                         state = ReadHtml(line, builder);
                         break;
+                    case BlockState.List:
+                        state = ReadList(line, builder);
+                        break;
                     case BlockState.None:
                     default:
                         state = Read(line, builder);
@@ -65,7 +68,7 @@ namespace hatenagroup
 
         private static BlockState ReadBlockquote(string line, Builder builder)
         {
-            var m = EndBlockquoteMacther.Match(line);
+            var m = EndBlockquoteMatcher.Match(line);
             if (m.Success)
             {
                 return BlockState.None;
@@ -75,7 +78,7 @@ namespace hatenagroup
 
         private static BlockState ReadSuperPre(string line, Builder builder)
         {
-            var m = EndSuprePreMacther.Match(line);
+            var m = EndSuprePreMatcher.Match(line);
             if (m.Success)
             {
                 return DoEndSuprePre(builder);
@@ -86,12 +89,23 @@ namespace hatenagroup
 
         private static BlockState ReadHtml(string line, Builder builder)
         {
-            var m = EndHtmlMacther.Match(line);
+            var m = EndHtmlMatcher.Match(line);
             if (m.Success)
             {
                 return DoEndHtml(m, line, builder);
             }
             return DoHtml(line, builder);
+        }
+
+        private static BlockState ReadList(string line, Builder builder)
+        {
+            var m = ListMatcher.Match(line);
+            if (m.Success)
+            {
+                return DoList(m, line, builder);
+            }
+            DoEndList(builder);
+            return Read(line, builder);
         }
 
         static BlockState Read(string line, Builder builder)
@@ -109,6 +123,7 @@ namespace hatenagroup
             m = ListMatcher.Match(line);
             if (m.Success)
             {
+                DoBeginList(builder);
                 return DoList(m, line, builder);
             }
             m = DefinitionMatcher.Match(line);
@@ -127,6 +142,7 @@ namespace hatenagroup
             m = BeginBlockquoteMacther.Match(line);
             if (m.Success)
             {
+                // ignore m.Groups[1] (link notation)
                 return BlockState.Blockquote;
             }
             m = BeginSuprePreMacther.Match(line);
@@ -169,7 +185,7 @@ namespace hatenagroup
 
         private static BlockState DoEndHtml(Match m, string line, Builder builder)
         {
-            var html = line.Substring(0, line.Length - 1 - m.Length).Trim();
+            var html = line.Substring(0, line.Length - m.Length).Trim();
             builder.Append(html);
             return BlockState.None;
         }
@@ -237,6 +253,11 @@ namespace hatenagroup
             builder.Append("</dl>");
         }
 
+        private static void DoBeginList(Builder builder)
+        {
+            builder.Append("");
+        }
+
         private static BlockState DoList(Match m, string line, Builder builder)
         {
             var listMark =
@@ -247,7 +268,12 @@ namespace hatenagroup
             var listText = line.Substring(m.Length).Trim();
             listText = ParseInline(listText);
             builder.Append($"{listMark}{listText}");
-            return BlockState.None;
+            return BlockState.List;
+        }
+
+        private static void DoEndList(Builder builder)
+        {
+            builder.Append("");
         }
 
         private static BlockState DoSubHeader(Match m, string line, Builder builder)
@@ -267,7 +293,7 @@ namespace hatenagroup
             var mm = CategoryMatcher.Match(headerText);
             if (mm.Success)
             {
-                tags = mm.Groups[1].Captures.Select(x => x.Value).ToArray();
+                tags = mm.Groups[1].Captures.Select(x => x.Value.Substring(1, x.Length - 2)).ToArray();
                 headerText = headerText.Substring(mm.Length);
             }
             headerText = ParseInline(headerText);
@@ -280,22 +306,22 @@ namespace hatenagroup
         static readonly Regex ListMatcher = new Regex("^-{1,3}");
         static readonly Regex DefinitionMatcher = new Regex("^:([^:]+):");
         static readonly Regex TableMatcher = new Regex("^\\|(([^|]*)\\|)+$");
-        static readonly Regex BeginBlockquoteMacther = new Regex("^>>$");
-        static readonly Regex EndBlockquoteMacther = new Regex("^<<$");
+        static readonly Regex BeginBlockquoteMacther = new Regex("^>([^>]+)?>$");
+        static readonly Regex EndBlockquoteMatcher = new Regex("^<<$");
         static readonly Regex BeginSuprePreMacther = new Regex("^>\\|([^|]*)\\|$");
-        static readonly Regex EndSuprePreMacther = new Regex("^\\|\\|<$");
-        static readonly Regex BeginHtmlMacther = new Regex("^><");
-        static readonly Regex EndHtmlMacther = new Regex("><$");
+        static readonly Regex EndSuprePreMatcher = new Regex("^\\|\\|<$");
+        static readonly Regex BeginHtmlMacther = new Regex("^>(?=<)");
+        static readonly Regex EndHtmlMatcher = new Regex("(?<=>)<$");
         static readonly Regex CategoryMatcher = new Regex("(\\[([^\\]]+)\\])+");
-        static readonly Regex HttpMatcher = new Regex("\\[(https?://[^\\]]+)(:title(=[^\\]]*)?)?\\]");
+        static readonly Regex HttpMatcher = new Regex("\\[(https?://[^\\]:]+)(:title(=[^\\]]*)?)?\\]");
 
         static string EvalHttp(Match m)
         {
+            // new Regex("\\[(https?://[^\\]:]+)(:title(=[^\\]]*)?)?\\]");
             var url = m.Groups[1].Value;
             var title =
                 m.Groups[4].Success ? m.Groups[4].Value :
-                m.Groups[2].Success ? "'title'" : // TOOD
-                "";
+                url;
             return $"[{title}]({url})";
         }
 
@@ -337,6 +363,7 @@ namespace hatenagroup
             Blockquote,
             SuperPre,
             Html,
+            List,
         }
 
         class Builder

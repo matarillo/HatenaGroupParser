@@ -19,12 +19,12 @@
       <content:encoded><![CDATA[
 いまさらですが、2016年12月のF# Advent Calendar記事の締め切りに間に合わなかったこともあり、アクセス数が少ないので、ここで再紹介します。
 
-[](http://qiita.com/matarillo/items/8444db7b97abd29194c2:title)
+[http://qiita.com/matarillo/items/8444db7b97abd29194c2](http://qiita.com/matarillo/items/8444db7b97abd29194c2)
 
 シグネチャファイルを書くことで、型の実装を隠蔽する方法について書きました。
 
 ……といいつつ、記事のほとんどは、横浜へなちょこプログラミング勉強会さんによるコーディング問題
-[](http://nabetani.sakura.ne.jp/hena/orde09_penwa/:title)
+[http://nabetani.sakura.ne.jp/hena/orde09_penwa/](http://nabetani.sakura.ne.jp/hena/orde09_penwa/)
 の回答になっています。　^^
 
 コードの説明というより、解法の説明が長いです。
@@ -42,7 +42,7 @@
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -75,7 +75,7 @@ love : 'Ego -> 'Ego -> seq<int> when 'Ego : comparison
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -89,19 +89,21 @@ love : 'Ego -> 'Ego -> seq<int> when 'Ego : comparison
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-この記事は[](http://connpass.com/event/22056/:title=F# Advent Calendar 2015)の9日目の記事です。
+この記事は[http://connpass.com/event/22056/](http://connpass.com/event/22056/)の9日目の記事です。
 
 記事の発端は、[id:m-hiyama](https://profile.hatena.ne.jp/m-hiyama/) さんの3つの記事です。
 
-[](http://d.hatena.ne.jp/m-hiyama/20151130/1448843034:title)
-[](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930:title)
-[](http://d.hatena.ne.jp/m-hiyama/20151208/1449544751:title)
+[http://d.hatena.ne.jp/m-hiyama/20151130/1448843034](http://d.hatena.ne.jp/m-hiyama/20151130/1448843034)
+[http://d.hatena.ne.jp/m-hiyama/20151202/1449016930](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930)
+[http://d.hatena.ne.jp/m-hiyama/20151208/1449544751](http://d.hatena.ne.jp/m-hiyama/20151208/1449544751)
 
 3行で無理やりまとめると
+
 
 * ジェネリクスと演算子オーバーロードと型クラスが便利に使えたらいいなあ。
 * C++には演算子オーバーロードがあるし、暗黙の型変換も便利だけど、ユーザー定義リテラルはいまいち。
 * 空気を読んでくれる、多相的な定数（数値リテラル）や記号（演算子）があるともっといいのに。
+
 
 2つ目の記事は、Min-Plus半環という、和と積の定義がちょっとおもしろい代数をネタにしています。
 
@@ -117,25 +119,29 @@ F# は
 
 なのだけど、Min-Plus半環のコードを書いてみたらどうなるの？というのをやってみました。
 
-まずは、[](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930:title=m-hiyamaさんの2番目の記事)のコードを参考に
+まずは、[http://d.hatena.ne.jp/m-hiyama/20151202/1449016930](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930)のコードを参考に
+
 
 * 演算子オーバーロード
 * ユーザー定義リテラル
 * 明示的な型変換
 
-を入れてみたのが、[](http://haskell.g.hatena.ne.jp/matarillo/20151207:title=12/7の記事)に載せたコードです。ここに再掲します。
+
+を入れてみたのが、[http://haskell.g.hatena.ne.jp/matarillo/20151207](http://haskell.g.hatena.ne.jp/matarillo/20151207)に載せたコードです。ここに再掲します。
 
 <script src="https://gist.github.com/matarillo/7502d98b8d46f56b4546.js"></script>
 
-次に、[](http://d.hatena.ne.jp/m-hiyama/20151208/1449544751:title=m-hiyamaさんの3番目の記事)を参考にして、多相的な数値リテラルはないけれども演算子オーバーロードをたくさん作ってみたらどんな使い勝手になるかを試してみました。
+次に、[http://d.hatena.ne.jp/m-hiyama/20151208/1449544751](http://d.hatena.ne.jp/m-hiyama/20151208/1449544751)を参考にして、多相的な数値リテラルはないけれども演算子オーバーロードをたくさん作ってみたらどんな使い勝手になるかを試してみました。
 
 <script src="https://gist.github.com/matarillo/d9861bcce64b4b6ae4da.js"></script>
 
 簡単に解説します。
 
+
 * 演算子 <code>@+</code>と<code>@*</code>がMin-Plus半環のための演算子です。これは（<code>?&lt;-</code>演算子を使うハックによって）<code>int</code>型、<code>float</code>型、および<code>MinPlus</code>カスタム型を引数にとることができます。
-* * なお、このハックについては、[](http://haskell.g.hatena.ne.jp/matarillo/20150817/1439787013:title=この記事)から始まる5つのエントリーで解説していますので、興味がある人はそちらを読んでください。
+* * なお、このハックについては、[http://haskell.g.hatena.ne.jp/matarillo/20150817/1439787013](http://haskell.g.hatena.ne.jp/matarillo/20150817/1439787013)から始まる5つのエントリーで解説していますので、興味がある人はそちらを読んでください。
 * <code>main</code>関数では、シャドーイング機能を使って、<code>+</code>演算子と<code>*</code>演算子の実装を<code>@+</code>と<code>@*</code>に付け替えています。
+
 
 ちなみに、<code>fstropical</code>モジュール（fstropical.fs）では、Min-Plus半環のための演算子として<code>@+</code>と<code>@*</code>を使っていますが、ここを<code>+</code>と<code>*</code>に置き換えることもできます。すると、<code>fstropical</code>モジュールをopenするだけで、ファイル全体で<code>+</code>演算子と<code>*</code>演算子の動きが置き換わります。
 
@@ -159,7 +165,7 @@ m-hiyamaさんは
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -176,9 +182,9 @@ m-hiyamaさんは
 （12/8追記: 檜山さんの新しい記事を受けて、別バージョンを書きました。https://gist.github.com/matarillo/d9861bcce64b4b6ae4da 明日には新しいブログエントリーを書くつもりです。）
 
 
-[](http://haskell.g.hatena.ne.jp/matarillo/20151202/1449027369:title)の続き。
+[http://haskell.g.hatena.ne.jp/matarillo/20151202/1449027369](http://haskell.g.hatena.ne.jp/matarillo/20151202/1449027369)の続き。
 
-もともとの [](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930:title)に近しいコードに書き直しました。
+もともとの [http://d.hatena.ne.jp/m-hiyama/20151202/1449016930](http://d.hatena.ne.jp/m-hiyama/20151202/1449016930)に近しいコードに書き直しました。
 
 <code>Q</code>をプリフィックスとするカスタム数値リテラルを定義してみました。
 <code>0Q</code>と<code>1Q</code>の扱いをどうするか悩みましたが、実数 <code>0.0</code>および<code>1.0</code>からの変換と同じ扱いにしました。
@@ -205,7 +211,7 @@ MinPlus半環の単位元が必要な場合は、<code>MinPlus.Zero</code>およ
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -218,9 +224,7 @@ MinPlus半環の単位元が必要な場合は、<code>MinPlus.Zero</code>およ
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[>http://d.hatena.ne.jp/m-hiyama/20151202/1449016930:title>
-行列計算はともかくとして、min-plus半環そのものを定義します。
-<<
+      <content:encoded><![CDATA[> 行列計算はともかくとして、min-plus半環そのものを定義します。
 
 複数のプリミティブ数値型に対応するには？と読みました。
 
@@ -231,7 +235,7 @@ F#には型クラスがないので、型に応じた計算の関数を引き渡
 <script src="https://gist.github.com/matarillo/44d202fce5cfff16d4ca.js"></script>
 
 
-[](https://ideone.com/FzAgSV:title=実行結果はIdeoneで見れます)。
+[https://ideone.com/FzAgSV](https://ideone.com/FzAgSV)。
 
 もとの記事のソースをよく読むと、内部的には<code>double</code>だけでOKだったっぽい。そしたらもっと楽ですね。後で書けたら書く。
 
@@ -249,7 +253,7 @@ F#には型クラスがないので、型に応じた計算の関数を引き渡
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -263,32 +267,30 @@ F#には型クラスがないので、型に応じた計算の関数を引き渡
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
->http://d.hatena.ne.jp/m-hiyama/20151130/1448843034:title>
-「TypeScriptジェネリックス：可能性が見えると不満がつのる」において、クラス定義や関数定義に型パラメータを渡せるだけでは、ジェネリック・プログラミングは難しいと述べました。そのときの例題はリストの総和だったのですが、より簡単な累乗（ベキ乗、power）計算を例にしてもう一度問題点を説明します。
-<<
+> 「TypeScriptジェネリックス：可能性が見えると不満がつのる」において、クラス定義や関数定義に型パラメータを渡せるだけでは、ジェネリック・プログラミングは難しいと述べました。そのときの例題はリストの総和だったのですが、より簡単な累乗（ベキ乗、power）計算を例にしてもう一度問題点を説明します。
 
->http://d.hatena.ne.jp/m-hiyama/20151130/1448843034:title>
-最近のプログラミング言語はジェネリックス機能を持っているものが多いですが、言語の進化に伴って後から付けたものがほとんどで、最初からジェネリックスありきで設計したものって、（少なくともメジャーどころでは）ないんじゃないの。ジェネリックスと演算子オーバーロードと型クラスを中核にしたプログラミング言語が出てきたら面白いのにね。
-<<
+> 最近のプログラミング言語はジェネリックス機能を持っているものが多いですが、言語の進化に伴って後から付けたものがほとんどで、最初からジェネリックスありきで設計したものって、（少なくともメジャーどころでは）ないんじゃないの。ジェネリックスと演算子オーバーロードと型クラスを中核にしたプログラミング言語が出てきたら面白いのにね。
 
-F# は[](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html:title=TIOBEランキングで31位) なのでメジャーどころとは言いにくいところですが、ジェネリックスがあって演算子オーバーロードもあって、型クラスはないけどインライン関数の力でポリモーフィックなべき乗を書くことができます。
+F# は[http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html) なのでメジャーどころとは言いにくいところですが、ジェネリックスがあって演算子オーバーロードもあって、型クラスはないけどインライン関数の力でポリモーフィックなべき乗を書くことができます。
 
 <script src="https://gist.github.com/matarillo/cd9aa111c29573e5576f.js"></script>
 
-実行結果は[](https://ideone.com/LFqeAg:title=IdeOne)で見ることができます。
+実行結果は[https://ideone.com/LFqeAg](https://ideone.com/LFqeAg)で見ることができます。
 
-<code>[](https://msdn.microsoft.com/en-us/library/ee353503.aspx:title=LanguagePrimitives.GenericOne)</code>関数は、プリミティブな数値型、もしくは<code>One</code>という名前の静的メンバーが定義されている任意の型を引数にとって、その型の「1」を返すというもの。
+<code>[https://msdn.microsoft.com/en-us/library/ee353503.aspx](https://msdn.microsoft.com/en-us/library/ee353503.aspx)</code>関数は、プリミティブな数値型、もしくは<code>One</code>という名前の静的メンバーが定義されている任意の型を引数にとって、その型の「1」を返すというもの。
 
 インライン関数として定義した<code>pow</code>の引数や戻り値の型や型制約を省略しているのでよくわからないかもしれませんが、F#コンパイラが適切な型や型制約を推論してくれます。
 
 たとえば<code>pow</code>の引数<code>x</code>の型については、
+
 * 演算子 <code>*</code> がオーバーロード定義されていること
 * <code>LanguagePrimitives.GenericOne</code>関数と同じ制約を持つこと、すなわち、プリミティブな数値型、もしくは<code>One</code>という名前の静的メンバーが定義されている任意の型であること
+
 の2つが要請されます。
 
 その上で、<code>pow</code>の呼び出し側で、実際にどんな型を引数として渡しているかが、コンパイル時にチェックされます。今回の例では<code>int</code>型と<code>float</code>型を渡していますが、どちらもプリミティブな数値型であり、<code>*</code>演算子がオーバーロード定義されているので、コンパイルに通ります。
 
-「F#すごいじゃん」と思うかもしれませんが、実は注意点があって、F#では<strong>ジェネリクスと（多相）インライン関数は別の仕組みなのでシームレスに使うことはできない</strong>というところ。そのあたりのことが[](https://msdn.microsoft.com/ja-jp/library/dd548046.aspx:title=MSDNに書いてあります)が、一言でいえば「インライン関数はコンパイル時に、ジェネリクスは実行時に型が解決される」という感じです。
+「F#すごいじゃん」と思うかもしれませんが、実は注意点があって、F#では<strong>ジェネリクスと（多相）インライン関数は別の仕組みなのでシームレスに使うことはできない</strong>というところ。そのあたりのことが[https://msdn.microsoft.com/ja-jp/library/dd548046.aspx](https://msdn.microsoft.com/ja-jp/library/dd548046.aspx)が、一言でいえば「インライン関数はコンパイル時に、ジェネリクスは実行時に型が解決される」という感じです。
 
 （追記）ちなみにScalaの場合は「staticなんてものはないのだ。シングルトンオブジェクトがあるだけだ。」「型からシングルトンオブジェクトのインスタンスが決まる仕組みが整備されれば、それが型クラスになるのだ。」という感じの解決法で、（自分で好んで書きたいとはあまり思わないものの）興味深い仕掛けです。
 
@@ -306,7 +308,7 @@ F# は[](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html:title=
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -323,24 +325,23 @@ F# は[](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html:title=
 
 ほかのはやりの言語は自身をわざわざC# なんかと比較したりしないし、そういうこというのF# ぐらいしかないよね。
 
-div class="twitter-detail twitter-detail-left">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="http://twitter.com/tanakh">
-<img src="http://pbs.twimg.com/profile_images/603918430639521792/zZNtUnXN_normal.png" alt="tanakh" height="48" width="48"  this);" >
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-F#からWindowsアプリ作るスケルトンはないんですかね
-</p>
-<p class="twitter-detail-info">
-<a href="http://twitter.com/tanakh/status/642933802352943104" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2015-09-13</span> <span class="twitter-detail-info-time">14:32:18</span></a> <span class="twitter-detail-info-source">via <a href="https://about.twitter.com/products/tweetdeck" rel="nofollow">TweetDeck</a></span>
-</p>
-</div>
-</di
-
-F#はVisual Studio的に1st class languageじゃないんだけど、でもそっちを求めるのも個人的には違うなと思ってる。（VSエコシステム的には重要なんだろうけどね）どっちかというとクロプラ方面のほうがいいっす。VS Codeが機能向上しちゃうとそっちもC# が出てくるかもしれないけど。
-
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="http://twitter.com/tanakh">
+>       <img src="http://pbs.twimg.com/profile_images/603918430639521792/zZNtUnXN_normal.png" alt="tanakh" height="48" width="48"  this);" >
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       F#からWindowsアプリ作るスケルトンはないんですかね
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="http://twitter.com/tanakh/status/642933802352943104" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2015-09-13</span> <span class="twitter-detail-info-time">14:32:18</span></a> <span class="twitter-detail-info-source">via <a href="https://about.twitter.com/products/tweetdeck" rel="nofollow">TweetDeck</a></span>
+>     </p>
+>   </div>
+> </div><
+> 
+> F#はVisual Studio的に1st class languageじゃないんだけど、でもそっちを求めるのも個人的には違うなと思ってる。（VSエコシステム的には重要なんだろうけどね）どっちかというとクロプラ方面のほうがいいっす。VS Codeが機能向上しちゃうとそっちもC# が出てくるかもしれないけど。
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -355,7 +356,7 @@ F#はVisual Studio的に1st class languageじゃないんだけど、でもそ�
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -369,10 +370,10 @@ F#はVisual Studio的に1st class languageじゃないんだけど、でもそ�
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[](http://fsharp.org/guides/web/:title) に載ってる中でちょっと気になったやつをメモ。
+[http://fsharp.org/guides/web/](http://fsharp.org/guides/web/) に載ってる中でちょっと気になったやつをメモ。
 
 Suave.IOはノンブロッキングでクロスプラットフォーム。ほうほう。結構作りこまれてる様子。
-[](http://suave.io/:title)
+[http://suave.io/](http://suave.io/)
 
 ```ocaml
 type SuaveTask<'a> = Async<'a option>
@@ -399,7 +400,7 @@ startWebServer defaultConfig app
 ```
 
 Freyaはステートマシン。シンプルっぽい。
-[](https://github.com/freya-fs/freya:title)
+[https://github.com/freya-fs/freya](https://github.com/freya-fs/freya)
 
 ```ocaml
 type Freya<'a> = FreyaState -> Async<'a * FreyaState>
@@ -425,7 +426,7 @@ let double x =
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -443,9 +444,10 @@ let double x =
 
 さて、ここまでを踏まえれば、最初の記事に載せた
 
-[](http://stackoverflow.com/questions/11150947/f-overloaded-operater-with-floats-not-working-with-other-floats/11152288#11152288:title)
+[http://stackoverflow.com/questions/11150947/f-overloaded-operater-with-floats-not-working-with-other-floats/11152288#11152288](http://stackoverflow.com/questions/11150947/f-overloaded-operater-with-floats-not-working-with-other-floats/11152288#11152288)
 
 はほぼ理解できる。
+
 
 * 組み込みの<code>float</code>とユーザー定義の<code>vector2</code>の両方で使えるように、2項演算子 <code>*=</code> をオーバーロードしたい
 * しかし、<code>float</code>同士の<code>*=</code>演算を、後付けで定義することができない
@@ -455,6 +457,7 @@ let double x =
 * * その演算子は、<code>Overloads</code>型の値を1つ、<code>*=</code>演算子を適用したい型の値を2つ受け取るが、<code>Overloads</code>型の値は捨ててしまい、本来やりたかった<code>*=</code>演算だけを実装する
 * 以上の準備ができたなら、グローバルレベルでのインライン演算子定義で、<code>*=</code>を実装し、<code>Overloads</code>型の<code>?&lt;-</code>演算子にぶん投げる
 * * <code>Overloads</code>型の値は演算子オーバーロードの解決に使われた後は捨てられるので、unit的に値が1つしかない型で十分。よって、<code>Overloads</code>型は値が1つしかない判別共用体として定義してもいい。
+
 
 なんとまあ。分かってしまえば何ということはなかった。<code>?&lt;-</code>を使っているのは単にそれが3項演算子だからってだけのようだし、<code>Overloads</code>型が値が1つしかない判別共用体であることにも大きな意味はなかった。
 ]]></content:encoded>
@@ -471,7 +474,7 @@ let double x =
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:comment>
         <wp:comment_id />
         <wp:comment_author><![CDATA[bleis-tift]]></wp:comment_author>
@@ -574,7 +577,7 @@ val inline ( %* ) :
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -645,7 +648,7 @@ let a = 1 + 2 // コンパイルエラー。MyRecord型の引数が期待され�
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -714,7 +717,7 @@ let testString =
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -727,7 +730,7 @@ let testString =
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[[](http://stackoverflow.com/questions/11150947/f-overloaded-operater-with-floats-not-working-with-other-floats/11152288#11152288:title)
+      <content:encoded><![CDATA[[http://stackoverflow.com/questions/11150947/f-overloaded-operater-with-floats-not-working-with-other-floats/11152288#11152288](http://stackoverflow.com/questions/11150947/f-overloaded-operater-with-floats-not-working-with-other-floats/11152288#11152288)
 
 F#の <code>?&lt;-</code> 演算子は「動的プロパティに値を設定する演算子」なんですが、なんでそれがここに？
 しかも、
@@ -752,7 +755,7 @@ F#の演算子のことをよくわかっていないことに気づいたので
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -766,7 +769,7 @@ F#の演算子のことをよくわかっていないことに気づいたので
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-CodeIQに[](https://codeiq.jp/q/1579:title=Minority's hello, world)という問題が出ていました。
+CodeIQに[https://codeiq.jp/q/1579](https://codeiq.jp/q/1579)という問題が出ていました。
 
 問題が見れなくなっているので引用すると、こういうもの。
 > <h4>■問題の概要</h4>
@@ -778,7 +781,7 @@ CodeIQに[](https://codeiq.jp/q/1579:title=Minority's hello, world)という問�
 
 出題者の鍋谷さんによる結果発表と解説がこちら。
 
-[](http://nabetani.sakura.ne.jp/codeiq/hwbattle2/)
+[http://nabetani.sakura.ne.jp/codeiq/hwbattle2/](http://nabetani.sakura.ne.jp/codeiq/hwbattle2/)
 
 で、私はF#で適当に（あまり考えずに）下のようなコードをぶっこんで
 
@@ -853,7 +856,7 @@ let main argv =
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -867,8 +870,8 @@ let main argv =
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[](http://www.meetup.com/FunctionalKats/:image=http://photos1.meetupstatic.com/photos/theme_head/e/8/d/d/full_6779613.jpeg)
-[](http://www.meetup.com/FunctionalKats/:title)
+[http://www.meetup.com/FunctionalKats/:image=http://photos1.meetupstatic.com/photos/theme_head/e/8/d/d/full_6779613.jpeg]
+[http://www.meetup.com/FunctionalKats/](http://www.meetup.com/FunctionalKats/)
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -976,7 +979,7 @@ Scalaのfor式が不便(Haskellのdoとreturnみたいに独立してない)と�
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1031,7 +1034,7 @@ Scalaのfor式が不便(Haskellのdoとreturnみたいに独立してない)と�
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1047,14 +1050,16 @@ Scalaのfor式が不便(Haskellのdoとreturnみたいに独立してない)と�
       <content:encoded><![CDATA[
 去年、こんなのをメモしてた。
 
-* [](http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774:title)
-* [](http://haskell.g.hatena.ne.jp/matarillo/20130527/1369636675:title)
+
+* [http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774](http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774)
+* [http://haskell.g.hatena.ne.jp/matarillo/20130527/1369636675](http://haskell.g.hatena.ne.jp/matarillo/20130527/1369636675)
+
 
 これってオダスキー先生のこれ↓がベースなのか！
 
-[](http://lampwww.epfl.ch/~odersky/talks/wg2.8-boston06.pdf)
+[http://lampwww.epfl.ch/~odersky/talks/wg2.8-boston06.pdf](http://lampwww.epfl.ch/~odersky/talks/wg2.8-boston06.pdf)
 
-（追記）というわけで、[](http://d.hatena.ne.jp/matarillo/20140429:title=C#で書いてみた)。
+（追記）というわけで、[http://d.hatena.ne.jp/matarillo/20140429](http://d.hatena.ne.jp/matarillo/20140429)。
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -1069,7 +1074,7 @@ Scalaのfor式が不便(Haskellのdoとreturnみたいに独立してない)と�
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1083,70 +1088,67 @@ Scalaのfor式が不便(Haskellのdoとreturnみたいに独立してない)と�
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-blockquote cite="http://okwave.jp/qa/q8468578.html" title="プログラミングHaskell 第8章関数型パーサー | その他(プログラミング)のQ&amp;A【OKWave】">
-<p>Graham Hutton著「プログラミングHaskell」の第8章関数型パーサーを勉強しています。
-本の中にあるソースコードではdo記法などが使えないため、動きません。
-サポートページにプログラムがあります。そのプログラムの意味がよくわかりません。
-教えていただけないでしょうか。<p>
-</blockquot
-
-プログラミングHaskellでHaskellを学んだ私が来ましたよ。
-OKWaveにアカウントを作るつもりはないですが。
-
-blockquote>
-<p>まず、newtypeで新しい型を定義していると思うのですが、右辺のPというのがなにかわかりません。<br />
-また、instance Monad Parser whereやinstance MonadPlus Parser whereの意味もわかりません。
-その下で、return, >=, mzero, mplusといった関数を定義する意味もわかりません。
-よろしくおねがいします。</p>
-</blockquot
-
-この本は、コードを写経して動かしながら学ぼうという向きにはつらくて、「第8章 関数型パーサー」の中に >>= とか return とか do記法とかが出てくるのだけど、そこには嘘があって、<strong>きちんとモナドとして定義された型でしかdo記法は使えない</strong>はずなのに、モナドとして型を定義する話は第8章にはぜんぜん出てこない。
-
-第8章の頭には
-```haskell
-type Parser a = String -> [(a, String)]
-```
-って書いてあるけど、<strong>これではdo記法は使えない</strong>のだ。
-
-じゃあどう定義すればParser型でdo記法が使えるのか、というと、それがダウンロードできるサンプルコードでの定義のやり方なのだけど、この方法は第8章まで読んだだけでは理解できない。なぜなら、型クラスの話は「10.6 クラスとインスタンスの宣言」まで出てこないからだ。
-
-その代わり、第10章まで読めば、
-
-blockquote>
-<p>instance Monad Parser whereやinstance MonadPlus Parser whereの意味</p>
-</blockquot
-
-とか、
-
-blockquote>
-<p>その下で、return, >=, mzero, mplusといった関数を定義する意味</p>
-</blockquot
-
-については理解できると思う。
-
-とはいえ、
-
-<strong>この本にはMonadPlusの説明なんか1行もでてこないけどな！</strong>
-
-しかもしかも、サンプルコードには
-```haskell
-newtype Parser a = P (String -> [(a,String)])
-```
-って書いてあるけど、
-
-<strong>この本にはnewtypeキーワードの説明なんか1行もでてこないけどな！</strong>
-
-というわけで、質問者のあなたがわからないのも当然ですわ。この本以外を使って自学するしかないです。
-
-それではあんまりなので、少しだけ説明しましょうか。
-
-<dl>
-<dt>MonadPlus</dt><dd>モノイドの性質をあわせ持つモナドを表す型クラス。ざっくりいうと、足し算ができるモナド。この本のParser型では、パーサー同士を連結できるという意味。</dd>
-<dt>newtypeキーワード</dt><dd>dataキーワードに似た、新しい型を定義する文法。Pは値コンストラクタ。dataキーワードとの違いは、newtypeで定義された値コンストラクタは正格なこと。パターンマッチの動きも違ってくる。</dd>
-</dl>
-
-とはいえ、ぶっちゃけこのあたりのことは、この本を読み進める上ではわからなくてもいいです。
-
+> <p>Graham Hutton著「プログラミングHaskell」の第8章関数型パーサーを勉強しています。
+> 本の中にあるソースコードではdo記法などが使えないため、動きません。
+> サポートページにプログラムがあります。そのプログラムの意味がよくわかりません。
+> 教えていただけないでしょうか。<p>
+> </blockquote><
+> 
+> プログラミングHaskellでHaskellを学んだ私が来ましたよ。
+> OKWaveにアカウントを作るつもりはないですが。
+> 
+> ><blockquote>
+> <p>まず、newtypeで新しい型を定義していると思うのですが、右辺のPというのがなにかわかりません。<br />
+> また、instance Monad Parser whereやinstance MonadPlus Parser whereの意味もわかりません。
+> その下で、return, >=, mzero, mplusといった関数を定義する意味もわかりません。
+> よろしくおねがいします。</p>
+> </blockquote><
+> 
+> この本は、コードを写経して動かしながら学ぼうという向きにはつらくて、「第8章 関数型パーサー」の中に >>= とか return とか do記法とかが出てくるのだけど、そこには嘘があって、<strong>きちんとモナドとして定義された型でしかdo記法は使えない</strong>はずなのに、モナドとして型を定義する話は第8章にはぜんぜん出てこない。
+> 
+> 第8章の頭には
+> >|haskell|
+> type Parser a = String -> [(a, String)]
+> ||<
+> って書いてあるけど、<strong>これではdo記法は使えない</strong>のだ。
+> 
+> じゃあどう定義すればParser型でdo記法が使えるのか、というと、それがダウンロードできるサンプルコードでの定義のやり方なのだけど、この方法は第8章まで読んだだけでは理解できない。なぜなら、型クラスの話は「10.6 クラスとインスタンスの宣言」まで出てこないからだ。
+> 
+> その代わり、第10章まで読めば、
+> 
+> ><blockquote>
+> <p>instance Monad Parser whereやinstance MonadPlus Parser whereの意味</p>
+> </blockquote><
+> 
+> とか、
+> 
+> ><blockquote>
+> <p>その下で、return, >=, mzero, mplusといった関数を定義する意味</p>
+> </blockquote><
+> 
+> については理解できると思う。
+> 
+> とはいえ、
+> 
+> <strong>この本にはMonadPlusの説明なんか1行もでてこないけどな！</strong>
+> 
+> しかもしかも、サンプルコードには
+> >|haskell|
+> newtype Parser a = P (String -> [(a,String)])
+> ||<
+> って書いてあるけど、
+> 
+> <strong>この本にはnewtypeキーワードの説明なんか1行もでてこないけどな！</strong>
+> 
+> というわけで、質問者のあなたがわからないのも当然ですわ。この本以外を使って自学するしかないです。
+> 
+> それではあんまりなので、少しだけ説明しましょうか。
+> 
+> :MonadPlus:モノイドの性質をあわせ持つモナドを表す型クラス。ざっくりいうと、足し算ができるモナド。この本のParser型では、パーサー同士を連結できるという意味。
+> :newtypeキーワード:dataキーワードに似た、新しい型を定義する文法。Pは値コンストラクタ。dataキーワードとの違いは、newtypeで定義された値コンストラクタは正格なこと。パターンマッチの動きも違ってくる。
+> 
+> とはいえ、ぶっちゃけこのあたりのことは、この本を読み進める上ではわからなくてもいいです。
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -1161,7 +1163,7 @@ newtype Parser a = P (String -> [(a,String)])
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1181,7 +1183,7 @@ C#は、いろんな機能を貪欲にぶっこんできているわけじゃな
 
 で、そのぶっこみかたというのが、割とコンパイラががんばるタイプの、キーワードが増えていくやつじゃないですか。
 
-そんで、その様を「[](http://bleis-tift.hatenablog.com/entry/asyncawaitdis:title=専用の構文をどんどん追加していくと、その言語にはどんどんゴミの山が積みあがっていきます。)」と厳しく指摘されたりするわけじゃないですか。
+そんで、その様を「[http://bleis-tift.hatenablog.com/entry/asyncawaitdis](http://bleis-tift.hatenablog.com/entry/asyncawaitdis)」と厳しく指摘されたりするわけじゃないですか。
 
 で、なんでC#はそういう（言わば、ダサい）方針なのかというと、言語仕様についてもユーザービリティテストを実施して、その結果がおれらみたいなボンクラにとって難しすぎるとわかると却下していたりするからなんだけど、その中に含まれる1要因として、IDE、というかVisual Studioで開発したりデバッグ時にステップ実行したりするときにわかりやすいかどうか、というのもあるんじゃないかなと。
 
@@ -1214,7 +1216,7 @@ https://twitter.com/igeta/status/404427405898432513
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1228,16 +1230,14 @@ https://twitter.com/igeta/status/404427405898432513
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
->http://d.hatena.ne.jp/toromoti/20130619/1371649079:title>
-では、こんな関数があったとき
-pre>
-replicate 2 (product (map (*3) (zipWith max [1,2] [4,5])))
-</pr
-関数合成をして、まっとうな記述をするとこう書けるらしい。
-pre>
-replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
-</pr
-<<
+> では、こんな関数があったとき
+> ><pre>
+>  replicate 2 (product (map (*3) (zipWith max [1,2] [4,5])))
+> </pre><
+> 関数合成をして、まっとうな記述をするとこう書けるらしい。
+> ><pre>
+>  replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
+> </pre><
 
 Haskell学びたてのころは、どういう発想するとこうなるのか（そしてこの書き方の何が嬉しいのか）あまりわかってなかった。
 
@@ -1278,8 +1278,8 @@ zipWith max [1,2] [4,5])
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1293,7 +1293,7 @@ zipWith max [1,2] [4,5])
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[](http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774:title=前回の記事)のど頭のこれ
+[http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774](http://haskell.g.hatena.ne.jp/matarillo/20130524/1369369774)のど頭のこれ
 
 ```ocaml
 type 'a Num = { ... }
@@ -1316,7 +1316,7 @@ type 'a Num = { ... }
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1346,7 +1346,7 @@ type 'a Num = { ... }
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1359,7 +1359,7 @@ type 'a Num = { ... }
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[[](http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2228766-add-higher-order-generics-to-f-type-classes-:title=.NETのCLRに高階ジェネリクス（型クラス、高カインド）を！という要望はMSから断られているわけだけども)。
+      <content:encoded><![CDATA[[http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2228766-add-higher-order-generics-to-f-type-classes-](http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2228766-add-higher-order-generics-to-f-type-classes-)。
 
 回答にある「Steffenがコメント欄に書いたようなやり方でエンコードできるよ」というのが気になった。
 
@@ -1368,8 +1368,8 @@ type 'a Num = { ... }
 時間を見つけてこのコードを勉強してやろう。
 
 （おまけ）
-[](https://code.google.com/p/fsharp-typeclasses/:title)
-[](http://ntypeclasses.codeplex.com/:title)
+[https://code.google.com/p/fsharp-typeclasses/](https://code.google.com/p/fsharp-typeclasses/)
+[http://ntypeclasses.codeplex.com/](http://ntypeclasses.codeplex.com/)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1385,7 +1385,7 @@ type 'a Num = { ... }
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1419,7 +1419,7 @@ type 'a Num = { ... }
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1450,7 +1450,7 @@ unlambdaやlazy kは実用言語じゃないでしょう？
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1464,9 +1464,9 @@ unlambdaやlazy kは実用言語じゃないでしょう？
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[](http://qiita.com/items/84255ac417ef25069a3b:title)
+[http://qiita.com/items/84255ac417ef25069a3b](http://qiita.com/items/84255ac417ef25069a3b)
 
-[](http://qiita.com/items/7385db8cce051cb499d7:title)
+[http://qiita.com/items/7385db8cce051cb499d7](http://qiita.com/items/7385db8cce051cb499d7)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1482,7 +1482,7 @@ unlambdaやlazy kは実用言語じゃないでしょう？
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1496,9 +1496,9 @@ unlambdaやlazy kは実用言語じゃないでしょう？
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[](http://qiita.com/items/709d61dff282cff7a890:title)
+[http://qiita.com/items/709d61dff282cff7a890](http://qiita.com/items/709d61dff282cff7a890)
 
-[](http://qiita.com/items/463311ff1ce4dd2cc943:title)
+[http://qiita.com/items/463311ff1ce4dd2cc943](http://qiita.com/items/463311ff1ce4dd2cc943)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1514,7 +1514,7 @@ unlambdaやlazy kは実用言語じゃないでしょう？
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1531,11 +1531,11 @@ unlambdaやlazy kは実用言語じゃないでしょう？
 haskellグループなのにF#のエントリ。大目に見てね。
 
 F#の練習に
-[](http://qiita.com/items/d819d1e5f2378317511e:title)
+[http://qiita.com/items/d819d1e5f2378317511e](http://qiita.com/items/d819d1e5f2378317511e)
 の問題を解いてみた。
 （横浜へなちょこプログラミング勉強会には参加したことないですが……横からすみません）
 
-[](http://qiita.com/items/80c2c22d3224cb7c448c:title)
+[http://qiita.com/items/80c2c22d3224cb7c448c](http://qiita.com/items/80c2c22d3224cb7c448c)
 
 以下、頭の中をトレース出力。
 
@@ -1635,7 +1635,7 @@ let show (h:Hand) =
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1664,8 +1664,8 @@ let show (h:Hand) =
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1679,7 +1679,7 @@ let show (h:Hand) =
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-何度も書いているのは、[](http://d.hatena.ne.jp/itchyny/20130209/1360417348:title)を読んだから。
+何度も書いているのは、[http://d.hatena.ne.jp/itchyny/20130209/1360417348](http://d.hatena.ne.jp/itchyny/20130209/1360417348)を読んだから。
 
 ```ocaml
 let rec foldr = T (fun _ (k : Thunk<Thunk<'a> -> Thunk<'b> -> 'b>) (z : Thunk<'b>) (list : Thunk<TList<'a>>) ->
@@ -1709,7 +1709,7 @@ printfn "%A" list3
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1723,7 +1723,7 @@ printfn "%A" list3
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-コードは、「[](http://d.hatena.ne.jp/sumim/20130210/p1:title=セクシー素数ベンチ（の非効率な実装）)」を移植したもの。
+コードは、「[http://d.hatena.ne.jp/sumim/20130210/p1](http://d.hatena.ne.jp/sumim/20130210/p1)」を移植したもの。
 
 ```ocaml
 open System.Linq
@@ -1755,137 +1755,136 @@ rst76が
 
 （追記）などとぼやいていたら、殺伐としたTLにMSMVP for <s>VBA</s>F#が登場!
 
-div class="twitter-detail twitter-detail-right">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
-<img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-そうか F# のシーケンス（が返すEnumerator）がぽっちゃり実装なんだな。
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/matarillo/status/318990829542838272" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">16:38:34</span></a> <span class="twitter-detail-info-source">via web</span>
-</p>
-</div>
-</di
-
-div class="twitter-detail twitter-detail-left">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/igeta">
-<img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-自己解決にめげずにコメント付けに行くべきかどうか。
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/igeta/status/319006910860902401" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">17:42:29</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span>
-</p>
-</div>
-</di
-
-div class="twitter-detail twitter-detail-right">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
-<img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-@<a class="twitter-user-screen-name" href="https://twitter.com/igeta" target="_top">igeta</a> R!F!C! R!F!C!
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/matarillo/status/319007723230490624" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">17:45:42</span></a> <span class="twitter-detail-info-source">via web</span> to @<a href="https://twitter.com/igeta/status/319006910860902401" class="twitter-user-screen-name">igeta</a>
-</p>
-</div>
-</di
-
-div class="twitter-detail twitter-detail-left">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/igeta">
-<img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-@<a class="twitter-user-screen-name" href="https://twitter.com/matarillo" target="_top">matarillo</a> let range n len = Seq.init len ((+) n) とかでやってみるとまた一段と遅くなるのでマジオヌヌメ。 #取り急ぎご報告まで
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/igeta/status/319015526443667456" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">18:16:43</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span> to @<a href="https://twitter.com/matarillo/status/319007723230490624" class="twitter-user-screen-name">matarillo</a>
-</p>
-</div>
-</di
-
-div class="twitter-detail twitter-detail-right">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
-<img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-@<a class="twitter-user-screen-name" href="https://twitter.com/igeta" target="_top">igeta</a> 120秒を超えました!
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/matarillo/status/319028811016593409" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:09:30</span></a> <span class="twitter-detail-info-source">via web</span> to @<a href="https://twitter.com/igeta/status/319015526443667456" class="twitter-user-screen-name">igeta</a>
-</p>
-</div>
-</di
-
-div class="twitter-detail twitter-detail-left">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/igeta">
-<img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-@<a class="twitter-user-screen-name" href="https://twitter.com/matarillo" target="_top">matarillo</a> そして let range n m = Seq.unfold (fun n -&gt; if n &lt;= m then Some (n, n+1) else None) n にするとちょっとマシになるっていう。
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/igeta/status/319030208957128704" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:15:03</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span> to @<a href="https://twitter.com/matarillo/status/319028811016593409" class="twitter-user-screen-name">matarillo</a>
-</p>
-</div>
-</di
-
-div class="twitter-detail twitter-detail-right">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
-<img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-@<a class="twitter-user-screen-name" href="https://twitter.com/igeta" target="_top">igeta</a> 18秒を切りました!
-結構変わるものですね。なんか遅いなーと思ったらプロファイル取ったりfscのソースを眺めたりして、自分のコードを書き換えないといけませんね (fscを改造して賢くできるような技能は持ってないので)
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/matarillo/status/319036006609321985" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:38:06</span></a> <span class="twitter-detail-info-source">via web</span> to @<a href="https://twitter.com/igeta/status/319030208957128704" class="twitter-user-screen-name">igeta</a>
-</p>
-</div>
-</di
-
-div class="twitter-detail twitter-detail-left">
-<div class="twitter-detail-user">
-<a class="twitter-user-screen-name" href="https://twitter.com/igeta">
-<img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
-</a>
-</div>
-<div class="twitter-detail-tweet">
-<p class="twitter-detail-text">
-@<a class="twitter-user-screen-name" href="https://twitter.com/matarillo" target="_top">matarillo</a> シーケンス式イコール悪ってわけでもないんですよーと言いたかったのです！　むしろ根深い。。
-</p>
-<p class="twitter-detail-info">
-<a href="https://twitter.com/igeta/status/319037337130647552" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:43:23</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span> to @<a href="https://twitter.com/matarillo/status/319036006609321985" class="twitter-user-screen-name">matarillo</a>
-</p>
-</div>
-</di
-
-大変参考になりました。ありがとうございましたいげ太さん！
-
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
+>       <img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       そうか F# のシーケンス（が返すEnumerator）がぽっちゃり実装なんだな。
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/matarillo/status/318990829542838272" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">16:38:34</span></a> <span class="twitter-detail-info-source">via web</span>
+>     </p>
+>   </div>
+> </div><
+> 
+> ><div class="twitter-detail twitter-detail-left">
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/igeta">
+>       <img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       自己解決にめげずにコメント付けに行くべきかどうか。
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/igeta/status/319006910860902401" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">17:42:29</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span>
+>     </p>
+>   </div>
+> </div><
+> 
+> ><div class="twitter-detail twitter-detail-right">
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
+>       <img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       @<a class="twitter-user-screen-name" href="https://twitter.com/igeta" target="_top">igeta</a> R!F!C! R!F!C!
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/matarillo/status/319007723230490624" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">17:45:42</span></a> <span class="twitter-detail-info-source">via web</span> to @<a href="https://twitter.com/igeta/status/319006910860902401" class="twitter-user-screen-name">igeta</a>
+>     </p>
+>   </div>
+> </div><
+> 
+> ><div class="twitter-detail twitter-detail-left">
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/igeta">
+>       <img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       @<a class="twitter-user-screen-name" href="https://twitter.com/matarillo" target="_top">matarillo</a> let range n len = Seq.init len ((+) n) とかでやってみるとまた一段と遅くなるのでマジオヌヌメ。 #取り急ぎご報告まで
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/igeta/status/319015526443667456" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">18:16:43</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span> to @<a href="https://twitter.com/matarillo/status/319007723230490624" class="twitter-user-screen-name">matarillo</a>
+>     </p>
+>   </div>
+> </div><
+> 
+> ><div class="twitter-detail twitter-detail-right">
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
+>       <img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       @<a class="twitter-user-screen-name" href="https://twitter.com/igeta" target="_top">igeta</a> 120秒を超えました!
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/matarillo/status/319028811016593409" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:09:30</span></a> <span class="twitter-detail-info-source">via web</span> to @<a href="https://twitter.com/igeta/status/319015526443667456" class="twitter-user-screen-name">igeta</a>
+>     </p>
+>   </div>
+> </div><
+> 
+> ><div class="twitter-detail twitter-detail-left">
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/igeta">
+>       <img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       @<a class="twitter-user-screen-name" href="https://twitter.com/matarillo" target="_top">matarillo</a> そして let range n m = Seq.unfold (fun n -&gt; if n &lt;= m then Some (n, n+1) else None) n にするとちょっとマシになるっていう。
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/igeta/status/319030208957128704" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:15:03</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span> to @<a href="https://twitter.com/matarillo/status/319028811016593409" class="twitter-user-screen-name">matarillo</a>
+>     </p>
+>   </div>
+> </div><
+> 
+> ><div class="twitter-detail twitter-detail-right">
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/matarillo">
+>       <img src="https://si0.twimg.com/profile_images/3441716366/72180e0f757b0530feaeb9190e9b585d_normal.jpeg" alt="matarillo" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       @<a class="twitter-user-screen-name" href="https://twitter.com/igeta" target="_top">igeta</a> 18秒を切りました!
+> 結構変わるものですね。なんか遅いなーと思ったらプロファイル取ったりfscのソースを眺めたりして、自分のコードを書き換えないといけませんね (fscを改造して賢くできるような技能は持ってないので)
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/matarillo/status/319036006609321985" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:38:06</span></a> <span class="twitter-detail-info-source">via web</span> to @<a href="https://twitter.com/igeta/status/319030208957128704" class="twitter-user-screen-name">igeta</a>
+>     </p>
+>   </div>
+> </div><
+> 
+> ><div class="twitter-detail twitter-detail-left">
+>   <div class="twitter-detail-user">
+>     <a class="twitter-user-screen-name" href="https://twitter.com/igeta">
+>       <img src="https://si0.twimg.com/profile_images/3461222648/6876a2f0f92a5bded199f4cf620ca904_normal.png" alt="igeta" height="48" width="48">
+>     </a>
+>   </div>
+>   <div class="twitter-detail-tweet">
+>     <p class="twitter-detail-text">
+>       @<a class="twitter-user-screen-name" href="https://twitter.com/matarillo" target="_top">matarillo</a> シーケンス式イコール悪ってわけでもないんですよーと言いたかったのです！　むしろ根深い。。
+>     </p>
+>     <p class="twitter-detail-info">
+>       <a href="https://twitter.com/igeta/status/319037337130647552" class="twitter-detail-info-permalink"><span class="twitter-detail-info-date">2013-04-02</span> <span class="twitter-detail-info-time">19:43:23</span></a> <span class="twitter-detail-info-source">via <a href="https://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span> to @<a href="https://twitter.com/matarillo/status/319036006609321985" class="twitter-user-screen-name">matarillo</a>
+>     </p>
+>   </div>
+> </div><
+> 
+> 大変参考になりました。ありがとうございましたいげ太さん！
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -1900,7 +1899,7 @@ div class="twitter-detail twitter-detail-left">
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -1979,7 +1978,7 @@ printfn "%A" (evalList list2)
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2025,7 +2024,7 @@ three = add `apply` one `apply` two
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2038,7 +2037,7 @@ three = add `apply` one `apply` two
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[[](http://d.hatena.ne.jp/notogawa/20121201/1354389374:title)
+      <content:encoded><![CDATA[[http://d.hatena.ne.jp/notogawa/20121201/1354389374](http://d.hatena.ne.jp/notogawa/20121201/1354389374)
 hoogleの使い方（型から引く）という技もそうだが、トップダウン思考が参考になった。
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2054,7 +2053,7 @@ hoogleの使い方（型から引く）という技もそうだが、トップ�
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2068,8 +2067,8 @@ hoogleの使い方（型から引く）という技もそうだが、トップ�
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[](http://www.haskell.org/ghc/docs/latest/html/libraries/base/Control-Applicative.html:title=Applicative)の勉強のため、[](http://haskell.g.hatena.ne.jp/matarillo/20110620/1308581970:title=プログラミングHaskellのパーサー)をApplicativeに変更してみた。
-書いていると、Applicativeというよりは[](http://itpro.nikkeibp.co.jp/article/COLUMN/20120110/378061/?ST=develop&P=4:title=Alternative)にするべきと分かったので、そのように実装した。
+[http://www.haskell.org/ghc/docs/latest/html/libraries/base/Control-Applicative.html](http://www.haskell.org/ghc/docs/latest/html/libraries/base/Control-Applicative.html)の勉強のため、[http://haskell.g.hatena.ne.jp/matarillo/20110620/1308581970](http://haskell.g.hatena.ne.jp/matarillo/20110620/1308581970)をApplicativeに変更してみた。
+書いていると、Applicativeというよりは[http://itpro.nikkeibp.co.jp/article/COLUMN/20120110/378061/?ST=develop&P=4](http://itpro.nikkeibp.co.jp/article/COLUMN/20120110/378061/?ST=develop&P=4)にするべきと分かったので、そのように実装した。
 
 ```haskell
 import Data.Char
@@ -2176,7 +2175,7 @@ symbol xs                     =  token (string xs)
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2298,7 +2297,7 @@ f x0 (f x1 (f x2 (f x3 ( ... ) ) ) )
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2336,7 +2335,7 @@ f x0 (f x1 (f x2 (f x3 ( ... ) ) ) )
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2372,7 +2371,7 @@ f x0 (f x1 (f x2 (f x3 ( ... ) ) ) )
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2391,16 +2390,21 @@ f x0 (f x1 (f x2 (f x3 ( ... ) ) ) )
 あまり厳密ではないけど、ざっくり書いてみる。
 
 ## 計算理論
+
 * 「計算」を数学的に厳密に定義することで、「計算」に何ができて何ができないのかを解き明かす理論。
 
+
 ## ラムダ計算
+
 * 計算理論で使われる1つのモデル。
 * ラムダ式（≒1引数無名高階関数の定義）と簡約（≒関数が返す値の評価）ですべての計算を表現できるというもの。
 * 複数の引数を持つ関数はカリー化によって1引数関数として扱われる。
 * ラムダ式がラムダ式を受け取ったりラムダ式を返したりできないと、理論が成立しない。
 * 型のないラムダ計算と、型付きラムダ計算の両方が研究されている。
 
+
 ## 関数型言語
+
 * ラムダ計算を理論的基盤としたプログラミング言語。
 * ラムダ式という名前の無名関数を記述できる。たいてい複数の引数を持つラムダ式を定義できるが、常にカリー化されるかどうかは言語による。
 * すべてをラムダ式で扱うのは冗長だし効率も悪いので、関数や変数やリテラルなど、ラムダ式以外の要素も使うことができる。
@@ -2411,12 +2415,15 @@ f x0 (f x1 (f x2 (f x3 ( ... ) ) ) )
 * プログラムの実行は式の評価とほぼ同義。
 
 
+
 ## C#やVB.NETのラムダ式
+
 * 関数型言語のラムダ式を参考にして取り込んだ、匿名メソッドを簡易に定義する機能。（式木も定義できるけど、そこは省略）
 * カリー化はない。
 * 式として記述するならreturnを書かなくても値を返せる。
 * 関数型言語を参考にしたLINQで活躍。
 * 引数としてデリゲートを受け取るメソッドに渡すのに便利。そのようなメソッドは高階関数とみなせるが、それを意識する必要はほとんどない。
+
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2455,7 +2462,7 @@ f x0 (f x1 (f x2 (f x3 ( ... ) ) ) )
 
 図示するとこんな感じ、のはず（理解が間違っていなければ）。
 
-[](http://dl.dropbox.com/u/130665/blog/2012-08-08Rain.jpg:image)
+[http://dl.dropbox.com/u/130665/blog/2012-08-08Rain.jpg:image]
 
 図から見れば
 
@@ -2495,7 +2502,7 @@ f x0 (f x1 (f x2 (f x3 ( ... ) ) ) )
       <content:encoded><![CDATA[
 ## 13.9 練習問題
 
-blockquote><ol>
+<blockquote><ol>
 <li value="7">以下の定義が与えられているとする。<br />
 <pre>
 map f &#91;]     = &#91;]
@@ -2503,158 +2510,157 @@ map f (x:xs) = f x : map f xs
 (f.g) x      = f (g x)
 </pre>
 <code>map f (map g xs) = map (f.g) xs</code>であることを、xsに対する数学的帰納法で証明せよ。</li>
-</ol></blockquot
+</ol></blockquote>
 
-dl>
-<dt><code>xs = &#91;]</code>の場合</dt>
-<dd><pre>  左辺
-= map f (map g &#91;])
-= map f &#91;]
-= &#91;]
-
-右辺
-= map (f.g) &#91;]
-= &#91;]</pre></dd>
-<dt><code>xs = ns</code> のときに式が成り立つと仮定して、 <code>xs = n:ns</code> の場合</dt>
-<dd><pre>  左辺
-= map f (map g (n:ns))
-= map f (g n : map g ns)
-= f (g n) : map f (map g ns)
-= (f.g) n : map (f.g) ns
-
-右辺
-= map (f.g) (n:ns)
-= (f.g) n : map (f.g) ns</pre></dd>
-</d
-
-
-
-blockquote><ol>
-<li value="8">以下の定義が与えられているとする。<br />
-<pre>
-take 0 _          = &#91;]
-take (n+1) &#91;]     = &#91;]
-take (n+1) (x:xs) = x : take n xs
-
-drop 0 xs         = xs
-drop (n+1) &#91;]     = &#91;]
-drop (n+1) (_:xs) = drop n xs
-</pre>
-この定義と上記の<code>++</code>の定義を使って、<code>take n xs ++ drop n xs = xs</code>を証明せよ。
-その際、0以上の整数nとリストxsに対して同時に数学的帰納法を用いよ。<br />
-ヒント：関数 <code>take</code> と <code>drop</code> の定義は、それぞれ三つの場合分けがあることに注意。</li>
-</ol></blockquot
-
-dl>
-<dt><code>n = 0</code>の場合</dt>
-<dd><pre>  左辺
-= take 0 xs ++ drop 0 xs
-= [] ++ xs
-= xs
-= 右辺</pre></dd>
-
-<dt><code>n > 0, xs = []</code>の場合</dt>
-<dd><pre>  左辺
-= take n [] ++ drop n []
-= [] ++ []
-= []
-= 右辺</pre></dd>
-
-<dt><code>n = m, xs = ys</code>で式が成り立つと仮定して、<code>n = m+1, xs = y:ys</code>の場合</dt>
-<dd><pre>  左辺
-= take (m+1) (y:ys) ++ drop (m+1) (y:ys)
-= (y: take m ys) ++ (drop m ys)
-= y : (take m ys ++ drop m ys)
-= y:ys
-= 右辺</pre></dd>
-</d
-
-
-
-blockquote><ol>
-<li value="9">以下の型が与えられているとする。<br />
-<pre>
-data Tree = Leaf Int | Node Tree Tree
-</pre>
-この木の葉の個数は、節の個数よりも、常に1多いことを数学的帰納法で示せ。<br />
-ヒント：木の葉と節の個数を数える関数を定義するところから始めよ。</li>
-</ol></blockquot
-
-ヒント通り、木の葉と節の個数を数える関数を定義する。
-
-```haskell
-countLeaf :: Tree -> Int
-countLeaf Leaf _   = 1
-countLeaf Node l r = countLeaf l + countLeaf r
-
-countNode :: Tree -> Int
-countNode Leaf _ = 0
-countNode Node l r = 1 + countNode l + countNode r
-```
-
-その上で、<code>countLeaf t = countNode t + 1</code>が常に成り立つことをを証明する。
-
-dl>
-<dt><code>t = Leaf n</code>の場合</dt>
-<dd><pre>  左辺
-= countLeaf Leaf n
-= 1
-
-右辺
-= countNode Leaf n + 1
-= 0 + 1
-= 1</pre></dd>
-
-<dt><code>t = l</code> および  <code>t = r</code> で式が成り立つと仮定して <code>t = Node l r</code> の場合
-<dd><pre>  左辺
-= countLeaf Node l r
-= countLeaf l + countLeaf r
-= (countNode l + 1) + (countNode r + 1)
-= 2 + countNode l + countNode r
-
-右辺
-= countNode Node l r + 1
-= 1 + countNode l + countNode r + 1
-= 2 + countNode l + countNode r</pre></dd>
-</d
-
-
-
-blockquote><ol>
-<li value="10">等式 <code>comp' e c = comp e ++ c</code> が与えられたとき、数学的帰納法に似た手法をeに対して用いることで、関数 <code>comp'</code>の再帰的な定義を求めよ。</li>
-</ol></blockquot
-
-<code>comp</code>の定義を再掲しておく。
-
-```haskell
-comp           :: Expr -> Code
-comp (Val n)   =  [Push n]
-comp (Add x y) =  comp x ++ comp y ++ [ADD]
-```
-
-dl>
-<dt><code>e = Val n</code>の場合</dt>
-<dd><pre>  comp' (Val n) c
-= [Push n] ++ c
-= Push n : c</pre></dd>
-
-<dt><code>e = x</code> および  <code>e = y</code> で <code>comp' e c = comp e ++ c</code> が成り立つと仮定して <code>e = Add x y</code> の場合
-<dd><pre>  comp' (Add x y) c
-= comp x ++ comp y ++ [ADD] ++ c
-= comp' x (comp y ++ [ADD] ++ c)
-= comp' x (comp' y (ADD : c))</pre></dd>
-</d
-
-まとめると
-
-```haskell
-comp'             :: Expr -> Code -> Code
-comp' (Val n) c   =  Push n : c
-comp' (Add x y) c =  comp' x (comp' y (ADD : c))
-```
-
-ついに終わった……
-
+> <dt><code>xs = &#91;]</code>の場合</dt>
+> <dd><pre>  左辺
+> = map f (map g &#91;])
+> = map f &#91;]
+> = &#91;]
+> 
+>   右辺
+> = map (f.g) &#91;]
+> = &#91;]</pre></dd>
+> <dt><code>xs = ns</code> のときに式が成り立つと仮定して、 <code>xs = n:ns</code> の場合</dt>
+> <dd><pre>  左辺
+> = map f (map g (n:ns))
+> = map f (g n : map g ns)
+> = f (g n) : map f (map g ns)
+> = (f.g) n : map (f.g) ns
+> 
+>   右辺
+> = map (f.g) (n:ns)
+> = (f.g) n : map (f.g) ns</pre></dd>
+> </dl><
+> 
+> 
+> 
+> ><blockquote><ol>
+> <li value="8">以下の定義が与えられているとする。<br />
+> <pre>
+> take 0 _          = &#91;]
+> take (n+1) &#91;]     = &#91;]
+> take (n+1) (x:xs) = x : take n xs
+> 
+> drop 0 xs         = xs
+> drop (n+1) &#91;]     = &#91;]
+> drop (n+1) (_:xs) = drop n xs
+> </pre>
+> この定義と上記の<code>++</code>の定義を使って、<code>take n xs ++ drop n xs = xs</code>を証明せよ。
+> その際、0以上の整数nとリストxsに対して同時に数学的帰納法を用いよ。<br />
+> ヒント：関数 <code>take</code> と <code>drop</code> の定義は、それぞれ三つの場合分けがあることに注意。</li>
+> </ol></blockquote><
+> 
+> ><dl>
+> <dt><code>n = 0</code>の場合</dt>
+> <dd><pre>  左辺
+> = take 0 xs ++ drop 0 xs
+> = [] ++ xs
+> = xs
+> = 右辺</pre></dd>
+> 
+> <dt><code>n > 0, xs = []</code>の場合</dt>
+> <dd><pre>  左辺
+> = take n [] ++ drop n []
+> = [] ++ []
+> = []
+> = 右辺</pre></dd>
+> 
+> <dt><code>n = m, xs = ys</code>で式が成り立つと仮定して、<code>n = m+1, xs = y:ys</code>の場合</dt>
+> <dd><pre>  左辺
+> = take (m+1) (y:ys) ++ drop (m+1) (y:ys)
+> = (y: take m ys) ++ (drop m ys)
+> = y : (take m ys ++ drop m ys)
+> = y:ys
+> = 右辺</pre></dd>
+> </dl><
+> 
+> 
+> 
+> ><blockquote><ol>
+> <li value="9">以下の型が与えられているとする。<br />
+> <pre>
+> data Tree = Leaf Int | Node Tree Tree
+> </pre>
+> この木の葉の個数は、節の個数よりも、常に1多いことを数学的帰納法で示せ。<br />
+> ヒント：木の葉と節の個数を数える関数を定義するところから始めよ。</li>
+> </ol></blockquote><
+> 
+> ヒント通り、木の葉と節の個数を数える関数を定義する。
+> 
+> >|haskell|
+> countLeaf :: Tree -> Int
+> countLeaf Leaf _   = 1
+> countLeaf Node l r = countLeaf l + countLeaf r
+> 
+> countNode :: Tree -> Int
+> countNode Leaf _ = 0
+> countNode Node l r = 1 + countNode l + countNode r
+> ||<
+> 
+> その上で、<code>countLeaf t = countNode t + 1</code>が常に成り立つことをを証明する。
+> 
+> ><dl>
+> <dt><code>t = Leaf n</code>の場合</dt>
+> <dd><pre>  左辺
+> = countLeaf Leaf n
+> = 1
+> 
+>   右辺
+> = countNode Leaf n + 1
+> = 0 + 1
+> = 1</pre></dd>
+> 
+> <dt><code>t = l</code> および  <code>t = r</code> で式が成り立つと仮定して <code>t = Node l r</code> の場合
+> <dd><pre>  左辺
+> = countLeaf Node l r
+> = countLeaf l + countLeaf r
+> = (countNode l + 1) + (countNode r + 1)
+> = 2 + countNode l + countNode r
+> 
+>   右辺
+> = countNode Node l r + 1
+> = 1 + countNode l + countNode r + 1
+> = 2 + countNode l + countNode r</pre></dd>
+> </dl><
+> 
+> 
+> 
+> ><blockquote><ol>
+> <li value="10">等式 <code>comp' e c = comp e ++ c</code> が与えられたとき、数学的帰納法に似た手法をeに対して用いることで、関数 <code>comp'</code>の再帰的な定義を求めよ。</li>
+> </ol></blockquote><
+> 
+> <code>comp</code>の定義を再掲しておく。
+> 
+> >|haskell|
+> comp           :: Expr -> Code
+> comp (Val n)   =  [Push n]
+> comp (Add x y) =  comp x ++ comp y ++ [ADD]
+> ||<
+> 
+> ><dl>
+> <dt><code>e = Val n</code>の場合</dt>
+> <dd><pre>  comp' (Val n) c
+> = [Push n] ++ c
+> = Push n : c</pre></dd>
+> 
+> <dt><code>e = x</code> および  <code>e = y</code> で <code>comp' e c = comp e ++ c</code> が成り立つと仮定して <code>e = Add x y</code> の場合
+> <dd><pre>  comp' (Add x y) c
+> = comp x ++ comp y ++ [ADD] ++ c
+> = comp' x (comp y ++ [ADD] ++ c)
+> = comp' x (comp' y (ADD : c))</pre></dd>
+> </dl><
+> 
+> まとめると
+> 
+> >|haskell|
+> comp'             :: Expr -> Code -> Code
+> comp' (Val n) c   =  Push n : c
+> comp' (Add x y) c =  comp' x (comp' y (ADD : c))
+> ||<
+> 
+> ついに終わった……
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -2686,7 +2692,7 @@ comp' (Add x y) c =  comp' x (comp' y (ADD : c))
 
 ## 13.9 練習問題
 
-blockquote><ol>
+<blockquote><ol>
 <li value="7">以下の定義が与えられているとする。<br />
 <pre>
 map f &#91;]     = &#91;]
@@ -2717,7 +2723,7 @@ data Tree = Leaf Int | Node Tree Tree
 ヒント：木の葉と節の個数を数える関数を定義するところから始めよ。</li>
 
 <li value="10">等式 <code>comp' e c = comp e ++ c</code> が与えられたとき、数学的帰納法に似た手法をeに対して用いることで、関数 <code>comp'</code>の再帰的な定義を求めよ。</li>
-</ol></blockquot
+</ol></blockquote>
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -2745,9 +2751,9 @@ data Tree = Leaf Int | Node Tree Tree
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-Stack Overflowに質問されていた、「[](http://stackoverflow.com/questions/2785029/:title=In what areas might the use of F# be more appropriate than C#?)」の回答を翻訳してみた。
+Stack Overflowに質問されていた、「[http://stackoverflow.com/questions/2785029/](http://stackoverflow.com/questions/2785029/)」の回答を翻訳してみた。
 
-## [](http://stackoverflow.com/posts/2787342/revisions:title=simon cousins)の回答
+## [http://stackoverflow.com/posts/2787342/revisions](http://stackoverflow.com/posts/2787342/revisions)の回答
 
 私は、とあるエネルギー会社向けに、発電所のポートフォリオに関する国の発電スケジュールと取引ポジションとのバランスをとるためのアプリケーションを書きました。クライアントおよびサーバーコンポーネントはC#でしたが、計算エンジンはF#で書かれています。
 
@@ -2767,17 +2773,21 @@ F#はこのアプリケーションの心臓部の複雑さに対処するため
 
 <span class="deco" style="font-weight:bold;">並列処理</span>。実装の結果が関数的に純粋であることは、ベクトルデータの処理に固有の並列性を利用するのにうってつけです。NET 4が出た今は、私が次に進むべき場所は多分ここでしょう。
 
-## [](http://stackoverflow.com/posts/2785113/revisions:title=Tomas Petricek)の回答
+## [http://stackoverflow.com/posts/2785113/revisions](http://stackoverflow.com/posts/2785113/revisions)の回答
 
 Microsoft Researchでインターンシップに参加していたとき、（F#自身で記述された）F#のVisual Studio IntelliSenseに関して何か所か仕事をしました。以前のC#プロジェクトですでにIntelliSenseについての経験がありましたので、両者を比較できると思います。
+
 
 * Visual Studio機能拡張は相変わらずCOMベースです。ですので、あんまり素敵とは言えない（そしてまったくもって関数的でない）.NETオブジェクトを扱わないといけません。ですが、C#とF#との間に大きな違いは感じませんでした（F#でもスムーズに動作します）。
 * F#でプログラムコードを表現するのに使われたデータ構造は、ほとんどが判別共用体です（そしてそれはC#では妥当な方法でサポートされていません）。そして、この手の（プログラムコードのような木構造を処理しないといけない）アプリケーションにとっては、それは大きな違いとなります。判別共用体とパターンマッチングによってコードの構造が改善されます（関連する機能を1か所にまとめておくことができます。仮想メソッドだとあちこちに散らばってしまいますが）。
 
+
 以前は、F#のCodeDOMプロバイダ（こちらもF#で記述されています）についても仕事をしました。実は最初はC#で始めたのですが、後からコードをF#に変更しました。
+
 
 * CodeDOMプロバイダは.NETのオブジェクトを使って表現された構造を探索しないといけません。ですので、独自のデータ表現を考える余地はほとんどありませんでした（そしてそこがF#が力を発揮できる分野なのですが）。
 * とはいえ、この仕事を楽にするちょっとしたF#の機能はたくさんありました。とある文字列を生成しなければならなかったので、（StringBuilderを使って）文字列を組み立てるカスタム演算子をいくつか定義した上で、それらの演算子や高階関数を使ってコードを実装しました（たとえば、指定した文字列をセパレータに使ってオブジェクトのリストをフォーマットするといったようなものです）。そうすることで、コードの重複を大幅に削減できました（つまらないforeachループもです）。
+
 
 比較的詳細な例を2つ挙げましたが、どちらもプログラムの表現形式や式に関係するものです。もっと一般的に言えば、木構造のような複雑なデータ構造です。この分野ではF#が間違いなく良い選択肢だと思います（C#にも関数型の機能があることを踏まえても、です）。
 
@@ -2795,7 +2805,7 @@ Microsoft Researchでインターンシップに参加していたとき、（F#
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2811,9 +2821,9 @@ Microsoft Researchでインターンシップに参加していたとき、（F#
       <content:encoded><![CDATA[
 ## 13.9 練習問題
 
-blockquote><ol>
+<blockquote><ol>
 <li value="1">付録Aにある標準ライブラリの中から重複のあるパターンを使って定義されている関数を探せ。</li>
-</ol></blockquot
+</ol></blockquote>
 
 教科書を見ながら抜き出してみる。
 ガードも重複パターンのうちかな？
@@ -2921,195 +2931,194 @@ zip (x:xs) (y:ys) = (x,y):zip xs ys
       <content:encoded><![CDATA[
 ## 13.9 練習問題
 
-blockquote><ol>
+<blockquote><ol>
 <li value="1">付録Aにある標準ライブラリの中から重複のあるパターンを使って定義されている関数を探せ。</li>
-</ol></blockquot
+</ol></blockquote>
 
 いま手元に教科書がなくて、付録Aを確認できないので、今日はパス。
 
-blockquote><ol>
+<blockquote><ol>
 <li value="2"><code>add n (Succ m) = Succ (add n m)</code> であることをnに対する数学的帰納法で示せ。</li>
-</ol></blockquot
+</ol></blockquote>
 
-dl>
-<dt><code>n = Zero</code>の場合</dt>
-<dd><pre>  左辺
-= add Zero (Succ m)
-= Succ m
-
-右辺
-= Succ (add Zero m)
-= Succ m</pre></dd>
-<dt><code>n = x</code> のときに <code>add x (Succ m) = Succ (add x m)</code> が成り立つと仮定して、 <code>n = Succ x</code> の場合</dt>
-<dd><pre>  左辺
-= add (Succ x) (Succ m)
-= Succ (add x (Succ m))
-= Succ (Succ (add x m))
-
-右辺
-= Succ (add (Succ x) m)
-= Succ (Succ (add x m))
-</dd>
-</d
-
-blockquote><ol>
-<li value="3">練習問題2の性質と <code>add n Zero = n</code> を使って、加算が交換法則 <code>add n m = add m n</code> を満たすことを示せ。その際、nに対して数学的帰納法を用いよ。</li>
-</ol></blockquot
-
-dl>
-<dt><code>n = Zero</code>の場合</dt>
-<dd><pre>  左辺
-= add Zero m
-= m
-
-右辺
-= add m Zero
-= m</pre></dd>
-<dt><code>n = x</code> のときに <code>add x m = add m x</code> が成り立つと仮定して、 <code>n = Succ x</code> の場合</dt>
-<dd><pre>  左辺
-= add (Succ x) m
-= Succ (add x m)
-= Succ (add m x)
-
-右辺
-= add m (Succ x)
-= Succ (add m x)
-</pre></dd>
-</d
-
-blockquote><ol>
-<li value="4">リストのすべての要素が、ある述語を満たすか調べるライブラリ関数 <code>all</code> の定義が以下のように与えられたとする。<br />
-<pre>
-all p []     = True
-all p (x:xs) = p x && all p xs
-</pre>
-関数 <code>replicate</code> の正しさを証明したい。関数 <code>replicate</code> が生成するリストのすべての要素が同じであることを示す式 <code>all (==x) (replicate n x)</code> が満たされることを0以上の整数nに対する数学的帰納法を用いて証明せよ。<br />
-ヒント：この性質が常に <code>True</code> となることを示せ。</li>
-</ol></blockquot
-
-dl>
-<dt><code>n = 0</code>の場合</dt>
-<dd><pre>  all (==x) (replicate 0 x)
-= all (==x) []
-= True
-</pre></dd>
-<dt><code>n = m</code> のときに <code>all (==x) (replicate m x) = True</code> が成り立つと仮定して、 <code>n = m + 1</code> の場合</dt>
-<dd><pre>  all (==x) (replicate (m+1) x)
-= all (==x) (x : replicate m x)
-= (==x) x && all (==x) (replicate m x)
-= True && True
-= True
-</pre></dd>
-</d
-
-blockquote><ol>
-<li value="5">以下の定義が与えられているとする。<br />
-<pre>
-[] ++ ys     = ys
-(x:xs) ++ ys = x:(xs ++ ys)
-</pre>
-以下の二つの性質をxsに対する数学的帰納法で証明せよ。<br />
-<pre>
-xs ++ []         = xs
-xs ++ (ys ++ zs) = (xs ++ ys) ++ zs
-</pre>
-ヒント：関数 <code>add</code> の証明と同じようにせよ。</li>
-</ol></blockquot
-
-dl>
-<dt><code>xs = []</code>の場合</dt>
-<dd><pre>  1の左辺
-= &#91;] ++ []
-= []
-= 1の右辺
-
-2の左辺
-= [] ++ (ys ++ zs)
-= ys ++ zs
-= ([] ++ ys) ++ zs
-= 2の右辺
-</pre></dd>
-<dt><code>xs = ns</code> のときに <code>ns ++ [] = ns</code> および <code>ns ++ (ys ++ zs) = (ns ++ ys) ++ zs</code> が成り立つと仮定して、 <code>xs = n:ns</code> の場合</dt>
-<dd><pre>  1の左辺
-= (n:ns) ++ []
-= n:(ns ++ [])
-= n:ns
-= 1の右辺
-
-2の左辺
-= (n:ns) ++ (ys ++ zs)
-= n:(ns ++ (ys ++ zs))
-= n:((ns ++ ys) ++ zs)
-= (n:(ns ++ ys)) ++ zs
-= ((n:ns) ++ ys) ++ zs
-= 2の右辺
-</pre></dd>
-</d
-
-blockquote><ol>
-<li value="6">等式 <code>reverse (reverse xs) = xs</code> は、補助定理 <code>reverse (xs ++ [x]) = x:reverse xs</code> のみを用いて証明できる。この補助定理自体は、xsに対する数学的帰納法で証明できる。13.5節で示した証明の方が優れているのはなぜか？</li>
-</ol></blockquot
-
-ちょっと何言ってるかわからないので、補助定理の証明にチャレンジ。
-
-dl>
-<dt><code>xs = []</code>の場合</dt>
-<dd><pre>  左辺
-= reverse ([] ++ [x])
-= reverse [x]
-= [x] -- 13.3の性質
-
-右辺
-= x:reverse []
-= x:[]
-= [x]
-</pre></dd>
-<dt><code>xs = ns</code> のときに <code>reverse (ns ++ [x]) = x:reverse ns</code> が成り立つと仮定して、 <code>xs = n:ns</code> の場合</dt>
-<dd><pre>  左辺
-= reverse ((n:ns) ++ [x])
-= reverse (n:(ns ++ [x])) -- xxの定義
-= reverse (ns ++ [x]) ++ [n] -- reverseの定義
-= (x:reverse ns) ++ [n] -- 仮定
-= x:(reverse ns ++ [n]) -- xxの定義
-
-右辺
-= x:reverse (n:ns)
-= x:(reverse ns ++ [n]) -- reverseの定義
-</pre></dd>
-</d
-
-で、この補助定理を使うと
-
-dl>
-<dt><code>xs = []</code>の場合</dt>
-<dd><pre>  左辺
-= reverse (reverse [])
-= reverse []
-= []
-= 右辺
-</pre></dd>
-<dt><code>xs = ns</code> のときに <code>reverse (reverse ns) = ns</code> が成り立つと仮定して、 <code>xs = ns ++ [n]</code> の場合</dt>
-<dd><pre>  左辺
-= reverse (reverse (ns ++ [n]))
-= reverse (n:reverse ns)) -- 補助定理
-= reverse (reverse ns) ++ [n] -- reverseの定義
-= ns ++ [n] -- 仮定
-= 右辺
-</pre></dd>
-</d
-
-帰納法のところで、<code>xs = n:ns</code> じゃなく、<code>xs = ns ++ [n]</code> になってるあたりがイケてないってことかな？それぐらいしか理由は思いつかないけど。
-
-### 追記
-ちょっとネットでカンニングしたら、13.5節の分配法則は、この補助定理を一般化した形だから、そっちの方がいい、という回答が。
-
-```
-reverse (xs ++ ys) = reverse ys ++ reverse xs
-```
-
-において、<code>ys = [x]</code> としたのが今回の補助定理になる。確かにそうだ。
-でも、13.5節の分配法則は、練習問題5で証明した <code>++</code>の結合法則がないと証明できないし……面倒だよね。
-
+> <dt><code>n = Zero</code>の場合</dt>
+> <dd><pre>  左辺
+> = add Zero (Succ m)
+> = Succ m
+> 
+>   右辺
+> = Succ (add Zero m)
+> = Succ m</pre></dd>
+> <dt><code>n = x</code> のときに <code>add x (Succ m) = Succ (add x m)</code> が成り立つと仮定して、 <code>n = Succ x</code> の場合</dt>
+> <dd><pre>  左辺
+> = add (Succ x) (Succ m)
+> = Succ (add x (Succ m))
+> = Succ (Succ (add x m))
+> 
+>   右辺
+> = Succ (add (Succ x) m)
+> = Succ (Succ (add x m))
+> </dd>
+> </dl><
+> 
+> ><blockquote><ol>
+> <li value="3">練習問題2の性質と <code>add n Zero = n</code> を使って、加算が交換法則 <code>add n m = add m n</code> を満たすことを示せ。その際、nに対して数学的帰納法を用いよ。</li>
+> </ol></blockquote><
+> 
+> ><dl>
+> <dt><code>n = Zero</code>の場合</dt>
+> <dd><pre>  左辺
+> = add Zero m
+> = m
+> 
+>   右辺
+> = add m Zero
+> = m</pre></dd>
+> <dt><code>n = x</code> のときに <code>add x m = add m x</code> が成り立つと仮定して、 <code>n = Succ x</code> の場合</dt>
+> <dd><pre>  左辺
+> = add (Succ x) m
+> = Succ (add x m)
+> = Succ (add m x)
+> 
+>   右辺
+> = add m (Succ x)
+> = Succ (add m x)
+> </pre></dd>
+> </dl><
+> 
+> ><blockquote><ol>
+> <li value="4">リストのすべての要素が、ある述語を満たすか調べるライブラリ関数 <code>all</code> の定義が以下のように与えられたとする。<br />
+> <pre>
+> all p []     = True
+> all p (x:xs) = p x && all p xs
+> </pre>
+> 関数 <code>replicate</code> の正しさを証明したい。関数 <code>replicate</code> が生成するリストのすべての要素が同じであることを示す式 <code>all (==x) (replicate n x)</code> が満たされることを0以上の整数nに対する数学的帰納法を用いて証明せよ。<br />
+> ヒント：この性質が常に <code>True</code> となることを示せ。</li>
+> </ol></blockquote><
+> 
+> ><dl>
+> <dt><code>n = 0</code>の場合</dt>
+> <dd><pre>  all (==x) (replicate 0 x)
+> = all (==x) []
+> = True
+> </pre></dd>
+> <dt><code>n = m</code> のときに <code>all (==x) (replicate m x) = True</code> が成り立つと仮定して、 <code>n = m + 1</code> の場合</dt>
+> <dd><pre>  all (==x) (replicate (m+1) x)
+> = all (==x) (x : replicate m x)
+> = (==x) x && all (==x) (replicate m x)
+> = True && True
+> = True
+> </pre></dd>
+> </dl><
+> 
+> ><blockquote><ol>
+> <li value="5">以下の定義が与えられているとする。<br />
+> <pre>
+> [] ++ ys     = ys
+> (x:xs) ++ ys = x:(xs ++ ys)
+> </pre>
+> 以下の二つの性質をxsに対する数学的帰納法で証明せよ。<br />
+> <pre>
+> xs ++ []         = xs
+> xs ++ (ys ++ zs) = (xs ++ ys) ++ zs
+> </pre>
+> ヒント：関数 <code>add</code> の証明と同じようにせよ。</li>
+> </ol></blockquote><
+> 
+> ><dl>
+> <dt><code>xs = []</code>の場合</dt>
+> <dd><pre>  1の左辺
+> = &#91;] ++ []
+> = []
+> = 1の右辺
+> 
+>   2の左辺
+> = [] ++ (ys ++ zs)
+> = ys ++ zs
+> = ([] ++ ys) ++ zs
+> = 2の右辺
+> </pre></dd>
+> <dt><code>xs = ns</code> のときに <code>ns ++ [] = ns</code> および <code>ns ++ (ys ++ zs) = (ns ++ ys) ++ zs</code> が成り立つと仮定して、 <code>xs = n:ns</code> の場合</dt>
+> <dd><pre>  1の左辺
+> = (n:ns) ++ []
+> = n:(ns ++ [])
+> = n:ns
+> = 1の右辺
+> 
+>   2の左辺
+> = (n:ns) ++ (ys ++ zs)
+> = n:(ns ++ (ys ++ zs))
+> = n:((ns ++ ys) ++ zs)
+> = (n:(ns ++ ys)) ++ zs
+> = ((n:ns) ++ ys) ++ zs
+> = 2の右辺
+> </pre></dd>
+> </dl><
+> 
+> ><blockquote><ol>
+> <li value="6">等式 <code>reverse (reverse xs) = xs</code> は、補助定理 <code>reverse (xs ++ [x]) = x:reverse xs</code> のみを用いて証明できる。この補助定理自体は、xsに対する数学的帰納法で証明できる。13.5節で示した証明の方が優れているのはなぜか？</li>
+> </ol></blockquote><
+> 
+> ちょっと何言ってるかわからないので、補助定理の証明にチャレンジ。
+> 
+> ><dl>
+> <dt><code>xs = []</code>の場合</dt>
+> <dd><pre>  左辺
+> = reverse ([] ++ [x])
+> = reverse [x]
+> = [x] -- 13.3の性質
+> 
+>   右辺
+> = x:reverse []
+> = x:[]
+> = [x]
+> </pre></dd>
+> <dt><code>xs = ns</code> のときに <code>reverse (ns ++ [x]) = x:reverse ns</code> が成り立つと仮定して、 <code>xs = n:ns</code> の場合</dt>
+> <dd><pre>  左辺
+> = reverse ((n:ns) ++ [x])
+> = reverse (n:(ns ++ [x])) -- xxの定義
+> = reverse (ns ++ [x]) ++ [n] -- reverseの定義
+> = (x:reverse ns) ++ [n] -- 仮定
+> = x:(reverse ns ++ [n]) -- xxの定義
+> 
+>   右辺
+> = x:reverse (n:ns)
+> = x:(reverse ns ++ [n]) -- reverseの定義
+> </pre></dd>
+> </dl><
+> 
+> で、この補助定理を使うと
+> 
+> ><dl>
+> <dt><code>xs = []</code>の場合</dt>
+> <dd><pre>  左辺
+> = reverse (reverse [])
+> = reverse []
+> = []
+> = 右辺
+> </pre></dd>
+> <dt><code>xs = ns</code> のときに <code>reverse (reverse ns) = ns</code> が成り立つと仮定して、 <code>xs = ns ++ [n]</code> の場合</dt>
+> <dd><pre>  左辺
+> = reverse (reverse (ns ++ [n]))
+> = reverse (n:reverse ns)) -- 補助定理
+> = reverse (reverse ns) ++ [n] -- reverseの定義
+> = ns ++ [n] -- 仮定
+> = 右辺
+> </pre></dd>
+> </dl><
+> 
+> 帰納法のところで、<code>xs = n:ns</code> じゃなく、<code>xs = ns ++ [n]</code> になってるあたりがイケてないってことかな？それぐらいしか理由は思いつかないけど。
+> 
+> ***追記
+> ちょっとネットでカンニングしたら、13.5節の分配法則は、この補助定理を一般化した形だから、そっちの方がいい、という回答が。
+> 
+> >||
+> reverse (xs ++ ys) = reverse ys ++ reverse xs
+> ||<
+> 
+> において、<code>ys = [x]</code> としたのが今回の補助定理になる。確かにそうだ。
+> でも、13.5節の分配法則は、練習問題5で証明した <code>++</code>の結合法則がないと証明できないし……面倒だよね。
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -3140,7 +3149,7 @@ reverse (xs ++ ys) = reverse ys ++ reverse xs
 ## 13.7 コンパイラーの正しさ
 
 忙しかったのでかなり間が空いてしまった。
-今回は[](http://haskell.g.hatena.ne.jp/matarillo/20120223/1330017719:title=10.5節で出てきた関数)を、10.5節とは違った形で（コンパイルして実行することで）評価する関数を定義して、その関数の振る舞いがもとの関数の振る舞いと一致することを証明する。
+今回は[http://haskell.g.hatena.ne.jp/matarillo/20120223/1330017719](http://haskell.g.hatena.ne.jp/matarillo/20120223/1330017719)を、10.5節とは違った形で（コンパイルして実行することで）評価する関数を定義して、その関数の振る舞いがもとの関数の振る舞いと一致することを証明する。
 
 10.5節の関数の、仮想マシンを使わない定義はこれ（10.5節ではもともとの関数名は <code>value</code> だったが、<code>eval</code> に置き換えてある）。
 
@@ -3632,7 +3641,7 @@ add (Succ n) m = Succ (add n m)
 = Succ x
 ```
 
-hr><
+<hr><
 
 自然数の加算に対する結合法則 <code>add x (add y z) = add (add x y) z</code> を証明する。
 
@@ -3661,7 +3670,7 @@ hr><
 = Succ (add (add n y) z)
 ||<
 
-><h
+><hr>
 
 指定された要素をn個持つリストを生成するライブラリ関数 <code>replicate</code> の定義
 
@@ -3718,126 +3727,125 @@ replicate (n+1) c =  c : replicate n c
       <content:encoded><![CDATA[
 ## 12.9 練習問題
 
-ol>
-<li value="1">以下の式において、簡約可能式はどこか？また、選び出した簡約可能式が、最も内側か、 最も外側か、両方か、いずれでもないかを考えよ。<br />
-<p>こんな感じ？簡約可能式に抜け漏れがなければいいけど。</p>
-<dl>
-<dt>1+(2*3)</dt>
-<dd><ul>
-<li>2*3...最内</li>
-<li>1+()...最外（追記）原著の解答では、こっちは簡約可能式とみなされてない……なぜだ。</li>
-</ul></dd>
-
-<dt>(1+2)*(2+3)</dt>
-<dd><ul>
-<li>1+2...最内</li>
-<li>2+3...どちらでもない（追記）こっちも最内といえるような気がするけど、原著の解答ではこっちは最内じゃないみたい。</li>
-<li>()*()...最外</li>
-</ul></dd>
-
-<dt>fst (1+2, 2+3)</dt>
-<dd><ul>
-<li>1+2...最内</li>
-<li>2+3...どちらでもない（追記）こっちも最内といえるような気がするけど、原著の解答ではこっちは最内じゃないみたい。</li>
-<li>fst ()...最外</li>
-</ul></dd>
-
-<dt>(λx→1+x) (2*3)</dt>
-<dd><ul>
-<li>2*3...最内</li>
-<li>1+x...どちらでもない（追記）原著の解答ではこっちは簡約可能式とみなされていない。ラムダ式の内側だから？</li>
-<li>(λx→1+x) ()...最外</li>
-</ul></dd>
-</dl>
-
-</li>
-</o
-
-ol>
-<li value="2">式 <code>fst (1+2, 2+3)</code> を評価する際、最内簡約よりも最外簡約の方が適している理由を述べよ。<br />
-<p>最内簡約だと <code>1+2</code>と<code>2+3</code>の両方を評価するが、最外簡約だと<code>1+2</code>だけ評価すればよいため。</p>
-</li>
-</o
-
-ol>
-<li value="3">定義 <code>mult = λx→(λy→x*y)</code> が与えられたとき、式 <code>mult 3 4</code> の評価が四段階の手順になることを示せ。<br />
-<ul>
-<li>初期状態 <code>mult 3 4</code></li>
-<li>multを評価 <code>(λx→(λy→x*y)) 3 4</code></li>
-<li>3を束縛 <code>(λy→3*y) 4</code></li>
-<li>4を束縛 <code>3*4</code></li>
-<li>積を計算 <code>12</code></li>
-</ul>
-</li>
-</o
-
-ol>
-<li value="4">リスト内包表記を使って、以下に示すフィボナッチ数の無限リストを生成する関数 <code>fibs :: [Integer]</code> を実装せよ。(フィボナッチ数は急激に大きくなるので、多倍長整数 <code>Integer</code> を使っていることに注意)<br />
-0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...<br />
-以下の手順を踏むこと。
-<ul>
-<li>最初の二つの数を0と1とする</li>
-<li>次の数は、前の二つの数を足して算出する</li>
-<li>二番目に戻る</li>
-</ul>
-ヒント：ライプラリ関数 zip と tail を利用せよ。<br />
-<pre>
-fibs :: [Integer]
-fibs =  0 : 1 : [x + y | (x, y) &lt;- zip fibs (tail fibs)]
-</pre>
-</li>
-</o
-
-ol>
-<li value="5">関数 <code>fibs</code> を用いて、0番目から数えてn番目のフィボナッチ数を返す関数 <code>fib :: Int -> Integer</code> を定義せよ。また、1000より大きい最初のフィボナッチ数を計算する式を示せ。<br />
-<p>fibsはリストなんだから、これでいいよね。</p>
-<pre>
-fib :: Int -&gt; Integer
-fib =  (fibs !!)
-</pre>
-<p>1000より大きな最初のフィボナッチは <code>head $ dropWhile (&lt;=1000) fibs</code> でいいですか。</p>
-</li>
-</o
-
-ol>
-<li value="6">以下のライブラリ関数が、 以下の二分木に対して動くように変更せよ。<br />
-<pre>
-repeat              :: a -> [a]
-repeat x            =  xs where xs = x:xs
-
-take                :: Int -> [a] -> [a]
-take 0 _            =  []
-take (n + 1) &#x5b;&#x5d;     =  []
-take (n + 1) (x:xs) =  x : take n xs
-
-replicate           :: Int -> a -> [a]
-replicate n         =  take n . repeat
-</pre>
-
-<pre>
-data Tree a = Leaf | Node (Tree a) a (Tree a)
-</pre>
-訳者からのヒント：nは木の深さを表す。<br />
-<p><code>repeat</code>は左の子にぶら下げるべきか、両方の子にぶらさげていくべきか。とりあえず両方の子にぶら下げよう。</p>
-<pre>
-repeat'   :: a -&gt; Tree a
-repeat' x =  xt where xt = Node xt x xt
-</pre>
-<p><code>take</code>は、n+1パターンは使えない前提で。</p>
-<pre>
-take'                :: Int -&gt; Tree a -&gt; Tree a
-take' 0 _            =  Leaf
-take' n Leaf         =  Leaf
-take' n (Node l x r) =  Node (take' (n-1) l) x (take' (n-1) r)
-</pre>
-<p><code>replicate</code>はそのまま。</p>
-<pre>
-replicate'   :: Int -&gt; a -&gt; Tree a
-replicate' n =  take' n . repeat'
-</pre>
-</li>
-</o
-
+> <li value="1">以下の式において、簡約可能式はどこか？また、選び出した簡約可能式が、最も内側か、 最も外側か、両方か、いずれでもないかを考えよ。<br />
+> <p>こんな感じ？簡約可能式に抜け漏れがなければいいけど。</p>
+> <dl>
+> <dt>1+(2*3)</dt>
+> <dd><ul>
+> <li>2*3...最内</li>
+> <li>1+()...最外（追記）原著の解答では、こっちは簡約可能式とみなされてない……なぜだ。</li>
+> </ul></dd>
+> 
+> <dt>(1+2)*(2+3)</dt>
+> <dd><ul>
+> <li>1+2...最内</li>
+> <li>2+3...どちらでもない（追記）こっちも最内といえるような気がするけど、原著の解答ではこっちは最内じゃないみたい。</li>
+> <li>()*()...最外</li>
+> </ul></dd>
+> 
+> <dt>fst (1+2, 2+3)</dt>
+> <dd><ul>
+> <li>1+2...最内</li>
+> <li>2+3...どちらでもない（追記）こっちも最内といえるような気がするけど、原著の解答ではこっちは最内じゃないみたい。</li>
+> <li>fst ()...最外</li>
+> </ul></dd>
+> 
+> <dt>(λx→1+x) (2*3)</dt>
+> <dd><ul>
+> <li>2*3...最内</li>
+> <li>1+x...どちらでもない（追記）原著の解答ではこっちは簡約可能式とみなされていない。ラムダ式の内側だから？</li>
+> <li>(λx→1+x) ()...最外</li>
+> </ul></dd>
+> </dl>
+> 
+> </li>
+> </ol><
+> 
+> ><ol>
+> <li value="2">式 <code>fst (1+2, 2+3)</code> を評価する際、最内簡約よりも最外簡約の方が適している理由を述べよ。<br />
+> <p>最内簡約だと <code>1+2</code>と<code>2+3</code>の両方を評価するが、最外簡約だと<code>1+2</code>だけ評価すればよいため。</p>
+> </li>
+> </ol><
+> 
+> ><ol>
+> <li value="3">定義 <code>mult = λx→(λy→x*y)</code> が与えられたとき、式 <code>mult 3 4</code> の評価が四段階の手順になることを示せ。<br />
+> <ul>
+> <li>初期状態 <code>mult 3 4</code></li>
+> <li>multを評価 <code>(λx→(λy→x*y)) 3 4</code></li>
+> <li>3を束縛 <code>(λy→3*y) 4</code></li>
+> <li>4を束縛 <code>3*4</code></li>
+> <li>積を計算 <code>12</code></li>
+> </ul>
+> </li>
+> </ol><
+> 
+> ><ol>
+> <li value="4">リスト内包表記を使って、以下に示すフィボナッチ数の無限リストを生成する関数 <code>fibs :: [Integer]</code> を実装せよ。(フィボナッチ数は急激に大きくなるので、多倍長整数 <code>Integer</code> を使っていることに注意)<br />
+> 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...<br />
+> 以下の手順を踏むこと。
+> <ul>
+> <li>最初の二つの数を0と1とする</li>
+> <li>次の数は、前の二つの数を足して算出する</li>
+> <li>二番目に戻る</li>
+> </ul>
+> ヒント：ライプラリ関数 zip と tail を利用せよ。<br />
+> <pre>
+> fibs :: [Integer]
+> fibs =  0 : 1 : [x + y | (x, y) &lt;- zip fibs (tail fibs)]
+> </pre>
+> </li>
+> </ol><
+> 
+> ><ol>
+> <li value="5">関数 <code>fibs</code> を用いて、0番目から数えてn番目のフィボナッチ数を返す関数 <code>fib :: Int -> Integer</code> を定義せよ。また、1000より大きい最初のフィボナッチ数を計算する式を示せ。<br />
+> <p>fibsはリストなんだから、これでいいよね。</p>
+> <pre>
+> fib :: Int -&gt; Integer
+> fib =  (fibs !!)
+> </pre>
+> <p>1000より大きな最初のフィボナッチは <code>head $ dropWhile (&lt;=1000) fibs</code> でいいですか。</p>
+> </li>
+> </ol><
+> 
+> ><ol>
+> <li value="6">以下のライブラリ関数が、 以下の二分木に対して動くように変更せよ。<br />
+> <pre>
+> repeat              :: a -> [a]
+> repeat x            =  xs where xs = x:xs
+> 
+> take                :: Int -> [a] -> [a]
+> take 0 _            =  []
+> take (n + 1) &#x5b;&#x5d;     =  []
+> take (n + 1) (x:xs) =  x : take n xs
+> 
+> replicate           :: Int -> a -> [a]
+> replicate n         =  take n . repeat
+> </pre>
+> 
+> <pre>
+> data Tree a = Leaf | Node (Tree a) a (Tree a)
+> </pre>
+> 訳者からのヒント：nは木の深さを表す。<br />
+> <p><code>repeat</code>は左の子にぶら下げるべきか、両方の子にぶらさげていくべきか。とりあえず両方の子にぶら下げよう。</p>
+> <pre>
+> repeat'   :: a -&gt; Tree a
+> repeat' x =  xt where xt = Node xt x xt
+> </pre>
+> <p><code>take</code>は、n+1パターンは使えない前提で。</p>
+> <pre>
+> take'                :: Int -&gt; Tree a -&gt; Tree a
+> take' 0 _            =  Leaf
+> take' n Leaf         =  Leaf
+> take' n (Node l x r) =  Node (take' (n-1) l) x (take' (n-1) r)
+> </pre>
+> <p><code>replicate</code>はそのまま。</p>
+> <pre>
+> replicate'   :: Int -&gt; a -&gt; Tree a
+> replicate' n =  take' n . repeat'
+> </pre>
+> </li>
+> </ol><
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -3904,9 +3912,11 @@ sieve (p:xs) =  p : sieve [x | x <- xs, x `mod` p /= 0]
 ## 12.7 正格適用
 
 関数適用を正格評価で実行する演算子<code>$!</code>。この演算子は
+
 * 基本型の場合は、値が定まるまで
 * タプルの場合は、タプルが得られるまで
 * リストの場合は、空リストまたは先頭の要素が得られるまで
+
 評価を実行し、その後は通常の関数適用と同じ動きになる。
 
 タプルやリストの要素自体の評価はどうするんだろうと思ってちょっとぐぐった。こっちも、基本型なら値が定まるまで評価されるのかな？
@@ -3967,46 +3977,45 @@ foldl' f v (x:xs) =  ((foldl' f) $! (f v x)) xs
 
 ## 12.9 練習問題
 
-ol>
-<li value="1">以下の式において、簡約可能式はどこか？また、選び出した簡約可能式が、最も内側か、 最も外側か、両方か、いずれでもないかを考えよ。<br />
-<pre>
-1+(2*3)
-(1+2)*(2+3)
-fst (1+2, 2+3)
-(λx→1+x) (2*3)
-</pre>
-</li>
-<li>式 <code>fst (1+2, 2+3)</code> を評価する際、最内簡約よりも最外簡約の方が適している理由を述べよ。</li>
-<li>定義 <code>mult = λx→(λy→x*y)</code> が与えられたとき、式 <code>mult 3 4</code> の評価が四段階の手順になることを示せ。</li>
-<li>リスト内包表記を使って、以下に示すフィボナッチ数の無限リストを生成する関数 <code>fibs :: [Integer]</code> を実装せよ。(フィボナッチ数は急激に大きくなるので、多倍長整数 <code>Integer</code> を使っていることに注意)<br />
-0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...<br />
-以下の手順を踏むこと。
-<ul>
-<li>最初の二つの数を0と1とする</li>
-<li>次の数は、前の二つの数を足して算出する</li>
-<li>二番目に戻る</li>
-</ul>
-ヒント：ライプラリ関数 zip と tail を利用せよ。</li>
-<li>関数 <code>fibs</code> を用いて、0番目から数えてn番目のフィボナッチ数を返す関数 <code>fib :: Int -> Integer</code> を定義せよ。また、1000より大きい最初のフィボナッチ数を計算する式を示せ。</li>
-<li>以下のライブラリ関数が、 以下の二分木に対して動くように変更せよ。<br />
-<pre>
-repeat              :: a -> [a]
-repeat x            =  xs where xs = x:xs
-
-take                :: Int -> [a] -> [a]
-take 0 _            =  []
-take (n + 1) &#x5b;&#x5d;     =  []
-take (n + 1) (x:xs) =  x : take n xs
-
-replicate           :: Int -> a -> [a]
-replicate n         =  take n . repeat
-</pre>
-<pre>
-data Tree a = Leaf | Node (Tree a) a (Tree a)
-</pre>
-訳者からのヒント：nは木の深さを表す。</li>
-</o
-
+> <li value="1">以下の式において、簡約可能式はどこか？また、選び出した簡約可能式が、最も内側か、 最も外側か、両方か、いずれでもないかを考えよ。<br />
+> <pre>
+> 1+(2*3)
+> (1+2)*(2+3)
+> fst (1+2, 2+3)
+> (λx→1+x) (2*3)
+> </pre>
+> </li>
+> <li>式 <code>fst (1+2, 2+3)</code> を評価する際、最内簡約よりも最外簡約の方が適している理由を述べよ。</li>
+> <li>定義 <code>mult = λx→(λy→x*y)</code> が与えられたとき、式 <code>mult 3 4</code> の評価が四段階の手順になることを示せ。</li>
+> <li>リスト内包表記を使って、以下に示すフィボナッチ数の無限リストを生成する関数 <code>fibs :: [Integer]</code> を実装せよ。(フィボナッチ数は急激に大きくなるので、多倍長整数 <code>Integer</code> を使っていることに注意)<br />
+> 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...<br />
+> 以下の手順を踏むこと。
+> <ul>
+> <li>最初の二つの数を0と1とする</li>
+> <li>次の数は、前の二つの数を足して算出する</li>
+> <li>二番目に戻る</li>
+> </ul>
+> ヒント：ライプラリ関数 zip と tail を利用せよ。</li>
+> <li>関数 <code>fibs</code> を用いて、0番目から数えてn番目のフィボナッチ数を返す関数 <code>fib :: Int -> Integer</code> を定義せよ。また、1000より大きい最初のフィボナッチ数を計算する式を示せ。</li>
+> <li>以下のライブラリ関数が、 以下の二分木に対して動くように変更せよ。<br />
+> <pre>
+> repeat              :: a -> [a]
+> repeat x            =  xs where xs = x:xs
+> 
+> take                :: Int -> [a] -> [a]
+> take 0 _            =  []
+> take (n + 1) &#x5b;&#x5d;     =  []
+> take (n + 1) (x:xs) =  x : take n xs
+> 
+> replicate           :: Int -> a -> [a]
+> replicate n         =  take n . repeat
+> </pre>
+> <pre>
+> data Tree a = Leaf | Node (Tree a) a (Tree a)
+> </pre>
+> 訳者からのヒント：nは木の深さを表す。</li>
+> </ol><
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -4113,7 +4122,7 @@ square n =  n * n
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -4129,135 +4138,134 @@ square n =  n * n
       <content:encoded><![CDATA[
 ## 11.7 練習問題
 
-ol>
-<li value="4">関数 <code>choices</code>、<code>exprs</code>、および<code>eval</code>を用いて、1、3、7、10、25、50に対し可能な式は33,665,406個あり、そのうち4,672,540個のみが有効であることを確かめよ。</li>
-</o
-
-こんな感じでいいのかな。
-もっと見た目よく関数合成したいんだけど。F#の <code>|> </code>みたいな演算子はないのかな。
-
-```haskell
-availables :: [Int] -> Int
-availables = length . concat . map exprs . choices
-
-valids :: [Int] -> Int
-valids = length . concat . map eval . concat . map exprs . choices
-
-main :: IO ()
-main = do
-  print $ availables [1,3,7,10,25,50]
-  print $ valids [1,3,7,10,25,50]
-```
-
-ol>
-<li value="5">同様に数値の定義域を整数に拡大すると、有効な式の数が10,839,369個に増えることを確かめよ。<br />
-ヒント：関数 <code>valid</code> の定義を変更せよ。</li>
-</o
-
-<code>eval</code>の方は変えなくてよかったのかな……
-
-```haskell
-valid         :: Op -> Int -> Int -> Bool
-valid Add _ _ =  True
-valid Sub x y =  True
-valid Mul _ _ =  True
-valid Div x y =  y /= 0 && x `mod` y == 0
-```
-
-ol>
-<li value="6">関数 <code>solutions''</code> を以下のように改良せよ。
-<ol type="a"><li>式に累乗演算子が使えるようにする</li>
-<li>解がない場合に、目標の数に最も近い解を算出する</li>
-<li>適切な方法で解を並び替える</li></ol></li>
-</o
-
-### 6-a
-
-累乗ということで<code>Pow</code>を増やした。そしたら整数値がオーバーフローするようになって困った。
-しかたなく、validの定義の方でオーバーフローしたものを排除するようにした。
-
-```haskell
-data Op = Add | Sub | Mul | Div | Pow
-  deriving Show
-
-valid         :: Op -> Int -> Int -> Bool
-valid Add x y =  x <= y && x + y /= 0
-valid Sub x y =  x > y
-valid Mul x y =  x /= 1 && y /= 1 && x <= y && x * y /= 0
-valid Div x y =  y /= 1 && x `mod` y == 0
-valid Pow x y =  x > 1 && y > 1 && x ^ y /= 0
-
-apply         :: Op -> Int -> Int -> Int
-apply Add x y =  x + y
-apply Sub x y =  x - y
-apply Mul x y =  x * y
-apply Div x y =  x `div` y
-apply Pow x y =  x ^ y
-
-ops :: [Op]
-ops =  [Add, Sub, Mul, Div, Pow]
-```
-
-### 6-b
-
-目標とする数値との差の絶対値が最小になる式のリストを作って返すようにした。
-わりと面倒なコードになってしまったけど、どうなんだろ。
-
-```haskell
-minsby :: (a -> a -> Ordering) -> [a] -> [a] -> [a]
-minsby _ xs     []     = xs
-minsby f []     (y:ys) = minsby f [y] ys
-minsby f (x:xs) (y:ys)
-  | f x y == LT        = minsby f (x:xs) ys
-  | f x y == EQ        = minsby f ((x:xs) ++ [y]) ys
-  | otherwise          = minsby f [y] ys
-
-solutions'' :: [Int] -> Int -> [Expr]
-solutions'' ns n = [e | (e, _) <- minsby f [] candidates]
-  where
-    f (_, x) (_, y) = compare (abs (x - n)) (abs (y - n))
-    candidates = [r | ns' <- choices ns,
-                      r <- results ns']
-```
-
-### 6-c
-
-「適切な方法」って何だよ！意味がわからない。
-なので
-* 使用した数値の数が小さい順
-* 使用した数値の並び順
-* 使用した演算子の並び順
-という感じにしてみた。
-
-```haskell
-data Op = Add | Sub | Mul | Div | Pow
-  deriving (Show, Ord, Eq)
-
-opcodes             :: Expr -> [Op]
-opcodes (Val _)     =  []
-opcodes (App o l r) =  o : (opcodes l) ++ (opcodes r)
-
-type Comparer a = a -> a -> Ordering
-
-andthen         :: Comparer a -> Comparer a -> Comparer a
-andthen f g x y =  if f x y /= EQ then f x y else g x y
-
-compareby       :: Ord b => (a -> b) -> Comparer a
-compareby f x y =  compare (f x) (f y)
-
-exprcomparer :: Comparer Expr
-exprcomparer =  compareby (length . values) `andthen`
-                compareby values `andthen`
-                compareby opcodes
-
-solutions'' :: [Int] -> Int -> [Expr]
-solutions'' ns n = sortBy exprcomparer [e | (e, _) <- minsby f [] candidates]
-  where
-    f (_, x) (_, y) = compare (abs (x - n)) (abs (y - n))
-    candidates = [r | ns' <- choices ns,
-                      r <- results ns']
-```
-
+> <li value="4">関数 <code>choices</code>、<code>exprs</code>、および<code>eval</code>を用いて、1、3、7、10、25、50に対し可能な式は33,665,406個あり、そのうち4,672,540個のみが有効であることを確かめよ。</li>
+> </ol><
+> 
+> こんな感じでいいのかな。
+> もっと見た目よく関数合成したいんだけど。F#の <code>|> </code>みたいな演算子はないのかな。
+> 
+> >|haskell|
+> availables :: [Int] -> Int
+> availables = length . concat . map exprs . choices
+> 
+> valids :: [Int] -> Int
+> valids = length . concat . map eval . concat . map exprs . choices
+> 
+> main :: IO ()
+> main = do
+>   print $ availables [1,3,7,10,25,50]
+>   print $ valids [1,3,7,10,25,50]
+> ||<
+> 
+> ><ol>
+> <li value="5">同様に数値の定義域を整数に拡大すると、有効な式の数が10,839,369個に増えることを確かめよ。<br />
+> ヒント：関数 <code>valid</code> の定義を変更せよ。</li>
+> </ol><
+> 
+> <code>eval</code>の方は変えなくてよかったのかな……
+> 
+> >|haskell|
+> valid         :: Op -> Int -> Int -> Bool
+> valid Add _ _ =  True
+> valid Sub x y =  True
+> valid Mul _ _ =  True
+> valid Div x y =  y /= 0 && x `mod` y == 0
+> ||<
+> 
+> ><ol>
+> <li value="6">関数 <code>solutions''</code> を以下のように改良せよ。
+> <ol type="a"><li>式に累乗演算子が使えるようにする</li>
+> <li>解がない場合に、目標の数に最も近い解を算出する</li>
+> <li>適切な方法で解を並び替える</li></ol></li>
+> </ol><
+> 
+> ***6-a
+> 
+> 累乗ということで<code>Pow</code>を増やした。そしたら整数値がオーバーフローするようになって困った。
+> しかたなく、validの定義の方でオーバーフローしたものを排除するようにした。
+> 
+> >|haskell|
+> data Op = Add | Sub | Mul | Div | Pow
+>   deriving Show
+> 
+> valid         :: Op -> Int -> Int -> Bool
+> valid Add x y =  x <= y && x + y /= 0
+> valid Sub x y =  x > y
+> valid Mul x y =  x /= 1 && y /= 1 && x <= y && x * y /= 0
+> valid Div x y =  y /= 1 && x `mod` y == 0
+> valid Pow x y =  x > 1 && y > 1 && x ^ y /= 0
+> 
+> apply         :: Op -> Int -> Int -> Int
+> apply Add x y =  x + y
+> apply Sub x y =  x - y
+> apply Mul x y =  x * y
+> apply Div x y =  x `div` y
+> apply Pow x y =  x ^ y
+> 
+> ops :: [Op]
+> ops =  [Add, Sub, Mul, Div, Pow]
+> ||<
+> 
+> ***6-b
+> 
+> 目標とする数値との差の絶対値が最小になる式のリストを作って返すようにした。
+> わりと面倒なコードになってしまったけど、どうなんだろ。
+> 
+> >|haskell|
+> minsby :: (a -> a -> Ordering) -> [a] -> [a] -> [a]
+> minsby _ xs     []     = xs
+> minsby f []     (y:ys) = minsby f [y] ys
+> minsby f (x:xs) (y:ys)
+>   | f x y == LT        = minsby f (x:xs) ys
+>   | f x y == EQ        = minsby f ((x:xs) ++ [y]) ys
+>   | otherwise          = minsby f [y] ys
+> 
+> solutions'' :: [Int] -> Int -> [Expr]
+> solutions'' ns n = [e | (e, _) <- minsby f [] candidates]
+>   where
+>     f (_, x) (_, y) = compare (abs (x - n)) (abs (y - n))
+>     candidates = [r | ns' <- choices ns,
+>                       r <- results ns']
+> ||<
+> 
+> ***6-c
+> 
+> 「適切な方法」って何だよ！意味がわからない。
+> なので
+> -使用した数値の数が小さい順
+> -使用した数値の並び順
+> -使用した演算子の並び順
+> という感じにしてみた。
+> 
+> >|haskell|
+> data Op = Add | Sub | Mul | Div | Pow
+>   deriving (Show, Ord, Eq)
+> 
+> opcodes             :: Expr -> [Op]
+> opcodes (Val _)     =  []
+> opcodes (App o l r) =  o : (opcodes l) ++ (opcodes r)
+> 
+> type Comparer a = a -> a -> Ordering
+> 
+> andthen         :: Comparer a -> Comparer a -> Comparer a
+> andthen f g x y =  if f x y /= EQ then f x y else g x y
+> 
+> compareby       :: Ord b => (a -> b) -> Comparer a
+> compareby f x y =  compare (f x) (f y)
+> 
+> exprcomparer :: Comparer Expr
+> exprcomparer =  compareby (length . values) `andthen`
+>                 compareby values `andthen`
+>                 compareby opcodes
+> 
+> solutions'' :: [Int] -> Int -> [Expr]
+> solutions'' ns n = sortBy exprcomparer [e | (e, _) <- minsby f [] candidates]
+>   where
+>     f (_, x) (_, y) = compare (abs (x - n)) (abs (y - n))
+>     candidates = [r | ns' <- choices ns,
+>                       r <- results ns']
+> ||<
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -4287,68 +4295,67 @@ solutions'' ns n = sortBy exprcomparer [e | (e, _) <- minsby f [] candidates]
       <content:encoded><![CDATA[
 ## 11.7 練習問題
 
-ol>
-<li value="1">ライブラリ関数<code>concat</code>と<code>map</code>を用いる代わりに、リスト内包表記を使って、組み合わせの関数<code>choices</code>を再定義せよ。</li>
-</o
-
-10章の練習問題でリストモナドについて書いたことを思い出せば簡単。
-
-```haskell
-choices' :: [a] -> [[a]]
-choices' xs = [zs | ys <- subs xs,
-                    zs <- perms ys]
-```
-
-ol>
-<li value="2">再帰的な関数<code>isChoice :: Eq a => [a] -> [a] -> Bool</code>を定義せよ。この関数は、関数<code>perms</code>や関数<code>subs</code>を使わずに、一方のリストが他方のリストから選択されたものかを検査する。<br />
-ヒント：まずはじめに、あるリストに対して、最初に見つかった特定の値を取り除く関数を定義せよ。</li>
-</o
-
-というわけでヒントどおりに関数<code>eliminate</code>を定義する。
-最初はfilterでいいかと思ったがそれではダメ。「最初に見つかった」値だけを取り除かないといけないから。
-```haskell
-eliminate :: Eq a => a -> [a] -> [a]
-eliminate p ps = before ++ after
-  where
-    before = takeWhile (/=p) ps
-    after  = safeTail (dropWhile (/=p) ps)
-    safeTail []   = []
-    safeTail x:xs = xs
-```
-
-（追記）なんて無駄なコードを……疲れてたのだろうか。消してしまいたい。
-```haskell
-eliminate :: Eq a => a -> [a] -> [a]
-eliminate _ [] = []
-eliminate x (y:ys)
-  | x == y    = ys
-  | otherwise = y : eliminate x ys
-```
-
-で、これを使うとこんな感じか。第1引数が選択元、第2引数が選択結果としよう。
-```haskell
-isChoice :: Eq a => [a] -> [a] -> Bool
-isChoice _  [] = True
-isChoice [] _  = False
-isChoice xs (y:ys)
-  | not (elem y xs) = False
-  | otherwise       = isChoice (eliminate y xs) ys
-```
-
-ol>
-<li value="3">関数<code>split</code>を空リストも許すように拡張すると、関数<code>solutions</code>の挙動にどのような影響を与えるか述べよ。</li>
-</o
-
-空リストを許すということは、こんな定義？
-```haskell
-split        :: [a] -> [([a],[a])]
-split []     =  ([], [])
-split [x]    =  ([], [x])
-split (x:xs) =  ([], (x:xs)) : [(x:ls,rs) | (ls,rs) <- split xs]
-```
-
-splitの結果に要素が1つ増えるだけだし、しかもそれは空リストを含んだタプルなので、exprsの中で無視されるから、たいした影響はないはず……と思ったんだけど、実行してみると逆にちょっと速くなる。何で？
-
+> <li value="1">ライブラリ関数<code>concat</code>と<code>map</code>を用いる代わりに、リスト内包表記を使って、組み合わせの関数<code>choices</code>を再定義せよ。</li>
+> </ol><
+> 
+> 10章の練習問題でリストモナドについて書いたことを思い出せば簡単。
+> 
+> >|haskell|
+> choices' :: [a] -> [[a]]
+> choices' xs = [zs | ys <- subs xs,
+>                     zs <- perms ys]
+> ||<
+> 
+> ><ol>
+> <li value="2">再帰的な関数<code>isChoice :: Eq a => [a] -> [a] -> Bool</code>を定義せよ。この関数は、関数<code>perms</code>や関数<code>subs</code>を使わずに、一方のリストが他方のリストから選択されたものかを検査する。<br />
+> ヒント：まずはじめに、あるリストに対して、最初に見つかった特定の値を取り除く関数を定義せよ。</li>
+> </ol><
+> 
+> というわけでヒントどおりに関数<code>eliminate</code>を定義する。
+> 最初はfilterでいいかと思ったがそれではダメ。「最初に見つかった」値だけを取り除かないといけないから。
+> >|haskell|
+> eliminate :: Eq a => a -> [a] -> [a]
+> eliminate p ps = before ++ after
+>   where
+>     before = takeWhile (/=p) ps
+>     after  = safeTail (dropWhile (/=p) ps)
+>     safeTail []   = []
+>     safeTail x:xs = xs
+> ||<
+> 
+> （追記）なんて無駄なコードを……疲れてたのだろうか。消してしまいたい。
+> >|haskell|
+> eliminate :: Eq a => a -> [a] -> [a]
+> eliminate _ [] = []
+> eliminate x (y:ys)
+>   | x == y    = ys
+>   | otherwise = y : eliminate x ys
+> ||<
+> 
+> で、これを使うとこんな感じか。第1引数が選択元、第2引数が選択結果としよう。
+> >|haskell|
+> isChoice :: Eq a => [a] -> [a] -> Bool
+> isChoice _  [] = True
+> isChoice [] _  = False
+> isChoice xs (y:ys)
+>   | not (elem y xs) = False
+>   | otherwise       = isChoice (eliminate y xs) ys
+> ||<
+> 
+> ><ol>
+> <li value="3">関数<code>split</code>を空リストも許すように拡張すると、関数<code>solutions</code>の挙動にどのような影響を与えるか述べよ。</li>
+> </ol><
+> 
+> 空リストを許すということは、こんな定義？
+> >|haskell|
+> split        :: [a] -> [([a],[a])]
+> split []     =  ([], [])
+> split [x]    =  ([], [x])
+> split (x:xs) =  ([], (x:xs)) : [(x:ls,rs) | (ls,rs) <- split xs]
+> ||<
+> 
+> splitの結果に要素が1つ増えるだけだし、しかもそれは空リストを含んだタプルなので、exprsの中で無視されるから、たいした影響はないはず……と思ったんだけど、実行してみると逆にちょっと速くなる。何で？
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -4375,7 +4382,7 @@ splitの結果に要素が1つ増えるだけだし、しかもそれは空リ�
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[[](http://haskell.g.hatena.ne.jp/matarillo/20120306/1331058448:title=昨日のHaskellコード)をF#に移植してみた。
+      <content:encoded><![CDATA[[http://haskell.g.hatena.ne.jp/matarillo/20120306/1331058448](http://haskell.g.hatena.ne.jp/matarillo/20120306/1331058448)をF#に移植してみた。
 
 ```ocaml
 type Point =
@@ -4462,8 +4469,8 @@ sys     0m0.015s
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:comment>
         <wp:comment_id />
         <wp:comment_author><![CDATA[rst76]]></wp:comment_author>
@@ -4578,7 +4585,7 @@ solve size =  solutions initial
         (f,b):ps = n
 ```
 
-[](http://ideone.com/0gFNU:title=ideone.comでの実行結果。)
+[http://ideone.com/0gFNU](http://ideone.com/0gFNU)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4594,7 +4601,7 @@ solve size =  solutions initial
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -4898,39 +4905,38 @@ sys     0m0.015s
       <content:encoded><![CDATA[
 ## 10.8 練習問題
 
-ol>
-<li value="8">以下のインスタンス宣言を完成させよ。<br />
-<pre>
-instance Monad Maybe where
-...
-instance Monad [] where
-...
-</pre>
-ここで<code>[]</code>は、<code>[a]</code>から型変数を取り除いたリスト型を表す。<br />
-ヒント：最初に、それぞれのインスタンスのメソッド <code>return</code> と <code>&gt;&gt;=</code> の型を考えよ。</li>
-</o
-
-<code>Maybe</code>はもう自習してたから、<code>[]</code>だけ考えればいいんだけど、こんなんでいいのかな？
-LINQに馴染んでいるので、リストがモナドだってことと、bindはSelectMany(scalaならflatMap)ってことは知ってる。
-```haskell
--- return :: a -> Maybe a
--- >>=    :: Maybe a -> (a -> Maybe b) -> Maybe b
-instance Monad Maybe where
-  return x      = Just x
-  Nothing >>= _ = Nothing
-  Just x  >>= f = f x
-```
-
-```haskell
--- return :: a -> [a]
--- >>=    :: [a] -> (a -> [b]) -> [b]
-instance Monad [] where
-  return x = [x]
-  xs >>= f = concat (map f xs)
-```
-
-ぐぐったらHaskellにconcatMapという関数があるみたいなのでそれでもよいと思うのだが、教科書には載ってなかったからあえて使わず。
-
+> <li value="8">以下のインスタンス宣言を完成させよ。<br />
+> <pre>
+> instance Monad Maybe where
+>   ...
+> instance Monad [] where
+>   ...
+> </pre>
+> ここで<code>[]</code>は、<code>[a]</code>から型変数を取り除いたリスト型を表す。<br />
+> ヒント：最初に、それぞれのインスタンスのメソッド <code>return</code> と <code>&gt;&gt;=</code> の型を考えよ。</li>
+> </ol><
+> 
+> <code>Maybe</code>はもう自習してたから、<code>[]</code>だけ考えればいいんだけど、こんなんでいいのかな？
+> LINQに馴染んでいるので、リストがモナドだってことと、bindはSelectMany(scalaならflatMap)ってことは知ってる。
+> >|haskell|
+> -- return :: a -> Maybe a
+> -- >>=    :: Maybe a -> (a -> Maybe b) -> Maybe b
+> instance Monad Maybe where
+>   return x      = Just x
+>   Nothing >>= _ = Nothing
+>   Just x  >>= f = f x
+> ||<
+> 
+> >|haskell|
+> -- return :: a -> [a]
+> -- >>=    :: [a] -> (a -> [b]) -> [b]
+> instance Monad [] where
+>   return x = [x]
+>   xs >>= f = concat (map f xs)
+> ||<
+> 
+> ぐぐったらHaskellにconcatMapという関数があるみたいなのでそれでもよいと思うのだが、教科書には載ってなかったからあえて使わず。
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -4960,118 +4966,117 @@ instance Monad [] where
       <content:encoded><![CDATA[
 ## 10.8 練習問題
 
-ol>
-<li value="6">関数 <code>isTaut</code> と、前の二つの章で定義したパーサーと対話プログラムのライブラリを用いて、対話的に恒真式か検査する関数を実装せよ。ユーザーがキーボードからわかりやすい文法で命題を入力できるようにすること。<br />
-ヒント：8章で定義した数式のパーサーを改良して、命題のパーサーを作れ。</li>
-</o
-
-なかなか面倒な問題だった。パーサーがうまく構成できなくてね。優先度をまちがえて、"True"をパースしたら"T"だけが <code>Var 'T'</code> とパースされたり。
-
-```haskell
-module TenEightSix where
-
-import Parsing
-import NineFive
-import TenEightFive
-
-factor :: Parser Prop
-factor
-  = do
-    symbol "("
-    e <- expr
-    symbol ")"
-    return e
-  +++
-    bool
-  +++
-    variable
-
-bool :: Parser Prop
-bool
-  = do
-    symbol "True"
-    return (Const True)
-  +++ do
-    symbol "False"
-    return (Const False)
-
-variable :: Parser Prop
-variable = token (do
-  c <- letter
-  return (Var c))
-
-term :: Parser Prop
-term
-  = do
-    symbol "!"
-    f <- factor
-    return (Not f)
-  +++
-    factor
-
-expr :: Parser Prop
-expr = do
-  t <- term
-  (do
-    symbol "&&"
-    t2 <- term
-    return (And t t2)
-   +++ do
-    symbol "||"
-    t2 <- term
-    return (Or t t2)
-   +++ do
-    symbol "=>"
-    t2 <- term
-    return (Imply t t2)
-   +++ do
-    symbol "=="
-    t2 <- term
-    return (Equiv t t2)
-   +++
-    return t)
-
-run :: IO ()
-run = do
-  putStr "Enter a proposition: "
-  xs <- getLine
-  parseTaut xs
-
-parseTaut :: String -> IO ()
-parseTaut xs = case parse expr xs of
-  [(p,"")] -> showTaut p
-  _        -> putStrLn "Syntax Error"
-
-showTaut :: Prop -> IO ()
-showTaut p = if isTaut p
-  then
-    putStrLn "Tautology"
-  else
-    putStrLn "Not tautology"
-```
-
-ol>
-<li value="7">乗算を扱えるように仮想マシンを拡張せよ。</li>
-</o
-
-仮想マシンの命令を2つ増やさざるを得ないと思われる。<code>EVAM Expr</code>と<code>MUL Int</code>。最初に定義していた<code>EVAL Expr</code>は加算の右辺評価命令なので、左辺はとりあえず<code>ADD Int</code>を突っ込んでおいて、右辺評価後に加算する。<code>EVAM Expr</code>は乗算の右辺評価命令なので、左辺はとりあえず<code>MUL Int</code>を突っ込んでおいて、右辺評価後に乗算する。
-
-```diff
-1c1
-< data Expr = Val Int | Add Expr Expr
----
-> data Expr = Val Int | Add Expr Expr | Mul Expr Expr
-4c4
-< data Op   = EVAL Expr | ADD Int
----
-> data Op   = EVAL Expr | ADD Int | EVAM Expr | MUL Int
-8a9
-> eval (Mul x y) c = eval x (EVAM y:c)
-13a15,16
-> exec (EVAM y:c) n =  eval y (MUL n:c)
-> exec (MUL n:c) m  =  exec c (n * m)
-```
-
+> <li value="6">関数 <code>isTaut</code> と、前の二つの章で定義したパーサーと対話プログラムのライブラリを用いて、対話的に恒真式か検査する関数を実装せよ。ユーザーがキーボードからわかりやすい文法で命題を入力できるようにすること。<br />
+> ヒント：8章で定義した数式のパーサーを改良して、命題のパーサーを作れ。</li>
+> </ol><
+> 
+> なかなか面倒な問題だった。パーサーがうまく構成できなくてね。優先度をまちがえて、"True"をパースしたら"T"だけが <code>Var 'T'</code> とパースされたり。
+> 
+> >|haskell|
+> module TenEightSix where
+> 
+> import Parsing
+> import NineFive
+> import TenEightFive
+> 
+> factor :: Parser Prop
+> factor
+>   = do
+>     symbol "("
+>     e <- expr
+>     symbol ")"
+>     return e
+>   +++
+>     bool
+>   +++
+>     variable
+> 
+> bool :: Parser Prop
+> bool
+>   = do
+>     symbol "True"
+>     return (Const True)
+>   +++ do
+>     symbol "False"
+>     return (Const False)
+> 
+> variable :: Parser Prop
+> variable = token (do
+>   c <- letter
+>   return (Var c))
+> 
+> term :: Parser Prop
+> term
+>   = do
+>     symbol "!"
+>     f <- factor
+>     return (Not f)
+>   +++
+>     factor
+> 
+> expr :: Parser Prop
+> expr = do
+>   t <- term
+>   (do
+>     symbol "&&"
+>     t2 <- term
+>     return (And t t2)
+>    +++ do
+>     symbol "||"
+>     t2 <- term
+>     return (Or t t2)
+>    +++ do
+>     symbol "=>"
+>     t2 <- term
+>     return (Imply t t2)
+>    +++ do
+>     symbol "=="
+>     t2 <- term
+>     return (Equiv t t2)
+>    +++
+>     return t)
+> 
+> run :: IO ()
+> run = do
+>   putStr "Enter a proposition: "
+>   xs <- getLine
+>   parseTaut xs
+> 
+> parseTaut :: String -> IO ()
+> parseTaut xs = case parse expr xs of
+>   [(p,"")] -> showTaut p
+>   _        -> putStrLn "Syntax Error"
+> 
+> showTaut :: Prop -> IO ()
+> showTaut p = if isTaut p
+>   then
+>     putStrLn "Tautology"
+>   else
+>     putStrLn "Not tautology"
+> ||<
+> 
+> ><ol>
+> <li value="7">乗算を扱えるように仮想マシンを拡張せよ。</li>
+> </ol><
+> 
+> 仮想マシンの命令を2つ増やさざるを得ないと思われる。<code>EVAM Expr</code>と<code>MUL Int</code>。最初に定義していた<code>EVAL Expr</code>は加算の右辺評価命令なので、左辺はとりあえず<code>ADD Int</code>を突っ込んでおいて、右辺評価後に加算する。<code>EVAM Expr</code>は乗算の右辺評価命令なので、左辺はとりあえず<code>MUL Int</code>を突っ込んでおいて、右辺評価後に乗算する。
+> 
+> >|diff|
+> 1c1
+> < data Expr = Val Int | Add Expr Expr
+> ---
+> > data Expr = Val Int | Add Expr Expr | Mul Expr Expr
+> 4c4
+> < data Op   = EVAL Expr | ADD Int
+> ---
+> > data Op   = EVAL Expr | ADD Int | EVAM Expr | MUL Int
+> 8a9
+> > eval (Mul x y) c = eval x (EVAM y:c)
+> 13a15,16
+> > exec (EVAM y:c) n =  eval y (MUL n:c)
+> > exec (MUL n:c) m  =  exec c (n * m)
+> ||<
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -5101,143 +5106,142 @@ ol>
       <content:encoded><![CDATA[
 ## 10.8 練習問題
 
-ol>
-<li value="1">再帰と関数<code>add</code>を用いて、自然数の乗算関数 <code>mult :: Nat -> Nat -> Nat</code> を定義せよ。</li>
-</o
-
-これは楽勝。（10.3で定義したNatはゼロも自然数だったことを思い出して）
-
-```haskell
-module TenEightOne where
-
-import TenThree
-
-mult :: Nat -> Nat -> Nat
-mult Zero     _    = Zero
-mult _        Zero = Zero
-mult (Succ m) n    = add n (mult m n)
-```
-
-ol>
-<li value="2">付録Aには掲載されていないが、標準ライブラリでは以下のクラスとメソッドが定義されている。<br />
-<pre>
-data Ordering = LT | EQ | GT
-compare :: Ord a => a -> a -> Ordering
-</pre>
-このメソッドは、順序クラスのある値が他の値と比較して、小さい（LT）か、等しい（EQ）か、大きい（GT）かを判断する。このメソッドを用いて、探索木用の関数 <code>occures :: Int -> Tree -> Bool</code> を再定義せよ。また、新しい実装が本の実装よりも効率的である理由を述べよ。</li>
-</o
-
-こんなのでどうかな。<code>cp</code>で比較した結果をもとにパターンマッチするから、比較が1回しか実行されない。
-
-```haskell
-module TenEightTwo where
-
-import TenThree
-
-occurs'' :: Int -> Tree -> Bool
-occurs'' m (Leaf n) = m == n
-occurs'' m t        = f (cp m t) m t
-  where
-    cp m (Node _ n _)   = compare m n
-    f LT m (Node l _ _) = occurs'' m l
-    f EQ _ _            = True
-    f GT m (Node _ _ r) = occurs'' m r
-```
-
-ol>
-<li value="3">以下の二分木を考えよう。<br />
-<pre>data Tree = Leaf Int | Node Tree Tree</pre><br />
-全ての節に対して、右と左の部分木にある葉の数が、高々一つだけ異なるとき、木は平衡していると表現する。葉は平衡していると考える。木が平衡しているか調べる関数 <code>balanced :: Tree -> Bool</code> を定義せよ。<br />
-ヒント：最初に木の中の葉の数を返す関数を実装せよ。</li>
-</o
-
-ヒント通りに実装。
-
-```haskell
-module TenEightThree where
-
-data Tree = Leaf Int | Node Tree Tree
-
-leaves            :: Tree -> Int
-leaves (Leaf _)   =  1
-leaves (Node l r) =  leaves l + leaves r
-
-balanced            :: Tree -> Bool
-balanced (Leaf _)   =  True
-balanced (Node l r) =  abs (leaves l - leaves r) <= 1
-```
-
-ol>
-<li value="4">空でない整数のリストを平衡木に変換する関数 <code>balance :: [Int] -> Tree</code> を定義せよ。<br />
-ヒント：最初にリストを、長さが高々一つだけ異なるリスト二つに分割する関数を実装せよ。
-</li>
-</o
-
-書けたんだけど、空リストを適用すると無限ループしてエラーになってしまう。
-```haskell
-module TenEightFour where
-
-import TenEightThree
-
-devide    :: [a] -> ([a], [a])
-devide xs =  splitAt (length xs `div` 2) xs
-
-balance :: [Int] -> Tree
-balance [n] = Leaf n
-balance xs  = Node (balance l) (balance r)
-  where (l, r) = devide xs
-```
-
-ol>
-<li value="5">恒真式か検査する関数を拡張して、命題に論理和（∨）と同値（⇔）が使えるようにせよ。</li>
-</o
-
-コンストラクタに<code>Or</code>と<code>Equiv</code>を追加。ついでに命題としてド・モルガンの法則（の片方）を定義してみる。
-```diff
-@@ -1,4 +1,4 @@
--module TenFour where
-+module TenEightFive where
- 
- import NineSeven
- import TenOne
-@@ -8,6 +8,8 @@
-   | Not Prop
-   | And Prop Prop
-   | Imply Prop Prop
-+  | Or Prop Prop
-+  | Equiv Prop Prop
- 
- p1 :: Prop
- p1 = And (Var 'A') (Not (Var 'A'))
-@@ -17,6 +19,8 @@
- p3 = Imply (Var 'A') (And (Var 'A') (Var 'B'))
- p4 :: Prop
- p4 = Imply (And (Var 'A') (Imply (Var 'A') (Var 'B'))) (Var 'B')
-+p5 :: Prop
-+p5 = Equiv (Not (And (Var 'A') (Var 'B'))) (Or (Not (Var 'A')) (Not (Var 'B')))
- 
- type Subst = Assoc Char Bool
- 
-@@ -26,6 +30,8 @@
- eval s (Not p)     =  not (eval s p)
- eval s (And p q)   =  eval s p && eval s q
- eval s (Imply p q) =  eval s p <= eval s q
-+eval s (Or p q)    =  eval s p || eval s q
-+eval s (Equiv p q) =  eval s p == eval s q
- 
- vars             :: Prop -> [Char]
- vars (Const _)   =  []
-@@ -33,6 +39,8 @@
- vars (Not p)     =  vars p
- vars (And p q)   =  vars p ++ vars q
- vars (Imply p q) =  vars p ++ vars q
-+vars (Or p q)    =  vars p ++ vars q
-+vars (Equiv p q) =  vars p ++ vars q
- 
- bools   :: Int -> [[Bool]]
- bools 0 = [[]]
-```
-
+> <li value="1">再帰と関数<code>add</code>を用いて、自然数の乗算関数 <code>mult :: Nat -> Nat -> Nat</code> を定義せよ。</li>
+> </ol><
+> 
+> これは楽勝。（10.3で定義したNatはゼロも自然数だったことを思い出して）
+> 
+> >|haskell|
+> module TenEightOne where
+> 
+> import TenThree
+> 
+> mult :: Nat -> Nat -> Nat
+> mult Zero     _    = Zero
+> mult _        Zero = Zero
+> mult (Succ m) n    = add n (mult m n)
+> ||<
+> 
+> ><ol>
+> <li value="2">付録Aには掲載されていないが、標準ライブラリでは以下のクラスとメソッドが定義されている。<br />
+> <pre>
+> data Ordering = LT | EQ | GT
+> compare :: Ord a => a -> a -> Ordering
+> </pre>
+> このメソッドは、順序クラスのある値が他の値と比較して、小さい（LT）か、等しい（EQ）か、大きい（GT）かを判断する。このメソッドを用いて、探索木用の関数 <code>occures :: Int -> Tree -> Bool</code> を再定義せよ。また、新しい実装が本の実装よりも効率的である理由を述べよ。</li>
+> </ol><
+> 
+> こんなのでどうかな。<code>cp</code>で比較した結果をもとにパターンマッチするから、比較が1回しか実行されない。
+> 
+> >|haskell|
+> module TenEightTwo where
+> 
+> import TenThree
+> 
+> occurs'' :: Int -> Tree -> Bool
+> occurs'' m (Leaf n) = m == n
+> occurs'' m t        = f (cp m t) m t
+>   where
+>     cp m (Node _ n _)   = compare m n
+>     f LT m (Node l _ _) = occurs'' m l
+>     f EQ _ _            = True
+>     f GT m (Node _ _ r) = occurs'' m r
+> ||<
+> 
+> ><ol>
+> <li value="3">以下の二分木を考えよう。<br />
+> <pre>data Tree = Leaf Int | Node Tree Tree</pre><br />
+> 全ての節に対して、右と左の部分木にある葉の数が、高々一つだけ異なるとき、木は平衡していると表現する。葉は平衡していると考える。木が平衡しているか調べる関数 <code>balanced :: Tree -> Bool</code> を定義せよ。<br />
+> ヒント：最初に木の中の葉の数を返す関数を実装せよ。</li>
+> </ol><
+> 
+> ヒント通りに実装。
+> 
+> >|haskell|
+> module TenEightThree where
+> 
+> data Tree = Leaf Int | Node Tree Tree
+> 
+> leaves            :: Tree -> Int
+> leaves (Leaf _)   =  1
+> leaves (Node l r) =  leaves l + leaves r
+> 
+> balanced            :: Tree -> Bool
+> balanced (Leaf _)   =  True
+> balanced (Node l r) =  abs (leaves l - leaves r) <= 1
+> ||<
+> 
+> ><ol>
+> <li value="4">空でない整数のリストを平衡木に変換する関数 <code>balance :: [Int] -> Tree</code> を定義せよ。<br />
+> ヒント：最初にリストを、長さが高々一つだけ異なるリスト二つに分割する関数を実装せよ。
+> </li>
+> </ol><
+> 
+> 書けたんだけど、空リストを適用すると無限ループしてエラーになってしまう。
+> >|haskell|
+> module TenEightFour where
+> 
+> import TenEightThree
+> 
+> devide    :: [a] -> ([a], [a])
+> devide xs =  splitAt (length xs `div` 2) xs
+> 
+> balance :: [Int] -> Tree
+> balance [n] = Leaf n
+> balance xs  = Node (balance l) (balance r)
+>   where (l, r) = devide xs
+> ||<
+> 
+> ><ol>
+> <li value="5">恒真式か検査する関数を拡張して、命題に論理和（∨）と同値（⇔）が使えるようにせよ。</li>
+> </ol><
+> 
+> コンストラクタに<code>Or</code>と<code>Equiv</code>を追加。ついでに命題としてド・モルガンの法則（の片方）を定義してみる。
+> >|diff|
+> @@ -1,4 +1,4 @@
+> -module TenFour where
+> +module TenEightFive where
+>  
+>  import NineSeven
+>  import TenOne
+> @@ -8,6 +8,8 @@
+>    | Not Prop
+>    | And Prop Prop
+>    | Imply Prop Prop
+> +  | Or Prop Prop
+> +  | Equiv Prop Prop
+>  
+>  p1 :: Prop
+>  p1 = And (Var 'A') (Not (Var 'A'))
+> @@ -17,6 +19,8 @@
+>  p3 = Imply (Var 'A') (And (Var 'A') (Var 'B'))
+>  p4 :: Prop
+>  p4 = Imply (And (Var 'A') (Imply (Var 'A') (Var 'B'))) (Var 'B')
+> +p5 :: Prop
+> +p5 = Equiv (Not (And (Var 'A') (Var 'B'))) (Or (Not (Var 'A')) (Not (Var 'B')))
+>  
+>  type Subst = Assoc Char Bool
+>  
+> @@ -26,6 +30,8 @@
+>  eval s (Not p)     =  not (eval s p)
+>  eval s (And p q)   =  eval s p && eval s q
+>  eval s (Imply p q) =  eval s p <= eval s q
+> +eval s (Or p q)    =  eval s p || eval s q
+> +eval s (Equiv p q) =  eval s p == eval s q
+>  
+>  vars             :: Prop -> [Char]
+>  vars (Const _)   =  []
+> @@ -33,6 +39,8 @@
+>  vars (Not p)     =  vars p
+>  vars (And p q)   =  vars p ++ vars q
+>  vars (Imply p q) =  vars p ++ vars q
+> +vars (Or p q)    =  vars p ++ vars q
+> +vars (Equiv p q) =  vars p ++ vars q
+>  
+>  bools   :: Int -> [[Bool]]
+>  bools 0 = [[]]
+> ||<
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -5575,13 +5579,17 @@ isTaut p =  and [eval s p | s <- substs p]
 引数なしのデータコンストラクタだと列挙型みたいなもの。これはOK。たとえば、Bool型の要素がTrueとFalse、といった形でこれまでも登場している。
 でも引数ありのデータコンストラクタを持つ型は、これまでになかったものだ。これはCで言えば構造体だし、オブジェクト指向言語でいえばオブジェクトにあたるのだけど、以下が違う。
 
+
 * フィールドには名前がいらない。
 * 名前のないフィールドを参照するときはパターンマッチ（順序で区別する）。
 
+
 この理解は正しいかな？と思いながらググったら、こんなこともわかった。
+
 
 * データコンストラクタのパターンマッチは、リストのパターンマッチという形ですでに登場していた
 * フィールドには名前をつけることもできる。
+
 
 ふむ。教科書にはそこまで書いてないから、先取りしたことになるだろうか。
 
@@ -5775,131 +5783,130 @@ safehead xs =  Just (head xs)
 ## 9.9 練習問題
 練習問題5は「グラフィック・ライブラリを用いて」とか書いてあって面倒なのでパス。Windowsで動かなかったりするし。
 
-ol>
-<li value="6">ニムはボードを使うゲームである。ボードには、番号の付いた行が五つあり、はじめは星が以下のように並べてある。
-<pre>
-1:*****
-2:****
-3:***
-4:**
-5:*
-</pre>
-二人のプレイヤーは、交互に行を一つ選び、その最後から一つ以上の星を取る。ボードから最後の星を取った方が勝ちである。ニムをHaskellで実装せよ。<br />ヒント：それぞれの残っている星の数のリストでボードを定義せよ。ボードの初期値は <code>[5,4,3,2,1]</code> となる。</li>
-</o
-
-割と長くなったので解説を入れながら。
-
-まず、入力のところを考える。
-入力は<code>"行番号 星の数"</code>と入力してEnterを押す仕様にする。
-せっかくなのでパーザーモナドを使う。
-```haskell
-import Parsing
-
-niminput :: Parser (Int,Int)
-niminput =  do
-  row <- nat
-  space
-  count <- nat
-  return (row,count)
-```
-こんな感じで、パーズに成功したら(行番号,星の数)というタプルを返すことにする。
-
-出力は、9.5の関数を一部使う。
-zip関数で(行番号,星の数)というタプルのリストを作って、それぞれを表示する。
-```haskell
-import NineFive
-
-type Board = [Int]
-
-display    :: Board -> IO ()
-display xs =  seqn $ map displayline $ zip [1..length xs] xs
-
-displayline :: (Int,Int) -> IO ()
-displayline (row,count) = do
-  putStr (show row ++ ":")
-  putStrLn (replicate count '*')
-```
-
-星を取る関数の仕様はちょっと悩んだ。
-入力が不正だと星を取れないというロジックを組み込まないといけない。
-というわけで、(成否を表す真偽値,結果のボード)のタプルを返すようにしてみた。
-Maybeモナドのほうがいいのかもしれないが、まだ教科書には出て来てないからな。
-```haskell
-getstars :: Board -> (Int,Int) -> (Bool,Board)
-getstars xs (row,count)
-  | row == 0              = (False,xs)
-  | count == 0            = (False,xs)
-  | row > length xs       = (False,xs)
-  | xs !! (row-1) < count = (False,xs)
-  | otherwise             = (True,take (row-1) xs ++ [xs !! (row-1) - count] ++ drop row xs)
-```
-
-あとはIOモナドでグリグリと表示したり入力したり。
-
-というわけで、回答はこちら。
-
-```haskell
-module NineNineFive where
-
-import Parsing
-import NineFive
-
-niminput :: Parser (Int,Int)
-niminput =  do
-  row <- nat
-  space
-  count <- nat
-  return (row,count)
-
-type Board = [Int]
-
-display    :: Board -> IO ()
-display xs =  seqn $ map displayline $ zip [1..length xs] xs
-
-displayline :: (Int,Int) -> IO ()
-displayline (row,count) = do
-  putStr (show row ++ ":")
-  putStrLn (replicate count '*')
-
-getstars :: Board -> (Int,Int) -> (Bool,Board)
-getstars xs (row,count)
-  | row == 0              = (False,xs)
-  | count == 0            = (False,xs)
-  | row > length xs       = (False,xs)
-  | xs !! (row-1) < count = (False,xs)
-  | otherwise             = (True,take (row-1) xs ++ [xs !! (row-1) - count] ++ drop row xs)
-
-turn :: Int -> Board -> IO ()
-turn p b
-  | all (==0) b = return ()
-  | otherwise   = do {display b; input p b}
-
-input :: Int -> Board -> IO ()
-input p b = do
-  putStr ("Player " ++ show p ++ ": ")
-  xs <- getLine
-  process p b $ parse niminput xs
-
-process :: Int -> Board -> [((Int,Int),String)] -> IO ()
-process p b []      = do {beep; input p b}
-process p b [(r,_)] = check p $ getstars b r
-
-check :: Int -> (Bool,Board) -> IO ()
-check p (False, b) = do {beep; input p b}
-check p (True , b) =
-  if all (==0) b then
-    putStrLn ("Player " ++ show p ++ " won!")
-  else
-    turn (chenge p) b
-
-chenge   :: Int -> Int
-chenge 1 =  2
-chenge 2 =  1
-
-nim :: IO ()
-nim =  turn 1 [5,4,3,2,1]
-```
-
+> <li value="6">ニムはボードを使うゲームである。ボードには、番号の付いた行が五つあり、はじめは星が以下のように並べてある。
+> <pre>
+> 1:*****
+> 2:****
+> 3:***
+> 4:**
+> 5:*
+> </pre>
+> 二人のプレイヤーは、交互に行を一つ選び、その最後から一つ以上の星を取る。ボードから最後の星を取った方が勝ちである。ニムをHaskellで実装せよ。<br />ヒント：それぞれの残っている星の数のリストでボードを定義せよ。ボードの初期値は <code>[5,4,3,2,1]</code> となる。</li>
+> </ol><
+> 
+> 割と長くなったので解説を入れながら。
+> 
+> まず、入力のところを考える。
+> 入力は<code>"行番号 星の数"</code>と入力してEnterを押す仕様にする。
+> せっかくなのでパーザーモナドを使う。
+> >|haskell|
+> import Parsing
+> 
+> niminput :: Parser (Int,Int)
+> niminput =  do
+>   row <- nat
+>   space
+>   count <- nat
+>   return (row,count)
+> ||<
+> こんな感じで、パーズに成功したら(行番号,星の数)というタプルを返すことにする。
+> 
+> 出力は、9.5の関数を一部使う。
+> zip関数で(行番号,星の数)というタプルのリストを作って、それぞれを表示する。
+> >|haskell|
+> import NineFive
+> 
+> type Board = [Int]
+> 
+> display    :: Board -> IO ()
+> display xs =  seqn $ map displayline $ zip [1..length xs] xs
+> 
+> displayline :: (Int,Int) -> IO ()
+> displayline (row,count) = do
+>   putStr (show row ++ ":")
+>   putStrLn (replicate count '*')
+> ||<
+> 
+> 星を取る関数の仕様はちょっと悩んだ。
+> 入力が不正だと星を取れないというロジックを組み込まないといけない。
+> というわけで、(成否を表す真偽値,結果のボード)のタプルを返すようにしてみた。
+> Maybeモナドのほうがいいのかもしれないが、まだ教科書には出て来てないからな。
+> >|haskell|
+> getstars :: Board -> (Int,Int) -> (Bool,Board)
+> getstars xs (row,count)
+>   | row == 0              = (False,xs)
+>   | count == 0            = (False,xs)
+>   | row > length xs       = (False,xs)
+>   | xs !! (row-1) < count = (False,xs)
+>   | otherwise             = (True,take (row-1) xs ++ [xs !! (row-1) - count] ++ drop row xs)
+> ||<
+> 
+> あとはIOモナドでグリグリと表示したり入力したり。
+> 
+> というわけで、回答はこちら。
+> 
+> >|haskell|
+> module NineNineFive where
+> 
+> import Parsing
+> import NineFive
+> 
+> niminput :: Parser (Int,Int)
+> niminput =  do
+>   row <- nat
+>   space
+>   count <- nat
+>   return (row,count)
+> 
+> type Board = [Int]
+> 
+> display    :: Board -> IO ()
+> display xs =  seqn $ map displayline $ zip [1..length xs] xs
+> 
+> displayline :: (Int,Int) -> IO ()
+> displayline (row,count) = do
+>   putStr (show row ++ ":")
+>   putStrLn (replicate count '*')
+> 
+> getstars :: Board -> (Int,Int) -> (Bool,Board)
+> getstars xs (row,count)
+>   | row == 0              = (False,xs)
+>   | count == 0            = (False,xs)
+>   | row > length xs       = (False,xs)
+>   | xs !! (row-1) < count = (False,xs)
+>   | otherwise             = (True,take (row-1) xs ++ [xs !! (row-1) - count] ++ drop row xs)
+> 
+> turn :: Int -> Board -> IO ()
+> turn p b
+>   | all (==0) b = return ()
+>   | otherwise   = do {display b; input p b}
+> 
+> input :: Int -> Board -> IO ()
+> input p b = do
+>   putStr ("Player " ++ show p ++ ": ")
+>   xs <- getLine
+>   process p b $ parse niminput xs
+> 
+> process :: Int -> Board -> [((Int,Int),String)] -> IO ()
+> process p b []      = do {beep; input p b}
+> process p b [(r,_)] = check p $ getstars b r
+> 
+> check :: Int -> (Bool,Board) -> IO ()
+> check p (False, b) = do {beep; input p b}
+> check p (True , b) =
+>   if all (==0) b then
+>     putStrLn ("Player " ++ show p ++ " won!")
+>   else
+>     turn (chenge p) b
+> 
+> chenge   :: Int -> Int
+> chenge 1 =  2
+> chenge 2 =  1
+> 
+> nim :: IO ()
+> nim =  turn 1 [5,4,3,2,1]
+> ||<
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -5929,114 +5936,113 @@ nim =  turn 1 [5,4,3,2,1]
       <content:encoded><![CDATA[
 ## 9.9 練習問題
 
-ol>
-<li value="4">ライフゲームのボードを対話的に作成したり、変更したりできるエディターを作れ。</li>
-</o
-
-[](http://haskell.g.hatena.ne.jp/matarillo/20120125/1327499245:title=9.7で写経したライフゲーム)を修正して、ボードサイズを可変にできるようにしてやったぜ。
-
-```haskell
-module NineNineFour where
-
-import System.IO
-import NineFive
-
-getCh :: IO Char
-getCh =  do hSetEcho stdin False
-            c <- getChar
-            hSetEcho stdin True
-            return c
-
--- variable size
-
-type Board = [Pos]
-type Size  = Pos
-
-showcells   :: Board -> IO ()
-showcells b =  seqn [writeat p "O" | p <- b]
-
-isAlive     :: Board -> Pos -> Bool
-isAlive b p =  elem p b
-
-isEmpty     :: Board -> Pos -> Bool
-isEmpty b p =  not (isAlive b p)
-
-neighbs         :: Size -> Pos -> [Pos]
-neighbs s (x,y) =  map (wrap s)
-                     [(x-1,y-1), (x,y-1), (x+1,y-1),
-                      (x-1,y),            (x+1,y),
-                      (x-1,y+1), (x,y+1), (x+1,y+1)]
-
-wrap             :: Size -> Pos -> Pos
-wrap (w,h) (x,y) =  (((x-1) `mod` w) + 1, ((y-1) `mod` h) + 1)
-
-liveneighbs      :: Size -> Board -> Pos -> Int
-liveneighbs s b  =  length . filter (isAlive b) . neighbs s
-
-survivors     :: Size -> Board -> [Pos]
-survivors s b =  [p | p <- b, elem (liveneighbs s b p) [2,3]]
-
-births     :: Size -> Board -> [Pos]
-births s b =  [p | p <- rmdups (concat (map (neighbs s) b)),
-                   isEmpty b p,
-                   liveneighbs s b p == 3]
-
-rmdups        :: Eq a => [a] -> [a]
-rmdups []     =  []
-rmdups (x:xs) =  x:rmdups (filter ((/=) x) xs)
-
-nextgen     :: Size -> Board -> Board
-nextgen s b =  survivors s b ++ births s b
-
-life     :: Size -> Board -> IO ()
-life s b =  do
-  cls
-  showcells b
-  wait 5000
-  life s (nextgen s b)
-
-wait   :: Int -> IO ()
-wait n =  seqn [return () | _ <- [1..n]]
-
--- board maker
-
-runlife     :: Int -> Int -> IO ()
-runlife w h =  makeboard (w,h) [] (1,1)
-
-makeboard       :: Size -> Board -> Pos -> IO ()
-makeboard s b p =  do
-  cls
-  showcells b
-  goto p
-  c <- getCh
-  process s b p c
-
-move                   :: Size -> Pos -> Pos -> Pos
-move s (dx,dy) (px,py) =  wrap s (px+dx,py+dy)
-
-up    = ( 0, -1)
-down  = ( 0,  1)
-right = ( 1,  0)
-left  = (-1,  0)
-
-process      :: Size -> Board -> Pos -> Char -> IO ()
-process s b p c
-  | elem c "\n" = life s b
-  | elem c " "  = makeboard s (flippos p b) p
-  | elem c "c"  = makeboard s [] p
-  | elem c "k"  = makeboard s b (move s up p)
-  | elem c "j"  = makeboard s b (move s down p)
-  | elem c "h"  = makeboard s b (move s left p)
-  | elem c "l"  = makeboard s b (move s right p)
-  | otherwise   = makeboard s b p
-
-flippos     :: Pos -> Board -> Board
-flippos p b =  if elem p b
-               then [q | q <- b, q /= p]
-               else p : b
-
-```
-
+> <li value="4">ライフゲームのボードを対話的に作成したり、変更したりできるエディターを作れ。</li>
+> </ol><
+> 
+> [http://haskell.g.hatena.ne.jp/matarillo/20120125/1327499245](http://haskell.g.hatena.ne.jp/matarillo/20120125/1327499245)を修正して、ボードサイズを可変にできるようにしてやったぜ。
+> 
+> >|haskell|
+> module NineNineFour where
+> 
+> import System.IO
+> import NineFive
+> 
+> getCh :: IO Char
+> getCh =  do hSetEcho stdin False
+>             c <- getChar
+>             hSetEcho stdin True
+>             return c
+> 
+> -- variable size
+> 
+> type Board = [Pos]
+> type Size  = Pos
+> 
+> showcells   :: Board -> IO ()
+> showcells b =  seqn [writeat p "O" | p <- b]
+> 
+> isAlive     :: Board -> Pos -> Bool
+> isAlive b p =  elem p b
+> 
+> isEmpty     :: Board -> Pos -> Bool
+> isEmpty b p =  not (isAlive b p)
+> 
+> neighbs         :: Size -> Pos -> [Pos]
+> neighbs s (x,y) =  map (wrap s)
+>                      [(x-1,y-1), (x,y-1), (x+1,y-1),
+>                       (x-1,y),            (x+1,y),
+>                       (x-1,y+1), (x,y+1), (x+1,y+1)]
+> 
+> wrap             :: Size -> Pos -> Pos
+> wrap (w,h) (x,y) =  (((x-1) `mod` w) + 1, ((y-1) `mod` h) + 1)
+> 
+> liveneighbs      :: Size -> Board -> Pos -> Int
+> liveneighbs s b  =  length . filter (isAlive b) . neighbs s
+> 
+> survivors     :: Size -> Board -> [Pos]
+> survivors s b =  [p | p <- b, elem (liveneighbs s b p) [2,3]]
+> 
+> births     :: Size -> Board -> [Pos]
+> births s b =  [p | p <- rmdups (concat (map (neighbs s) b)),
+>                    isEmpty b p,
+>                    liveneighbs s b p == 3]
+> 
+> rmdups        :: Eq a => [a] -> [a]
+> rmdups []     =  []
+> rmdups (x:xs) =  x:rmdups (filter ((/=) x) xs)
+> 
+> nextgen     :: Size -> Board -> Board
+> nextgen s b =  survivors s b ++ births s b
+> 
+> life     :: Size -> Board -> IO ()
+> life s b =  do
+>   cls
+>   showcells b
+>   wait 5000
+>   life s (nextgen s b)
+> 
+> wait   :: Int -> IO ()
+> wait n =  seqn [return () | _ <- [1..n]]
+> 
+> -- board maker
+> 
+> runlife     :: Int -> Int -> IO ()
+> runlife w h =  makeboard (w,h) [] (1,1)
+> 
+> makeboard       :: Size -> Board -> Pos -> IO ()
+> makeboard s b p =  do
+>   cls
+>   showcells b
+>   goto p
+>   c <- getCh
+>   process s b p c
+> 
+> move                   :: Size -> Pos -> Pos -> Pos
+> move s (dx,dy) (px,py) =  wrap s (px+dx,py+dy)
+> 
+> up    = ( 0, -1)
+> down  = ( 0,  1)
+> right = ( 1,  0)
+> left  = (-1,  0)
+> 
+> process      :: Size -> Board -> Pos -> Char -> IO ()
+> process s b p c
+>   | elem c "\n" = life s b
+>   | elem c " "  = makeboard s (flippos p b) p
+>   | elem c "c"  = makeboard s [] p
+>   | elem c "k"  = makeboard s b (move s up p)
+>   | elem c "j"  = makeboard s b (move s down p)
+>   | elem c "h"  = makeboard s b (move s left p)
+>   | elem c "l"  = makeboard s b (move s right p)
+>   | otherwise   = makeboard s b p
+> 
+> flippos     :: Pos -> Board -> Board
+> flippos p b =  if elem p b
+>                then [q | q <- b, q /= p]
+>                else p : b
+> 
+> ||<
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -6064,15 +6070,15 @@ flippos p b =  if elem p b
       <guid isPermaLink="false" />
       <description />
       <content:encoded><![CDATA[
-[](http://d.hatena.ne.jp/rst76/20120204/1328362118:title)
+[http://d.hatena.ne.jp/rst76/20120204/1328362118](http://d.hatena.ne.jp/rst76/20120204/1328362118)
 
 F#の環境を作るのが面倒という声も上がっているけど、
-[](http://ideone.com/DTAC2:title=オンラインでやりゃいいじゃない。パンがなければお菓子を食べればいいじゃない。)
+[http://ideone.com/DTAC2](http://ideone.com/DTAC2)
 
 というか、Linux/Mac/Solarisな人ならmonoを入れれ。
 
-[](http://www.go-mono.com/mono-downloads/download.html:title)
-[](http://functional-variations.net/crossplatform/:title)
+[http://www.go-mono.com/mono-downloads/download.html](http://www.go-mono.com/mono-downloads/download.html)
+[http://functional-variations.net/crossplatform/](http://functional-variations.net/crossplatform/)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -6088,8 +6094,8 @@ F#の環境を作るのが面倒という声も上がっているけど、
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[Haskell]"><![CDATA[[Haskell]]]></category>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="Haskell"><![CDATA[Haskell]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -6105,69 +6111,68 @@ F#の環境を作るのが面倒という声も上がっているけど、
       <content:encoded><![CDATA[
 ## 9.9 練習問題
 
-ol>
-<li value="3">ライフゲームは、世代ごとに画面全体をクリアするので、動かす環境によっては、動きがちらつくかもしれない。それを防止するために、状態が変わったところだけ表示し直すようライフゲームを変更せよ。</li>
-</o
-
-うーん。リモートターミナルとかだとちらつくかもしれないかな。
-
-```diff
-@@ -1,5 +1,6 @@
--module NineSeven where
-+module NineNineThree where
- 
-+import List
- import NineFive
- 
- width :: Int
-@@ -13,9 +14,12 @@
- glider :: Board
- glider =  [(4,2), (2,3), (4,3), (3,4), (4,4)]
- 
--showcells   :: Board -> IO ()
--showcells b =  seqn [writeat p "O" | p <- b]
-+clearcells    :: [Pos] -> IO ()
-+clearcells xs =  seqn [writeat p " " | p <- xs]
- 
-+writecells    :: [Pos] -> IO ()
-+writecells xs =  seqn [writeat p "O" | p <- xs]
-+
- isAlive     :: Board -> Pos -> Bool
- isAlive b p =  elem p b
- 
-@@ -36,6 +40,9 @@
- survivors   :: Board -> [Pos]
- survivors b =  [p | p <- b, elem (liveneighbs b p) [2,3]]
- 
-+deaths   :: Board -> [Pos]
-+deaths b =  [p | p <- b, not $ elem p (survivors b)]
-+
- births   :: Board -> [Pos]
- births b =  [p | p <- rmdups (concat (map neighbs b)),
-                  isEmpty b p,
-@@ -50,9 +57,14 @@
- 
- life   :: Board -> IO ()
- life b =  do cls
--             showcells b
--             wait 5000
--             life (nextgen b)
-+             writecells b
-+             wait 5000
-+             life' b
- 
-+life'   :: Board -> IO ()
-+life' b =  do writecells (births b)
-+              clearcells (deaths b)
-+              wait 5000
-+              life' (nextgen b)
-+
- wait   :: Int -> IO ()
- wait n =  seqn [return () | _ <- [1..n]]
-```
-
-というわけで、<code>cls >>= showcells</code> のところを <code>writecells >>= clearcells</code> としてみた。
-
+> <li value="3">ライフゲームは、世代ごとに画面全体をクリアするので、動かす環境によっては、動きがちらつくかもしれない。それを防止するために、状態が変わったところだけ表示し直すようライフゲームを変更せよ。</li>
+> </ol><
+> 
+> うーん。リモートターミナルとかだとちらつくかもしれないかな。
+> 
+> >|diff|
+> @@ -1,5 +1,6 @@
+> -module NineSeven where
+> +module NineNineThree where
+>  
+> +import List
+>  import NineFive
+>  
+>  width :: Int
+> @@ -13,9 +14,12 @@
+>  glider :: Board
+>  glider =  [(4,2), (2,3), (4,3), (3,4), (4,4)]
+>  
+> -showcells   :: Board -> IO ()
+> -showcells b =  seqn [writeat p "O" | p <- b]
+> +clearcells    :: [Pos] -> IO ()
+> +clearcells xs =  seqn [writeat p " " | p <- xs]
+>  
+> +writecells    :: [Pos] -> IO ()
+> +writecells xs =  seqn [writeat p "O" | p <- xs]
+> +
+>  isAlive     :: Board -> Pos -> Bool
+>  isAlive b p =  elem p b
+>  
+> @@ -36,6 +40,9 @@
+>  survivors   :: Board -> [Pos]
+>  survivors b =  [p | p <- b, elem (liveneighbs b p) [2,3]]
+>  
+> +deaths   :: Board -> [Pos]
+> +deaths b =  [p | p <- b, not $ elem p (survivors b)]
+> +
+>  births   :: Board -> [Pos]
+>  births b =  [p | p <- rmdups (concat (map neighbs b)),
+>                   isEmpty b p,
+> @@ -50,9 +57,14 @@
+>  
+>  life   :: Board -> IO ()
+>  life b =  do cls
+> -             showcells b
+> -             wait 5000
+> -             life (nextgen b)
+> +             writecells b
+> +             wait 5000
+> +             life' b
+>  
+> +life'   :: Board -> IO ()
+> +life' b =  do writecells (births b)
+> +              clearcells (deaths b)
+> +              wait 5000
+> +              life' (nextgen b)
+> +
+>  wait   :: Int -> IO ()
+>  wait n =  seqn [return () | _ <- [1..n]]
+> ||<
+> 
+> というわけで、<code>cls >>= showcells</code> のところを <code>writecells >>= clearcells</code> としてみた。
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -6197,42 +6202,41 @@ ol>
       <content:encoded><![CDATA[
 ## 9.9 練習問題
 
-ol>
-<li value="2">エラーの際に単にビープ音を鳴らすのではなく、エラーの位置が分かるように電卓を変更せよ。パーサーは消費しなかった文字列を返すという性質を活用するとよい。</li>
-</o
-
-「エラーの位置がわかるように」というのが何を求めているのかよくわからないが、「消費した（解読できた）位置まで戻る」という仕様にすることにした。
-
-```diff
-@@ -1,4 +1,4 @@
--module NineSix where
-+module NineNineTwo where
- 
- import Parsing
- import Expr
-@@ -58,9 +58,9 @@
- 
- eval    :: String -> IO ()
- eval xs =  case parse expr xs of
--             [(n,"")] -> calc (show n)
--             _        -> do beep
--                            calc xs
-+             [(n,"")]  -> calc (show n)
-+             [(_,out)] -> do beep
-+                             calc (take (length xs - length out) xs)
- 
- clear :: IO ()
- clear =  calc ""
-```
-
-要するに<code>eval</code>のパターンマッチを書き換えて、消費しなかった文字を切り捨てて再表示している。
-
-カッコが多いのがHaskellっぽくないのはわかっているけど、<code>take (length xs - length out) xs</code>が簡潔にならない限り、
-```haskell
-calc $ take (length xs - length out) xs
-```
-にしたところでたいした違いはない。
-
+> <li value="2">エラーの際に単にビープ音を鳴らすのではなく、エラーの位置が分かるように電卓を変更せよ。パーサーは消費しなかった文字列を返すという性質を活用するとよい。</li>
+> </ol><
+> 
+> 「エラーの位置がわかるように」というのが何を求めているのかよくわからないが、「消費した（解読できた）位置まで戻る」という仕様にすることにした。
+> 
+> >|diff|
+> @@ -1,4 +1,4 @@
+> -module NineSix where
+> +module NineNineTwo where
+>  
+>  import Parsing
+>  import Expr
+> @@ -58,9 +58,9 @@
+>  
+>  eval    :: String -> IO ()
+>  eval xs =  case parse expr xs of
+> -             [(n,"")] -> calc (show n)
+> -             _        -> do beep
+> -                            calc xs
+> +             [(n,"")]  -> calc (show n)
+> +             [(_,out)] -> do beep
+> +                             calc (take (length xs - length out) xs)
+>  
+>  clear :: IO ()
+>  clear =  calc ""
+> ||<
+> 
+> 要するに<code>eval</code>のパターンマッチを書き換えて、消費しなかった文字を切り捨てて再表示している。
+> 
+> カッコが多いのがHaskellっぽくないのはわかっているけど、<code>take (length xs - length out) xs</code>が簡潔にならない限り、
+> >|haskell|
+> calc $ take (length xs - length out) xs
+> ||<
+> にしたところでたいした違いはない。
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -6264,39 +6268,38 @@ calc $ take (length xs - length out) xs
 
 ## 9.9 練習問題
 
-ol>
-<li>アクション <code>getLine</code> に、削除キーで文字を消去できる機能を加えたアクション <code>readLine :: IO String</code> を定義せよ。<br />ヒント：一文字削除するための制御文字は <code>"\DEL"</code>、一文字戻るための制御文字列は <code>"\ESC[1D"</code> である。</li>
-</o
-
-結局、terminalのバッファリングモードの関係で、VirtualBoxでLinuxを動かした。
-[](http://haskell.g.hatena.ne.jp/matarillo/20120124/1327375513:title=最近のHugsにはgetChがないとのことでいろいろ面倒)だったからGHCiを使うことにした。
-```haskell
-module NineNineOne where
-
-import System.IO
-
-getCh :: IO Char
-getCh =  do hSetEcho stdin False
-            c <- getChar
-            hSetEcho stdin True
-            return c
-
-readLine :: IO String
-readLine =  f ""
-            where
-              f xs =  do c <- getCh
-                         handle xs c
-              handle xs '\n'   = do putChar '\n'
-                                    return xs
-              handle [] '\DEL' = f ""
-              handle xs '\DEL' = do putStr "\ESC[1D \ESC[1D"
-                                    f (init xs)
-              handle xs c      = do putChar c
-                                    f (xs ++ [c])
-```
-
-書いた後で考えると、<code>init xs</code>とか<code>xs ++ [c]</code>が気持ち悪いな。逆順のリストにしておいて、Enterが押されたときに<code>return reverse xs</code>のほうがよかった気もする。
-
+> <li>アクション <code>getLine</code> に、削除キーで文字を消去できる機能を加えたアクション <code>readLine :: IO String</code> を定義せよ。<br />ヒント：一文字削除するための制御文字は <code>"\DEL"</code>、一文字戻るための制御文字列は <code>"\ESC[1D"</code> である。</li>
+> </ol><
+> 
+> 結局、terminalのバッファリングモードの関係で、VirtualBoxでLinuxを動かした。
+> [http://haskell.g.hatena.ne.jp/matarillo/20120124/1327375513](http://haskell.g.hatena.ne.jp/matarillo/20120124/1327375513)だったからGHCiを使うことにした。
+> >|haskell|
+> module NineNineOne where
+> 
+> import System.IO
+> 
+> getCh :: IO Char
+> getCh =  do hSetEcho stdin False
+>             c <- getChar
+>             hSetEcho stdin True
+>             return c
+> 
+> readLine :: IO String
+> readLine =  f ""
+>             where
+>               f xs =  do c <- getCh
+>                          handle xs c
+>               handle xs '\n'   = do putChar '\n'
+>                                     return xs
+>               handle [] '\DEL' = f ""
+>               handle xs '\DEL' = do putStr "\ESC[1D \ESC[1D"
+>                                     f (init xs)
+>               handle xs c      = do putChar c
+>                                     f (xs ++ [c])
+> ||<
+> 
+> 書いた後で考えると、<code>init xs</code>とか<code>xs ++ [c]</code>が気持ち悪いな。逆順のリストにしておいて、Enterが押されたときに<code>return reverse xs</code>のほうがよかった気もする。
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
@@ -6328,65 +6331,39 @@ readLine =  f ""
 
 今日は時間がないので、問題文を写すだけにしておく。
 
-ol>
-<li>アクション <code>getLine</code> に、削除キーで文字を消去できる機能を加えたアクション <code>readLine :: IO String</code> を定義せよ。<br />ヒント：一文字削除するための制御文字は <code>"\DEL"</code>、一文字戻るための制御文字列は <code>"\ESC[1D"</code> である。</li>
-<li>エラーの際に単にビープ音を鳴らすのではなく、エラーの位置が分かるように電卓を変更せよ。パーサーは消費しなかった文字列を返すという性質を活用するとよい。</li>
-<li>ライフゲームは、世代ごとに画面全体をクリアするので、動かす環境によっては、動きがちらつくかもしれない。それを防止するために、状態が変わったところだけ表示し直すようライフゲームを変更せよ。</li>
-<li>ライフゲームのボードを対話的に作成したり、変更したりできるエディターを作れ。</li>
-<li>[http://www.haskell.org:title=www.haskell.org]から入手できるグラフィック・ライブラリを用いて、電卓とライフゲームのグラフィック版を作成せよ。</li>
-<li>ニムはボードを使うゲームである。ボードには、番号の付いた行が五つあり、はじめは星が以下のように並べてある。
-<pre>
-1:*****
-2:****
-3:***
-4:**
-5:*
-</pre>
-二人のプレイヤーは、交互に行を一つ選び、その最後から一つ以上の星を取る。ボードから最後の星を取った方が勝ちである。ニムをHaskellで実装せよ。<br />ヒント：それぞれの残っている星の数のリストでボードを定義せよ。ボードの初期値は <code>[5,4,3,2,1]</code> となる。</li>
-</o
-
+> <li>アクション <code>getLine</code> に、削除キーで文字を消去できる機能を加えたアクション <code>readLine :: IO String</code> を定義せよ。<br />ヒント：一文字削除するための制御文字は <code>"\DEL"</code>、一文字戻るための制御文字列は <code>"\ESC[1D"</code> である。</li>
+> <li>エラーの際に単にビープ音を鳴らすのではなく、エラーの位置が分かるように電卓を変更せよ。パーサーは消費しなかった文字列を返すという性質を活用するとよい。</li>
+> <li>ライフゲームは、世代ごとに画面全体をクリアするので、動かす環境によっては、動きがちらつくかもしれない。それを防止するために、状態が変わったところだけ表示し直すようライフゲームを変更せよ。</li>
+> <li>ライフゲームのボードを対話的に作成したり、変更したりできるエディターを作れ。</li>
+> <li>[http://www.haskell.org](http://www.haskell.org)から入手できるグラフィック・ライブラリを用いて、電卓とライフゲームのグラフィック版を作成せよ。</li>
+> <li>ニムはボードを使うゲームである。ボードには、番号の付いた行が五つあり、はじめは星が以下のように並べてある。
+> <pre>
+> 1:*****
+> 2:****
+> 3:***
+> 4:**
+> 5:*
+> </pre>
+> 二人のプレイヤーは、交互に行を一つ選び、その最後から一つ以上の星を取る。ボードから最後の星を取った方が勝ちである。ニムをHaskellで実装せよ。<br />ヒント：それぞれの残っている星の数のリストでボードを定義せよ。ボードの初期値は <code>[5,4,3,2,1]</code> となる。</li>
+> </ol><
+> 
+> *1327572788*ターミナル
+> 
+> さて、<code>getCh</code>の前から怪しいと思ってたのだけど、<code>getChar</code>がEnterを押すまでキーを認識しない。
+> いろいろ調べると、バッファリングモードの問題らしく
+> >|haskell|
+> import IO
+> do hSetBuffering stdio NoBuffering
+> ||<
+> とかなんとかそういうのをやれと書いてある。が、やっても効かない。
+> mintty/msys の問題なのかなあ。sttyの問題なのか？よくわからん。
+> cmd.exeじゃエスケープシーケンスが効かないからってminttyを導入したのに、結局、Windowsでやるなってことなのか･･････
+> 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
       <wp:post_date>2012-01-26 00:05:51</wp:post_date>
       <wp:post_date_gmt>2012-01-25 15:05:51</wp:post_date_gmt>
-      <wp:comment_status>open</wp:comment_status>
-      <wp:ping_status>open</wp:ping_status>
-      <wp:post_name />
-      <wp:status>publish</wp:status>
-      <wp:post_parent>0</wp:post_parent>
-      <wp:menu_order>0</wp:menu_order>
-      <wp:post_type>post</wp:post_type>
-      <wp:post_password />
-      <wp:is_sticky>0</wp:is_sticky>
-      <wp:postmeta>
-        <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
-        <wp:meta_value><![CDATA[1]]></wp:meta_value>
-      </wp:postmeta>
-    </item>
-    <item>
-      <title>ターミナル</title>
-      <link />
-      <pubDate>Thu, 26 Jan 2012 10:13:08 +09:00</pubDate>
-      <dc:creator>matarillo</dc:creator>
-      <guid isPermaLink="false" />
-      <description />
-      <content:encoded><![CDATA[
-さて、<code>getCh</code>の前から怪しいと思ってたのだけど、<code>getChar</code>がEnterを押すまでキーを認識しない。
-いろいろ調べると、バッファリングモードの問題らしく
-```haskell
-import IO
-do hSetBuffering stdio NoBuffering
-```
-とかなんとかそういうのをやれと書いてある。が、やっても効かない。
-mintty/msys の問題なのかなあ。sttyの問題なのか？よくわからん。
-cmd.exeじゃエスケープシーケンスが効かないからってminttyを導入したのに、結局、Windowsでやるなってことなのか･･････
-
-]]></content:encoded>
-      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
-      <wp:post_id />
-      <wp:post_date>2012-01-26 10:13:08</wp:post_date>
-      <wp:post_date_gmt>2012-01-26 01:13:08</wp:post_date_gmt>
       <wp:comment_status>open</wp:comment_status>
       <wp:ping_status>open</wp:ping_status>
       <wp:post_name />
@@ -6412,7 +6389,7 @@ cmd.exeじゃエスケープシーケンスが効かないからってminttyを�
 ## ライフゲーム
 
 さて、9.7はライフゲームの実装。
-ひたすら写経。[](http://haskell.g.hatena.ne.jp/matarillo/20110908/1315442247:title=9.5で実装した)関数群を使っている。
+ひたすら写経。[http://haskell.g.hatena.ne.jp/matarillo/20110908/1315442247](http://haskell.g.hatena.ne.jp/matarillo/20110908/1315442247)関数群を使っている。
 
 ```haskell
 module NineSeven where
@@ -6534,9 +6511,9 @@ wait n =  seqn [return () | _ <- [1..n]]
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[もともと、俺の[](http://haskell.g.hatena.ne.jp/matarillo/20110430/1304151012:title=Haskell学習の目標)は、“[](http://d.hatena.ne.jp/rst76/20100706/1278430517:title)を全部理解できるようになること”だったわけで、それは今でも変わっていない。
+      <content:encoded><![CDATA[もともと、俺の[http://haskell.g.hatena.ne.jp/matarillo/20110430/1304151012](http://haskell.g.hatena.ne.jp/matarillo/20110430/1304151012)は、“[http://d.hatena.ne.jp/rst76/20100706/1278430517](http://d.hatena.ne.jp/rst76/20100706/1278430517)を全部理解できるようになること”だったわけで、それは今でも変わっていない。
 で、Haskellはだんだんわかって来たけど、“木探索から CPS にすることで効率化”が腑に落ちてなかった。
-そんな時に[](http://www.geocities.jp/m_hiroi/func/ocaml25.html:title)というページを見つけた。
+そんな時に[http://www.geocities.jp/m_hiroi/func/ocaml25.html](http://www.geocities.jp/m_hiroi/func/ocaml25.html)というページを見つけた。
 おお、なるほどね。CPSで効率化を理解する取っ掛かりができたぞ。
 
 ]]></content:encoded>
@@ -6567,7 +6544,7 @@ wait n =  seqn [return () | _ <- [1..n]]
       <description />
       <content:encoded><![CDATA[9.6の計算機プログラムの中でgetChという関数が出てきていて、コンパイルに通らないのでgetCharに置き換えてたんだけど、
 
-blockquote cite="http://www.cs.nott.ac.uk/~gmh/errata.html" title="Programming in Haskell -- Errata"><
+<blockquote cite="http://www.cs.nott.ac.uk/~gmh/errata.html" title="Programming in Haskell -- Errata"><
 Page 90. The action getCh is no longer provided as a primitive in Hugs, but can be defined in Haskell as follows:
 >|haskell|
 import System.IO
@@ -6579,7 +6556,7 @@ hSetEcho stdin True
 return c
 ||<
 This definition works with the Glasgow Haskell Compiler, but may not work with some Haskell systems, such as Hugs.
-></blockquot
+></blockquote>
 
 えー。
 
@@ -6751,7 +6728,7 @@ Haskellにくわしい後輩から「F#教えてください」と言われた�
 
 でもそれじゃつまらないので、Haskellの勉強で学んだ知識をもとにF#に挑戦してみた。
 
-いろいろ試行錯誤した結果がこれだ。One, Two Three→[](http://qiita.com/items/1798:title=F#で素数の無限シーケンスを作る)
+いろいろ試行錯誤した結果がこれだ。One, Two Three→[http://qiita.com/items/1798](http://qiita.com/items/1798)
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -6767,7 +6744,7 @@ Haskellにくわしい後輩から「F#教えてください」と言われた�
       <wp:post_type>post</wp:post_type>
       <wp:post_password />
       <wp:is_sticky>0</wp:is_sticky>
-      <category domain="category" nicename="[F#]"><![CDATA[[F#]]]></category>
+      <category domain="category" nicename="F#"><![CDATA[F#]]></category>
       <wp:postmeta>
         <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
         <wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -8029,12 +8006,14 @@ drop' n xs = foldr dropWhileTrue [] (zip trueThenFalse xs)
       <description />
       <content:encoded><![CDATA[## リスト処理
 標準ライブラリPreludeに含まれるリスト処理高階関数。
+
 * <code>map :: (a -> b) -> [a] -> [b]</code>
 * <code>filter :: (a -> Bool) -> [a] -> [a]</code>
 * <code>all :: (a -> Bool) -> [a] -> Bool</code>
 * <code>any :: (a -> Bool) -> [a] -> Bool</code>
 * <code>takeWhile :: (a -> Bool) -> [a] -> [a]</code>
 * <code>dropWhile :: (a -> Bool) -> [a] -> [a]</code>
+
 
 LINQだとmapがSelectでfilterがWhereだけど、後は同名のメソッドがある。
 
@@ -8046,8 +8025,10 @@ foldr f v [] = v
 foldr f v (x : xs) = f x (foldr f v xs)
 ```
 再帰定義を見ると簡潔だし、無限リストに適用できそうなのも理解できる。ただし
+
 * 関数fを適用する際に、第2引数が遅延評価される（正格評価されない）
 * 関数fが値を返す際に、第2引数を評価しないか、または評価を遅延できる
+
 の両方が必要になる（でないと結局foldrは終わらない）。
 
 では、foldrを使って定義したライブラリ関数を写経しよう。
@@ -8121,12 +8102,12 @@ reverse = foldl (\xs x -> x : xs) []
       <description />
       <content:encoded><![CDATA[
 map/filter/foldr/foldlを例にした説明。
-このうち、foldr以外はLINQにもある。mapは[](http://msdn.microsoft.com/ja-jp/library/bb546168.aspx:title=Select)、filterは[](http://msdn.microsoft.com/ja-jp/library/bb546161.aspx:title=Where)、foldlは[](http://msdn.microsoft.com/ja-jp/library/bb546138.aspx:title=Aggregate)。だから大体問題ないんだけど、foldrを理解するのにちょっと時間がかかった。
+このうち、foldr以外はLINQにもある。mapは[http://msdn.microsoft.com/ja-jp/library/bb546168.aspx](http://msdn.microsoft.com/ja-jp/library/bb546168.aspx)、filterは[http://msdn.microsoft.com/ja-jp/library/bb546161.aspx](http://msdn.microsoft.com/ja-jp/library/bb546161.aspx)、foldlは[http://msdn.microsoft.com/ja-jp/library/bb546138.aspx](http://msdn.microsoft.com/ja-jp/library/bb546138.aspx)。だから大体問題ないんだけど、foldrを理解するのにちょっと時間がかかった。
 教科書にはまだ書いてなかったんだけど、どうやらfoldrは無限リストを扱えるようなのだ。
 まじ？どうやって？なんでfoldlではだめなの？
 
 ということでいろいろ調べながら、C#でfoldrを実装してみた。
-[](http://d.hatena.ne.jp/matarillo/20110507/p1:title)
+[http://d.hatena.ne.jp/matarillo/20110507/p1](http://d.hatena.ne.jp/matarillo/20110507/p1)
 
 これで少し納得がいった。foldrで無限リストを扱うには遅延評価が必要だと。
 
@@ -8366,6 +8347,7 @@ last (x: xs) = last xs
       <content:encoded><![CDATA[ここまで教科書に出てきたライブラリ関数(演算子も含める)をまとめてみる。
 教科書の付録Aにはもっと多くの関数が載っている。（付録Aを読んでみたら、ガードのotherwiseはキーワードではなくTrueと評価される定数だった。新しい発見。）
 
+
 * <code>(+) :: Num a => a -> a -> a</code>
 * <code>(-) :: Num a => a -> a -> a</code>
 * <code>(*) :: Num a => a -> a -> a</code>
@@ -8418,7 +8400,9 @@ last (x: xs) = last xs
 * <code>fromIntegral :: (Integral a, Num b) => a -> b</code>
 * <code>replicate :: Int -> a -> [a]</code>
 
+
 ## Data.Char
+
 * <code>ord :: Char -> Int</code>
 * <code>chr :: Int -> Char</code>
 * <code>isDigit :: Char -> Bool</code>
@@ -8426,6 +8410,7 @@ last (x: xs) = last xs
 * <code>isUpper :: Char -> Bool</code>
 * <code>toLower :: Char -> Char</code>
 * <code>toUpper :: Char -> Char</code>
+
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -8511,7 +8496,7 @@ sorted xs = and [x <= y | (x, y) <- pairs xs]
 
 ## 文字列の内包表記
 
-ここで、Stringは[Char]であることが示される。[](http://haskell.g.hatena.ne.jp/matarillo/20110429/1304100404:title=気づいてたけど。)
+ここで、Stringは[Char]であることが示される。[http://haskell.g.hatena.ne.jp/matarillo/20110429/1304100404](http://haskell.g.hatena.ne.jp/matarillo/20110429/1304100404)
 
 ただし String is a [Char]なのはいいけど、逆はどうなんだろう。つまり、Stringと[Char]は同値なのか？というのが気になったので、試してみた。
 
@@ -8899,6 +8884,7 @@ static T Add<T>(T x, T y) where T : ICalculatable // ICalculatableインター�
 
 ### 練習問題1
 
+
 * <code>['a', 'b', 'c'] :: [Char]</code>
 * <code>('a', 'b', 'c') :: (Char, Char, Char)</code>
 * <code>[(False, 'o'), (True, '1')] :: [(Bool, Char)]</code>
@@ -8906,7 +8892,9 @@ static T Add<T>(T x, T y) where T : ICalculatable // ICalculatableインター�
 * <code>[tail, init, reverse] :: [ [a] ]</code>かな？init関数は教科書に出てきてないぞ。
 * * Hugsで見てみた。おっと、関数だったのは分かってたはずなのに書きそこねた。<code>[tail, init, reverse] :: [ [a] -> [a] ]</code>だね。
 
+
 ### 練習問題2
+
 
 * <code>second xs = head (tail xs) :: [a] -> a</code>
 * <code>swap(x, y) = (y, x) :: (a, b) -> (b, a)</code>
@@ -8916,6 +8904,7 @@ static T Add<T>(T x, T y) where T : ICalculatable // ICalculatableインター�
 * * リストはそもそもEqクラスなのかな？と思ってよく読み返してみたら、要素がEqクラスならリストもEqクラスということのようだ。
 * <code>twice f x = f (f x) :: (a -> a) -> a -> a</code>
 * * これ少し難しいな。
+
 
 ### 練習問題3
 
@@ -8952,11 +8941,11 @@ Hugsで見てみた。演習問題1の最後の以外は合ってた！
       <dc:creator>matarillo</dc:creator>
       <guid isPermaLink="false" />
       <description />
-      <content:encoded><![CDATA[とりあえずの目標は、[](http://d.hatena.ne.jp/rst76/20100706/1278430517:title)を全部理解できるようになること。
+      <content:encoded><![CDATA[とりあえずの目標は、[http://d.hatena.ne.jp/rst76/20100706/1278430517](http://d.hatena.ne.jp/rst76/20100706/1278430517)を全部理解できるようになること。
 
 今日、UnitとBindはモナドに関係しているということを知った。
 
-[](http://blogs.msdn.com/b/wesdyer/archive/2008/01/11/the-marvels-of-monads.aspx:title)
+[http://blogs.msdn.com/b/wesdyer/archive/2008/01/11/the-marvels-of-monads.aspx](http://blogs.msdn.com/b/wesdyer/archive/2008/01/11/the-marvels-of-monads.aspx)
 
 教科書(プログラミングHaskell)はまだぜんぜん最初のほうで、モナドが出てくるのはまだ先の話だけど。
 ]]></content:encoded>
@@ -8994,6 +8983,7 @@ Hugsで見てみた。演習問題1の最後の以外は合ってた！
 Hugsの<code>:type</code>コマンドを学んだ！
 Hugsの<code>:load</code>コマンドが、プログラム中では<code>import</code>と同じということを学んだ！
 
+
 * <code>Bool</code>型
 * * 真偽値。<code>True</code>と<code>False</code>。
 * <code>Char</code>型
@@ -9004,7 +8994,7 @@ Hugsの<code>:load</code>コマンドが、プログラム中では<code>import<
 * * 固定精度整数。普通の32ビット符号付き整数。オーバーフローに注意。
 * <code>Integer</code>型
 * * 多倍長整数。
-* * * これ必要だよね。C#には長らくなかった。([](http://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger.aspx:title=.NET 4から標準ライブラリに入った))
+* * * これ必要だよね。C#には長らくなかった。([http://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger.aspx](http://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger.aspx))
 * <code>Float</code>型
 * * 単精度浮動小数点数。普通の32ビットIEEE 754浮動小数点数。
 * * * だとすればNaN、+∞、-∞も値に含まれるはず。あとで出てくるかな？
@@ -9023,6 +9013,7 @@ Hugsの<code>:load</code>コマンドが、プログラム中では<code>import<
 * * * 0引数の関数は、遅延評価される値と違いがないので、<code>→T</code>という型の関数はない。<code>T</code>型があるだけ。
 * * * <code>()→T</code>という型は定義できるが、unitを引数に取るので0引数にはならない。(Hugsで試した。)
 * * * たぶん<code>T→</code>のような戻り値がない関数も定義できないのではないだろうか。何らかの意味のない値(たとえばunit)を返すようにするとか。
+
 
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -9058,70 +9049,43 @@ ERROR file:test.hs:1 - Syntax error in declaration (unexpected symbol "x")
 ```
 ちょっとぐぐったら原因判明。文字コードがBOMつきUTF-8だったのが問題だったらしい。基本的にはANSIまたはBOMなしUTF-8じゃないといけないようだ。ま、BOMつきUTF-8なんて使うドザが悪いというのはあるけど、それにしてもOSSの文字コードの扱いはいろいろ良くないところがあるよね。
 
-dl>
-<dt>練習問題1</dt><dd><ul>
-<li>2^3*4 = (2^3)*4 = 32</li>
-<li>2*3+4*5=(2*3)+(4*5) = 26</li>
-<li>2+3*4^5=2+(3*(4^5)) = 3074</li>
-</ul></dd>
-<dt>練習問題2</dt><dd>もちろんHugsでやってる。</dd>
-<dt>練習問題3</dt><dd>
-<pre>N = a `div` length xs
-where
-a = 10
-xs = [1,2,3,4,5]
-</pre><br />
-実行してみたらエラーメッセージで分かるだろう。<ul>
-<li><code>Syntax error in input (unexpected symbol "xs")</code><br />
-たぶんxsのインデントが悪い。空白を追加。</li>
-<li><code>Undefined data constructor "N"</code><br />
-Nが大文字だからエラーになっているっぽい。小文字にしてみる。</li>
-</ul>あれ、エラー消えちゃった。引数なしの関数nを表示してみたら2って出るし。関数にするのは良くなかった？でもデータコンストラクタとか、まだ教科書に出てきてないぞ。<br />
-……もう一度問題文を見たら、'div'って書いてある。ここが間違いだったらしい。正しくはバッククォートを用いて`div`とやる（上では最初から`div`と書いてしまっていた）。
-</d
-
+> <dt>練習問題1</dt><dd><ul>
+> <li>2^3*4 = (2^3)*4 = 32</li>
+> <li>2*3+4*5=(2*3)+(4*5) = 26</li>
+> <li>2+3*4^5=2+(3*(4^5)) = 3074</li>
+> </ul></dd>
+> <dt>練習問題2</dt><dd>もちろんHugsでやってる。</dd>
+> <dt>練習問題3</dt><dd>
+> <pre>N = a `div` length xs
+>     where
+>       a = 10
+>      xs = [1,2,3,4,5]
+> </pre><br />
+> 実行してみたらエラーメッセージで分かるだろう。<ul>
+> <li><code>Syntax error in input (unexpected symbol "xs")</code><br />
+> たぶんxsのインデントが悪い。空白を追加。</li>
+> <li><code>Undefined data constructor "N"</code><br />
+> Nが大文字だからエラーになっているっぽい。小文字にしてみる。</li>
+> </ul>あれ、エラー消えちゃった。引数なしの関数nを表示してみたら2って出るし。関数にするのは良くなかった？でもデータコンストラクタとか、まだ教科書に出てきてないぞ。<br />
+> ……もう一度問題文を見たら、'div'って書いてある。ここが間違いだったらしい。正しくはバッククォートを用いて`div`とやる（上では最初から`div`と書いてしまっていた）。
+> </dl><
+> 
+> *1304064809*プログラミングHaskellを買った
+> https://www.amazon.co.jp/dp/4274067815
+> 
+> これから勉強していく。
+> 
+> まずは第1章を読んだ。が、プログラムなんだか数学なんだか。いきなりリストが出てきているし。qsortの定義は擬似コードなのか実コードなのかわからない。
+> 
+> :練習問題1:なんだこれ。外側のdoubleを適用した後2番目のdoubleを適用する、でいいのか？(内側のdoubleから適用するのと、外側のdoubleを適用した後1番目のdoubleを適用するのは、本文中に出てきたので)
+> :練習問題2:<code>sum [x] = x + sum [ ] = x</code>
+> :練習問題3:<code>qsort larger ++ [x] ++ qsort smaller</code>ってする。
+> :練習問題4:ピボットと同じ値が捨てられてしまう。<code>qsort [2,2,3,1,1] = qsort [1, 1] ++ [2] ++ qsort [3] = (qsort [ ] ++ [1] ++ qsort [ ]) ++ [2] ++ (qsort [ ] ++ [3] ++ qsort [ ]) = [1, 2, 3]</code>ってなる。つまり、ピボットとか関係なしに、sortしてuniqしたことになりそうだな。証明は……面倒くさい。
 ]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
       <wp:post_id />
       <wp:post_date>2011-04-29 16:35:08</wp:post_date>
       <wp:post_date_gmt>2011-04-29 07:35:08</wp:post_date_gmt>
-      <wp:comment_status>open</wp:comment_status>
-      <wp:ping_status>open</wp:ping_status>
-      <wp:post_name />
-      <wp:status>publish</wp:status>
-      <wp:post_parent>0</wp:post_parent>
-      <wp:menu_order>0</wp:menu_order>
-      <wp:post_type>post</wp:post_type>
-      <wp:post_password />
-      <wp:is_sticky>0</wp:is_sticky>
-      <wp:postmeta>
-        <wp:meta_key>_wpcom_is_markdown</wp:meta_key>
-        <wp:meta_value><![CDATA[1]]></wp:meta_value>
-      </wp:postmeta>
-    </item>
-    <item>
-      <title>プログラミングHaskellを買った</title>
-      <link />
-      <pubDate>Fri, 29 Apr 2011 08:13:29 +09:00</pubDate>
-      <dc:creator>matarillo</dc:creator>
-      <guid isPermaLink="false" />
-      <description />
-      <content:encoded><![CDATA[https://www.amazon.co.jp/dp/4274067815
-
-これから勉強していく。
-
-まずは第1章を読んだ。が、プログラムなんだか数学なんだか。いきなりリストが出てきているし。qsortの定義は擬似コードなのか実コードなのかわからない。
-
-<dl>
-<dt>練習問題1</dt><dd>なんだこれ。外側のdoubleを適用した後2番目のdoubleを適用する、でいいのか？(内側のdoubleから適用するのと、外側のdoubleを適用した後1番目のdoubleを適用するのは、本文中に出てきたので)</dd>
-<dt>練習問題2</dt><dd><code>sum [x] = x + sum [ ] = x</code></dd>
-<dt>練習問題3</dt><dd><code>qsort larger ++ [x] ++ qsort smaller</code>ってする。</dd>
-<dt>練習問題4</dt><dd>ピボットと同じ値が捨てられてしまう。<code>qsort [2,2,3,1,1] = qsort [1, 1] ++ [2] ++ qsort [3] = (qsort [ ] ++ [1] ++ qsort [ ]) ++ [2] ++ (qsort [ ] ++ [3] ++ qsort [ ]) = [1, 2, 3]</code>ってなる。つまり、ピボットとか関係なしに、sortしてuniqしたことになりそうだな。証明は……面倒くさい。</dd>
-]]></content:encoded>
-      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
-      <wp:post_id />
-      <wp:post_date>2011-04-29 08:13:29</wp:post_date>
-      <wp:post_date_gmt>2011-04-28 23:13:29</wp:post_date_gmt>
       <wp:comment_status>open</wp:comment_status>
       <wp:ping_status>open</wp:ping_status>
       <wp:post_name />
