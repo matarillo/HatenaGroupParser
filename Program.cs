@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace hatenagroup
 {
@@ -14,7 +15,9 @@ namespace hatenagroup
             {
                 entries.AddRange(Record.ToEntries(record));
             }
-            Console.WriteLine(entries.Count);
+            var es = entries.Where(e => e.Comments.Count > 0);
+            var wp = WordPressExporter.ToXml(es);
+            Console.WriteLine(wp);
         }
     }
 }
